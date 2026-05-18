@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
+import { useEffect } from "react";
 import {
   ArrowUpRight,
   Heart,
@@ -118,6 +119,22 @@ const TESTIMONIALS = [
 ];
 
 function HomePage() {
+  const hash = useRouterState({ select: (s) => s.location.hash });
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
+    const el = document.getElementById(hash);
+    if (el) {
+      // wait a tick so layout is ready
+      requestAnimationFrame(() => {
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+      });
+    }
+  }, [hash]);
+
   return (
     <div className="bg-background">
       {/* ============== HERO ============== */}
