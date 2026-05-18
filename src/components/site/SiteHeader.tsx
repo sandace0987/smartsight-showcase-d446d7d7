@@ -34,10 +34,10 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-border/60">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="relative flex h-16 lg:h-20 items-center justify-between gap-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="relative flex h-16 lg:h-20 items-center justify-between gap-2 sm:gap-4">
           {/* Logo mark — left */}
-          <Link to="/" aria-label="Clear Sight Opticians" className="flex-1 inline-flex items-center justify-start">
+          <Link to="/" aria-label="Clear Sight Opticians" className="inline-flex items-center justify-start shrink-0">
             <img
               src={logoUrl}
               alt="Clear Sight Opticians"
@@ -45,16 +45,16 @@ export function SiteHeader() {
             />
           </Link>
 
-          {/* Wordmark — absolutely centered */}
+          {/* Wordmark — inline on mobile, absolutely centered on desktop */}
           <Link
             to="/"
             aria-label="Clear Sight Opticians home"
-            className="hidden md:inline-flex absolute left-1/2 -translate-x-1/2 items-center"
+            className="flex-1 min-w-0 inline-flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2 md:flex-none"
           >
             <AnimatedWordmark />
           </Link>
 
-          {/* Right */}
+          {/* Desktop right */}
           <div className="hidden md:flex flex-1 items-center justify-end gap-3">
             <a
               href="tel:+919999999999"
@@ -71,15 +71,23 @@ export function SiteHeader() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile menu trigger */}
-          <button
-            type="button"
-            aria-label="Open menu"
-            className="md:hidden inline-flex size-10 items-center justify-center rounded-full border border-border"
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="size-4" /> : <Menu className="size-4" />}
-          </button>
+          {/* Mobile right cluster */}
+          <div className="md:hidden flex items-center gap-2 shrink-0">
+            <Link
+              to="/contact"
+              className="bg-electric text-white px-3 py-2 rounded-full text-[11px] font-semibold hover:bg-ink transition-colors whitespace-nowrap"
+            >
+              Book Eye Test
+            </Link>
+            <button
+              type="button"
+              aria-label="Open menu"
+              className="inline-flex size-9 items-center justify-center rounded-full border border-border"
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <X className="size-4" /> : <Menu className="size-4" />}
+            </button>
+          </div>
         </div>
 
         {/* Secondary nav */}
