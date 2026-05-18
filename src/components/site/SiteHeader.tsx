@@ -23,6 +23,15 @@ export function SiteHeader() {
 
   useEffect(() => setOpen(false), [location.pathname]);
 
+  const handleHashClick = (hash: string | undefined) => (e: React.MouseEvent) => {
+    if (!hash) return;
+    if (location.pathname !== "/") return; // let router handle cross-route nav
+    e.preventDefault();
+    const el = document.getElementById(hash);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-border/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -80,6 +89,7 @@ export function SiteHeader() {
               key={item.label}
               to={item.to}
               hash={item.hash}
+              onClick={handleHashClick(item.hash)}
               activeOptions={{ exact: true, includeHash: true }}
               className="text-muted-foreground hover:text-foreground transition-colors"
               activeProps={{ className: "text-electric" }}
@@ -103,6 +113,7 @@ export function SiteHeader() {
               key={item.label}
               to={item.to}
               hash={item.hash}
+              onClick={handleHashClick(item.hash)}
               activeOptions={{ exact: true, includeHash: true }}
               className="py-2 text-sm font-medium text-foreground/80"
               activeProps={{ className: "text-electric" }}
