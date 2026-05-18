@@ -601,9 +601,9 @@ function HomePage() {
               will be expecting you.
             </p>
             <div className="mt-10 space-y-4 text-sm text-white/80">
-              <p className="inline-flex items-center gap-3"><Phone className="size-4 text-electric" /> +91 99999 99999</p>
-              <p className="inline-flex items-center gap-3"><Mail className="size-4 text-electric" /><span>hello@clearsight.in</span></p>
-              <p className="inline-flex items-start gap-3"><MapPin className="size-4 text-electric mt-0.5" /> Kukatpally, Banjara Hills, Jubilee Hills</p>
+              <p className="inline-flex items-center gap-3"><Phone className="size-4 shrink-0 text-electric" /><span>+91 99999 99999</span></p>
+              <p className="inline-flex items-center gap-3"><Mail className="size-4 shrink-0 text-electric" /><span>hello@clearsight.in</span></p>
+              <p className="inline-flex items-start gap-3"><MapPin className="size-4 shrink-0 text-electric mt-0.5" /><span>Kukatpally, Banjara Hills, Jubilee Hills</span></p>
             </div>
           </div>
           <form className="lg:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
