@@ -134,8 +134,6 @@ function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
 
-          {/* Liquid-glass lens bubble */}
-          <LensBubble className="top-16 right-10 lg:top-24 lg:right-20" size={180} />
 
           {/* Top badge */}
           <div className="absolute top-6 left-6 sm:top-8 sm:left-8 flex items-center gap-2 text-white/85 text-[11px] font-semibold uppercase tracking-[0.22em]">
