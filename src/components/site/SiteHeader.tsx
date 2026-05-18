@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Search, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedWordmark } from "./AnimatedWordmark";
