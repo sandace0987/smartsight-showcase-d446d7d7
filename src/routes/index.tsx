@@ -19,6 +19,7 @@ import {
   Quote,
 } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
+import { LensBubble } from "@/components/site/LensBubble";
 import raybanMeta from "@/assets/rayban-meta.jpg";
 import oakleyMeta from "@/assets/oakley-meta.jpg";
 import productTortoise from "@/assets/product-tortoise.jpg";
