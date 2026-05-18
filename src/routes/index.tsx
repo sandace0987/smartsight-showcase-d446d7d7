@@ -177,28 +177,6 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Floating video card */}
-          <div className="hidden md:flex absolute bottom-8 right-8 lg:bottom-10 lg:right-10 bg-white p-4 rounded-2xl shadow-2xl gap-4 items-center max-w-xs animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_0.45s_both]">
-            <div className="size-20 rounded-xl bg-secondary overflow-hidden relative shrink-0">
-              <img src={eyeTest} alt="Eye testing equipment" width={200} height={200} loading="lazy" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="size-9 bg-white/95 rounded-full grid place-items-center shadow-md">
-                  <Play className="size-4 text-ink fill-ink ml-0.5" />
-                </div>
-              </div>
-            </div>
-            <div className="min-w-0">
-              <h4 className="font-bold text-sm mb-1 text-ink">See How It Works</h4>
-              <p className="text-[11px] text-muted-foreground leading-snug mb-2">
-                Advanced digital eye testing across all branches.
-              </p>
-              <div className="flex -space-x-2">
-                <div className="size-6 rounded-full border-2 border-white bg-electric" />
-                <div className="size-6 rounded-full border-2 border-white bg-secondary" />
-                <div className="size-6 rounded-full border-2 border-white bg-ink" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
