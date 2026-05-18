@@ -97,9 +97,10 @@ export function SiteHeader() {
         <nav className="px-6 py-5 flex flex-col gap-2">
           {NAV.map((item) => (
             <Link
-              key={item.to}
+              key={item.label}
               to={item.to}
-              activeOptions={{ exact: item.to === "/" }}
+              hash={item.hash}
+              activeOptions={{ exact: true, includeHash: true }}
               className="py-2 text-sm font-medium text-foreground/80"
               activeProps={{ className: "text-electric" }}
             >
