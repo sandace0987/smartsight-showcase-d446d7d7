@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 
-import { SmartGlassesScrub } from "@/components/site/SmartGlassesScrub";
+import raybanMetaHero from "@/assets/rayban-meta-hero.jpg";
 import oakleyMeta from "@/assets/oakley-meta.jpg";
 import productTortoise from "@/assets/product-tortoise.jpg";
 import productAviator from "@/assets/product-aviator.jpg";
@@ -255,8 +255,44 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ============== SMART GLASSES — SCROLL 3D SEQUENCE ============== */}
-      <SmartGlassesScrub />
+      {/* ============== RAY-BAN META — HERO SHOWCASE ============== */}
+      <section className="relative px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 text-white">
+            <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-electric/90">
+              <span className="size-1.5 rounded-full bg-electric" />
+              Ray-Ban Meta
+            </div>
+            <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tighter">
+              Iconic frames.
+              <br />
+              <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
+            </h2>
+            <p className="mt-6 text-white/70 text-base sm:text-lg max-w-md leading-relaxed">
+              Capture, call, and ask Meta AI — without ever reaching for your phone. The Wayfarer you know, reimagined.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/contact" className="bg-electric text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-ink transition-colors">
+                Try in store
+              </Link>
+              <Link to="/services" className="border border-white/25 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
+                Learn more
+              </Link>
+            </div>
+          </div>
+          <div className="lg:col-span-7 relative">
+            <div className="absolute -inset-10 bg-electric/20 blur-3xl rounded-full pointer-events-none" />
+            <img
+              src={raybanMetaHero}
+              alt="Ray-Ban Meta smart glasses on an obsidian pedestal with electric-blue rim lighting"
+              width={1600}
+              height={1024}
+              loading="lazy"
+              className="relative w-full h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ============== OAKLEY COMPANION + OFFER ============== */}
       <section className="px-6 lg:px-10 py-16 lg:py-24 bg-secondary/60">
