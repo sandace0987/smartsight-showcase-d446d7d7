@@ -16,9 +16,9 @@ export type Frame = {
 };
 
 export const FRAMES: Frame[] = [
-  { id: "wayfarer", name: "Wayfarer",   brand: "Ray-Ban",     src: rayban,  widthRatio: 2.2, yOffsetRatio: 0.0 },
-  { id: "aviator",  name: "Aviator",    brand: "Ray-Ban",     src: aviator, widthRatio: 2.3, yOffsetRatio: 0.05 },
-  { id: "holbrook", name: "Holbrook",   brand: "Oakley",      src: oakley,  widthRatio: 2.25, yOffsetRatio: 0.0 },
-  { id: "meta",     name: "Meta Wayfarer", brand: "Ray-Ban Meta", src: meta, widthRatio: 2.2, yOffsetRatio: 0.0 },
-  { id: "round",    name: "Round Tortoise", brand: "Clear Sight", src: round, widthRatio: 2.1, yOffsetRatio: 0.0 },
+  { id: "wayfarer", name: "Wayfarer",       brand: "Ray-Ban",      src: rayban,  widthRatio: 1.05, yOffsetRatio: 0.05 },
+  { id: "aviator",  name: "Aviator",        brand: "Ray-Ban",      src: aviator, widthRatio: 1.08, yOffsetRatio: 0.10 },
+  { id: "holbrook", name: "Holbrook",       brand: "Oakley",       src: oakley,  widthRatio: 1.06, yOffsetRatio: 0.05 },
+  { id: "meta",     name: "Meta Wayfarer",  brand: "Ray-Ban Meta", src: meta,    widthRatio: 1.05, yOffsetRatio: 0.05 },
+  { id: "round",    name: "Round Tortoise", brand: "Clear Sight",  src: round,   widthRatio: 1.00, yOffsetRatio: 0.05 },
 ];
