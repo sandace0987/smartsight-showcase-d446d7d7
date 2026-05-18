@@ -53,12 +53,6 @@ export function SiteHeader() {
             </a>
             <Link
               to="/contact"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/contact"
               className="bg-electric text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-ink transition-colors"
             >
               Book Eye Test
