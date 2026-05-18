@@ -9,6 +9,7 @@ const NAV = [
   { to: "/", hash: undefined, label: "Home" },
   { to: "/", hash: "brands", label: "Brands" },
   { to: "/", hash: "smart-glasses", label: "Smart Glasses" },
+  { to: "/", hash: "try-on", label: "Try On" },
   { to: "/", hash: "offers", label: "Offers" },
   { to: "/", hash: "stores", label: "Stores" },
   { to: "/", hash: "about", label: "About" },

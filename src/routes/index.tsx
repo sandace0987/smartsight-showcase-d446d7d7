@@ -25,6 +25,7 @@ import productAviator from "@/assets/product-aviator.jpg";
 import productGoldWire from "@/assets/product-gold-wire.jpg";
 import productAzure from "@/assets/product-azure.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
+import { TryOnSection } from "@/components/try-on/TryOnSection";
 
 
 export const Route = createFileRoute("/")({
@@ -545,6 +546,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ============== VIRTUAL TRY-ON ============== */}
+      <TryOnSection id="try-on" />
 
       {/* ============== OFFERS CTA ============== */}
       <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
