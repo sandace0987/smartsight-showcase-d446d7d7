@@ -273,7 +273,7 @@ function HomePage() {
       </section>
 
       {/* ============== RAY-BAN META — HERO SHOWCASE ============== */}
-      <section className="relative px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
+      <section id="smart-glasses" className="relative scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 text-white">
             <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-electric/90">
@@ -350,7 +350,7 @@ function HomePage() {
       </section>
 
       {/* ============== NEW ARRIVALS ============== */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section id="brands" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-12 lg:mb-16">
             <div>
@@ -426,7 +426,7 @@ function HomePage() {
       </section>
 
       {/* ============== WHY CHOOSE ============== */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28 bg-secondary/60 border-y border-border">
+      <section id="about" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28 bg-secondary/60 border-y border-border">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl mb-14">
             <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Why Clear Sight</span>
@@ -450,7 +450,7 @@ function HomePage() {
       </section>
 
       {/* ============== STORE LOCATOR ============== */}
-      <section id="stores" className="px-6 lg:px-10 py-20 lg:py-32">
+      <section id="stores" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
@@ -547,7 +547,7 @@ function HomePage() {
       </section>
 
       {/* ============== OFFERS CTA ============== */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28">
+      <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-electric text-white rounded-3xl p-10 lg:p-14 relative overflow-hidden">
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Smart Glasses</span>
@@ -586,7 +586,7 @@ function HomePage() {
       </section>
 
       {/* ============== BOOKING / CONTACT ============== */}
-      <section id="book" className="px-6 lg:px-10 pb-20 lg:pb-32">
+      <section id="contact" className="scroll-mt-24 px-6 lg:px-10 pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl bg-ink text-white rounded-[28px] lg:rounded-[40px] p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter leading-[1.02]">
