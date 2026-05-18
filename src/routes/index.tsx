@@ -123,18 +123,13 @@ const TESTIMONIALS = [
 function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   useEffect(() => {
-    if (!hash) {
-      window.scrollTo({ top: 0, behavior: "auto" });
-      return;
-    }
+    if (!hash) return;
     const el = document.getElementById(hash);
-    if (el) {
-      // wait a tick so layout is ready
-      requestAnimationFrame(() => {
-        const top = el.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top, behavior: "smooth" });
-      });
-    }
+    if (!el) return;
+    requestAnimationFrame(() => {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
   }, [hash]);
 
   return (
