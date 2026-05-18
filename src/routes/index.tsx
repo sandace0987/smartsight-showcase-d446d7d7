@@ -148,8 +148,48 @@ function HomePage() {
                 See better. Look better.
                 <br />
                 Live{" "}
-                <span className="font-serif italic font-medium px-4 py-0.5 sm:px-6 sm:py-1 border border-white/35 rounded-full inline-block backdrop-blur-sm">
+                <span
+                  className="relative font-serif italic font-medium px-5 py-1 sm:px-8 sm:py-1.5 rounded-full inline-block"
+                  style={{
+                    backdropFilter: "blur(10px) saturate(170%) contrast(110%)",
+                    WebkitBackdropFilter: "blur(10px) saturate(170%) contrast(110%)",
+                    background:
+                      "radial-gradient(120% 140% at 25% 20%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 38%, rgba(255,255,255,0.04) 65%, rgba(255,255,255,0.18) 100%)",
+                    boxShadow:
+                      "inset 0 1px 1px rgba(255,255,255,0.85), inset 0 -2px 8px rgba(15,23,42,0.25), inset 0 0 30px rgba(255,255,255,0.18), 0 12px 40px -8px rgba(0,71,255,0.35)",
+                    border: "1px solid rgba(255,255,255,0.55)",
+                    textShadow: "0 2px 18px rgba(255,255,255,0.35)",
+                  }}
+                >
                   smarter.
+                  {/* top catchlight */}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute rounded-full"
+                    style={{
+                      top: "12%",
+                      left: "10%",
+                      width: "38%",
+                      height: "30%",
+                      background:
+                        "radial-gradient(ellipse at center, rgba(255,255,255,0.7), rgba(255,255,255,0) 70%)",
+                      filter: "blur(2px)",
+                    }}
+                  />
+                  {/* bottom refractive arc */}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute rounded-full"
+                    style={{
+                      bottom: "8%",
+                      left: "22%",
+                      right: "22%",
+                      height: "22%",
+                      background:
+                        "radial-gradient(ellipse at center, rgba(0,71,255,0.22), rgba(0,71,255,0) 70%)",
+                      filter: "blur(3px)",
+                    }}
+                  />
                 </span>
               </h1>
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-12">
