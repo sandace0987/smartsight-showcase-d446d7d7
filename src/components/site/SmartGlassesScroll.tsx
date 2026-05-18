@@ -213,7 +213,7 @@ export function SmartGlassesScroll({ id = "smart" }: { id?: string }) {
 
   return (
     <section
-      id="smart"
+      id={id}
       ref={wrapRef}
       className="relative bg-gradient-to-b from-secondary/60 via-background to-secondary/40"
       style={{ height: "500vh" }}
