@@ -160,6 +160,8 @@ function HomePage() {
                     border: "1px solid rgba(255,255,255,0.55)",
                     textShadow: "0 2px 18px rgba(255,255,255,0.35)",
                   }}
+                >
+                  smarter.
                   {/* iridescent glass tint synced with scroll */}
                   <span
                     aria-hidden
