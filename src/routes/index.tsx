@@ -547,6 +547,9 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ============== VIRTUAL TRY-ON ============== */}
+      <TryOnSection id="try-on" />
+
       {/* ============== OFFERS CTA ============== */}
       <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
