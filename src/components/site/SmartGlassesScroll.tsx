@@ -104,7 +104,7 @@ function Captions({ progressRef }: { progressRef: React.MutableRefObject<number>
 
 /* ---------- Scroll-driven canvas sequence ---------- */
 
-export function SmartGlassesScroll() {
+export function SmartGlassesScroll({ id = "smart" }: { id?: string }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
