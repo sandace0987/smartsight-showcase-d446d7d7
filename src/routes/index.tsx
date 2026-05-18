@@ -123,6 +123,15 @@ function HomePage() {
       {/* ============== HERO ============== */}
       <section className="px-4 sm:px-6 lg:px-10 pt-6 pb-16 lg:pb-24">
         <div className="relative w-full h-[560px] sm:h-[640px] lg:h-[780px] overflow-hidden rounded-[28px] lg:rounded-[40px] bg-secondary">
+          {/* SVG filter — subtle lens warp via turbulence + displacement */}
+          <svg aria-hidden width="0" height="0" className="absolute" style={{ position: "absolute" }}>
+            <defs>
+              <filter id="lens-distort" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
           <img
             src={heroPortrait}
             alt="Person wearing clear-frame luxury eyewear in cinematic blue light"
