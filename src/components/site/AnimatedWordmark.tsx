@@ -57,6 +57,7 @@ function ShufflingWord({
 
   return (
     <span
+      suppressHydrationWarning
       className={cn(
         "inline-block transition-all duration-200 ease-out will-change-transform",
         flip ? "opacity-0 -translate-y-1 blur-[2px]" : "opacity-100 translate-y-0 blur-0",
