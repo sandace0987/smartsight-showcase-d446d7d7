@@ -53,13 +53,13 @@ export function SiteHeader() {
             >
               <Phone className="size-4" /> Call
             </a>
-            <ThemeToggle />
             <Link
               to="/contact"
               className="bg-electric text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-ink transition-colors"
             >
               Book Eye Test
             </Link>
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu trigger */}
