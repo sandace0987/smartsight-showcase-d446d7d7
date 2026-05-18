@@ -38,7 +38,12 @@ export function SiteHeader() {
           </div>
 
           {/* Logo */}
-          <Link to="/" className="flex-1 md:text-center group">
+          <Link to="/" className="flex-1 md:text-center group inline-flex items-center justify-center gap-2.5">
+            <img
+              src={logoUrl}
+              alt="Clear Sight Opticians"
+              className="h-8 lg:h-10 w-auto object-contain shrink-0"
+            />
             <AnimatedWordmark />
           </Link>
 
