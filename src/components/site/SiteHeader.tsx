@@ -113,6 +113,7 @@ export function SiteHeader() {
               key={item.label}
               to={item.to}
               hash={item.hash}
+              onClick={handleHashClick(item.hash)}
               activeOptions={{ exact: true, includeHash: true }}
               className="py-2 text-sm font-medium text-foreground/80"
               activeProps={{ className: "text-electric" }}
