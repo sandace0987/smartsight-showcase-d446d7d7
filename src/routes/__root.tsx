@@ -124,6 +124,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
+        <FloatingVideoCard />
       </div>
     </QueryClientProvider>
   );
