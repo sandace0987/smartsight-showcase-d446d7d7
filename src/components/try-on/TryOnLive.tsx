@@ -146,21 +146,26 @@ export default function TryOnLive({ onClose, initialFrameId }: Props) {
       const lm = result?.faceLandmarks?.[0];
       const img = frameImgRef.current;
       if (lm && img) {
-        const left = lm[LEFT_EYE_OUTER];
-        const right = lm[RIGHT_EYE_OUTER];
-        const lx = left.x * canvas.width;
-        const ly = left.y * canvas.height;
-        const rx = right.x * canvas.width;
-        const ry = right.y * canvas.height;
+        const lT = lm[LEFT_TEMPLE];
+        const rT = lm[RIGHT_TEMPLE];
+        const lE = lm[LEFT_EYE_CENTER];
+        const rE = lm[RIGHT_EYE_CENTER];
 
-        const cx = (lx + rx) / 2;
-        const cy = (ly + ry) / 2;
-        const dx = rx - lx;
-        const dy = ry - ly;
-        const eyeDist = Math.hypot(dx, dy);
+        const ltx = lT.x * canvas.width;
+        const lty = lT.y * canvas.height;
+        const rtx = rT.x * canvas.width;
+        const rty = rT.y * canvas.height;
+
+        // Center horizontally on temples, vertically on eyes
+        const cx = (ltx + rtx) / 2;
+        const cy = ((lE.y + rE.y) / 2) * canvas.height;
+
+        const dx = rtx - ltx;
+        const dy = rty - lty;
+        const faceWidth = Math.hypot(dx, dy);
         const angle = Math.atan2(dy, dx);
 
-        const targetWidth = eyeDist * frame.widthRatio;
+        const targetWidth = faceWidth * frame.widthRatio;
         const aspect = img.naturalHeight / img.naturalWidth;
         const targetHeight = targetWidth * aspect;
         const yOffset = targetHeight * frame.yOffsetRatio;
