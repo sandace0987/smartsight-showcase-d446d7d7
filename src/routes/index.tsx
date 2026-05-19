@@ -19,7 +19,7 @@ import {
 import { CategoryGlasses } from "@/components/site/CategoryGlasses";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 
-import raybanMetaHero from "@/assets/rayban-meta-hero.jpg";
+import raybanMetaHero from "@/assets/rayban-meta-hero.png";
 import oakleyMeta from "@/assets/oakley-meta.jpg";
 import productTortoise from "@/assets/product-tortoise.jpg";
 import productAviator from "@/assets/product-aviator.jpg";
@@ -359,7 +359,7 @@ function HomePage() {
               width={1600}
               height={1024}
               loading="lazy"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
+              className="relative w-full h-auto"
             />
           </div>
         </div>
