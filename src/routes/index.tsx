@@ -27,6 +27,12 @@ import productGoldWire from "@/assets/product-gold-wire.jpg";
 import productAzure from "@/assets/product-azure.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import { TryOnSection } from "@/components/try-on/TryOnSection";
+import { KineticHeading } from "@/components/motion/KineticHeading";
+import { Reveal } from "@/components/motion/Reveal";
+import { TiltCard } from "@/components/motion/TiltCard";
+import { CountUp } from "@/components/motion/CountUp";
+import { MagneticButton } from "@/components/motion/MagneticButton";
+import { motion } from "framer-motion";
 
 
 
