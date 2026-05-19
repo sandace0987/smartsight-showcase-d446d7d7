@@ -19,7 +19,7 @@ import {
 import { CategoryGlasses } from "@/components/site/CategoryGlasses";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 
-import raybanMetaHero from "@/assets/rayban-meta-hero.jpg";
+import raybanMetaHero from "@/assets/rayban-meta-hero.png";
 import oakleyMeta from "@/assets/oakley-meta.jpg";
 import productTortoise from "@/assets/product-tortoise.jpg";
 import productAviator from "@/assets/product-aviator.jpg";
