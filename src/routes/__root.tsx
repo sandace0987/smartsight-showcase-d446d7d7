@@ -91,12 +91,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/avif", href: "/clear-sight-logo.avif" },
       { rel: "apple-touch-icon", href: "/clear-sight-logo.avif" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap",
-      },
     ],
   }),
   shellComponent: RootShell,
