@@ -51,6 +51,9 @@ export const Route = createFileRoute("/")({
         content: "Premium prescription glasses, sunglasses, contact lenses and smart eyewear.",
       },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroPortrait, fetchpriority: "high" },
+    ],
   }),
   component: HomePage,
 });
@@ -149,6 +152,8 @@ function HomePage() {
             alt="Person wearing clear-frame luxury eyewear in cinematic blue light"
             width={1920}
             height={1080}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover scale-105 animate-[reveal_1.2s_cubic-bezier(0.16,1,0.3,1)_both]"
           />
           {/* gradients */}
