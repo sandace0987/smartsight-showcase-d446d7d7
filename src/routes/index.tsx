@@ -359,7 +359,7 @@ function HomePage() {
               width={1600}
               height={1024}
               loading="lazy"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
+              className="relative w-full h-auto"
             />
           </div>
         </div>
