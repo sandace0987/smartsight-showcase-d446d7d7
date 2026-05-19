@@ -164,12 +164,43 @@ function HomePage() {
 
           {/* Content */}
           <div className="absolute inset-0 flex flex-col justify-end px-6 sm:px-10 lg:px-16 pb-12 sm:pb-16 lg:pb-20">
-            <div className="max-w-3xl animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_0.15s_both]">
-              <h1 className="text-white text-4xl sm:text-6xl lg:text-8xl font-bold leading-[0.92] tracking-tighter">
-                See better. Look better.
+            <div className="max-w-3xl">
+              <motion.h1
+                className="text-white text-4xl sm:text-6xl lg:text-8xl font-bold leading-[0.92] tracking-tighter"
+                initial="hidden"
+                animate="show"
+                variants={{ hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } } }}
+              >
+                {["See", "better.", "Look", "better."].map((w, i) => (
+                  <span key={i} className="inline-block overflow-hidden align-baseline pb-[0.12em] mr-[0.28em]">
+                    <motion.span
+                      className="inline-block will-change-transform"
+                      variants={{
+                        hidden: { y: "110%" },
+                        show: { y: "0%", transition: { duration: 0.95, ease: [0.16, 1, 0.3, 1] } },
+                      }}
+                    >
+                      {w}
+                    </motion.span>
+                  </span>
+                ))}
                 <br />
-                Live{" "}
-                <span
+                <span className="inline-block overflow-hidden align-baseline pb-[0.12em] mr-[0.28em]">
+                  <motion.span
+                    className="inline-block will-change-transform"
+                    variants={{
+                      hidden: { y: "110%" },
+                      show: { y: "0%", transition: { duration: 0.95, ease: [0.16, 1, 0.3, 1] } },
+                    }}
+                  >
+                    Live
+                  </motion.span>
+                </span>
+                <motion.span
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.85, y: 20 },
+                    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
+                  }}
                   className="relative font-serif italic font-medium px-5 py-1 sm:px-8 sm:py-1.5 rounded-full inline-block"
                   style={{
                     backdropFilter: "blur(10px) saturate(170%) contrast(110%)",
@@ -183,7 +214,6 @@ function HomePage() {
                   }}
                 >
                   smarter.
-                  {/* iridescent glass tint synced with scroll */}
                   <span
                     aria-hidden
                     className="pointer-events-none absolute inset-0 rounded-full lens-iridescence mix-blend-screen opacity-60"
@@ -192,11 +222,7 @@ function HomePage() {
                         "linear-gradient(115deg, rgba(0,71,255,0.0) 0%, rgba(0,71,255,0.22) 20%, rgba(255,255,255,0.35) 38%, rgba(255,0,128,0.18) 58%, rgba(0,200,255,0.22) 78%, rgba(0,71,255,0.0) 100%)",
                     }}
                   />
-                  {/* shimmer sweep clipped to pill */}
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 rounded-full overflow-hidden"
-                  >
+                  <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full overflow-hidden">
                     <span
                       className="absolute top-0 bottom-0 w-[45%] lens-shimmer-track"
                       style={{
@@ -207,8 +233,6 @@ function HomePage() {
                       }}
                     />
                   </span>
-
-                  {/* top catchlight */}
                   <span
                     aria-hidden
                     className="pointer-events-none absolute rounded-full"
@@ -217,12 +241,10 @@ function HomePage() {
                       left: "10%",
                       width: "38%",
                       height: "30%",
-                      background:
-                        "radial-gradient(ellipse at center, rgba(255,255,255,0.7), rgba(255,255,255,0) 70%)",
+                      background: "radial-gradient(ellipse at center, rgba(255,255,255,0.7), rgba(255,255,255,0) 70%)",
                       filter: "blur(2px)",
                     }}
                   />
-                  {/* bottom refractive arc */}
                   <span
                     aria-hidden
                     className="pointer-events-none absolute rounded-full"
@@ -231,34 +253,42 @@ function HomePage() {
                       left: "22%",
                       right: "22%",
                       height: "22%",
-                      background:
-                        "radial-gradient(ellipse at center, rgba(0,71,255,0.22), rgba(0,71,255,0) 70%)",
+                      background: "radial-gradient(ellipse at center, rgba(0,71,255,0.22), rgba(0,71,255,0) 70%)",
                       filter: "blur(3px)",
                     }}
                   />
-                </span>
-              </h1>
-              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-12">
+                </motion.span>
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-12"
+              >
                 <p className="text-white/85 text-base sm:text-lg max-w-md leading-relaxed">
                   Premium eyewear curated for the visionary. Discover Ray-Ban Meta,
                   Oakley Meta and the world's finest luxury frames — fitted by experts.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <Link
-                    to="/brands"
-                    className="inline-flex items-center gap-2 bg-white text-ink px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-electric hover:text-white transition-colors"
-                  >
-                    Explore Brands
-                    <ArrowUpRight className="size-4" />
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/30 px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-colors"
-                  >
-                    Book Eye Test
-                  </Link>
+                  <MagneticButton>
+                    <Link
+                      to="/brands"
+                      className="inline-flex items-center gap-2 bg-white text-ink px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-electric hover:text-white transition-colors"
+                    >
+                      Explore Brands
+                      <ArrowUpRight className="size-4" />
+                    </Link>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/30 px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-colors"
+                    >
+                      Book Eye Test
+                    </Link>
+                  </MagneticButton>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
