@@ -513,41 +513,47 @@ function HomePage() {
       {/* ============== VIRTUAL TRY-ON ============== */}
       <TryOnSection id="try-on" />
 
-      {/* ============== OFFERS CTA ============== */}
+      {/* ============== OFFERS ============== */}
       <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-electric text-white rounded-3xl p-10 lg:p-14 relative overflow-hidden">
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Smart Glasses</span>
-            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
-              Save up to ₹12,000 on Ray-Ban &amp; Oakley Meta.
-            </h3>
-            <p className="mt-5 text-white/85 max-w-md">
-              Launch pricing across all three Hyderabad locations. In-store only.
-            </p>
-            <Link
-              to="/offers"
-              className="mt-8 inline-flex items-center gap-2 bg-white text-electric px-7 py-3.5 rounded-full text-sm font-semibold"
-            >
-              View all offers <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-          <div className="bg-secondary rounded-3xl p-10 lg:p-14">
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-electric">Eye Test</span>
-            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
-              Comprehensive eye test, <span className="font-serif italic font-medium text-electric">on us.</span>
-            </h3>
-            <p className="mt-5 text-muted-foreground max-w-md">
-              Complimentary digital eye examination with every frame purchase.
-              Walk-ins welcome, or book a slot.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-ink text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-electric transition-colors">
-                Book Eye Test
-              </Link>
-              <Link to="/stores" className="inline-flex items-center gap-2 border-2 border-ink/15 px-7 py-3 rounded-full text-sm font-semibold hover:border-electric hover:text-electric transition-colors">
-                Visit a store
-              </Link>
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-12 lg:mb-16">
+            <div>
+              <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">This Season</span>
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tighter mt-3">
+                Limited-time <span className="font-serif italic font-medium text-electric">offers.</span>
+              </h2>
+              <p className="text-muted-foreground mt-3 max-w-2xl text-lg">
+                Quietly generous deals on the brands you love — refreshed every season,
+                honoured at every branch.
+              </p>
             </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {OFFERS.map((o, i) => (
+              <article
+                key={o.title}
+                className={`rounded-3xl p-8 lg:p-10 flex flex-col min-h-[280px] ${o.accent ? "bg-electric text-white" : "bg-secondary/60 border border-border"}`}
+              >
+                <div className="flex items-center justify-between mb-8">
+                  <span className={`text-[10px] font-bold uppercase tracking-[0.22em] ${o.accent ? "text-white/80" : "text-electric"}`}>
+                    {o.tag}
+                  </span>
+                  <span className={`text-[10px] font-mono tracking-widest ${o.accent ? "text-white/60" : "text-muted-foreground"}`}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold tracking-tighter leading-tight">{o.title}</h3>
+                <p className={`mt-3 text-sm ${o.accent ? "text-white/85" : "text-muted-foreground"} font-serif italic`}>
+                  {o.desc}
+                </p>
+                <Link
+                  to="/contact"
+                  className={`mt-auto pt-8 inline-flex items-center gap-2 text-sm font-semibold ${o.accent ? "text-white" : "text-electric"}`}
+                >
+                  Claim in store <ArrowUpRight className="size-4" />
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
