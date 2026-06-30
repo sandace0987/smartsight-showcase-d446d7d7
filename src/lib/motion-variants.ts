@@ -33,7 +33,11 @@ export const wordReveal: Variants = {
 };
 
 export const pageTransition: Variants = {
-  hidden: { opacity: 0, y: 8 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: easeOutQuart } },
-  exit: { opacity: 0, y: -4, transition: { duration: 0.2 } },
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: easeOutQuart },
+  },
+  exit: { opacity: 0, y: -6, transition: { duration: 0.2, ease: easeOutQuart } },
 };
