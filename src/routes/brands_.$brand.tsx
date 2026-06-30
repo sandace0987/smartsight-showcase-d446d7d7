@@ -5,6 +5,7 @@ import { GlassSilhouette } from "@/components/site/GlassSilhouette";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { Reveal } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
+import { MagnifyLens } from "@/components/motion/MagnifyLens";
 
 export const Route = createFileRoute("/brands_/$brand")({
   head: ({ params }) => {
@@ -77,9 +78,13 @@ function BrandPage() {
                     <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-electric">{m.shape}</span>
                   </div>
 
-                  <div className="my-8 flex items-center justify-center h-28 text-foreground/85 group-hover:text-electric transition-colors">
+                  <MagnifyLens
+                    zoom={2.4}
+                    lensSize={150}
+                    className="my-8 flex items-center justify-center h-28 cursor-zoom-in text-foreground/85 group-hover:text-electric transition-colors"
+                  >
                     <GlassSilhouette shape={m.shape} className="w-full max-w-[220px] h-auto" />
-                  </div>
+                  </MagnifyLens>
 
                   <h3 className="text-xl font-bold tracking-tight">{m.model}</h3>
                   <p className="text-xs text-muted-foreground mt-1 font-serif italic">{m.colour}</p>
