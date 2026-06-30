@@ -331,82 +331,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ============== RAY-BAN META — HERO SHOWCASE ============== */}
-      <section id="smart-glasses" className="relative scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5 text-white">
-            <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-electric/90">
-              <span className="size-1.5 rounded-full bg-electric" />
-              Ray-Ban Meta
-            </div>
-            <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tighter">
-              Iconic frames.
-              <br />
-              <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
-            </h2>
-            <p className="mt-6 text-white/70 text-base sm:text-lg max-w-md leading-relaxed">
-              Capture, call, and ask Meta AI — without ever reaching for your phone. The Wayfarer you know, reimagined.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="bg-electric text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-ink transition-colors">
-                Try in store
-              </Link>
-              <Link to="/services" className="border border-white/25 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
-                Learn more
-              </Link>
-            </div>
-          </div>
-          <div className="lg:col-span-7 relative">
-            <div className="absolute -inset-10 bg-electric/20 blur-3xl rounded-full pointer-events-none" />
-            <img
-              src={raybanMetaHero}
-              alt="Ray-Ban Meta smart glasses on an obsidian pedestal with electric-blue rim lighting"
-              width={1600}
-              height={1024}
-              loading="lazy"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ============== OAKLEY COMPANION + OFFER ============== */}
-      <section className="px-6 lg:px-10 py-16 lg:py-24 bg-secondary/60">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 relative rounded-3xl overflow-hidden bg-ink text-white p-8 sm:p-10 flex flex-col justify-between min-h-[260px]">
-            <img src={oakleyMeta} alt="Oakley Meta performance glasses" width={1024} height={1024} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
-            <div className="relative">
-              <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur text-[10px] font-bold uppercase tracking-widest border border-white/15">
-                Performance
-              </span>
-              <h3 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight max-w-md">
-                Oakley Meta — for the way you move.
-              </h3>
-            </div>
-            <div className="relative flex flex-wrap items-center justify-between gap-4">
-              <p className="text-white/70 text-sm max-w-sm">
-                HSTN &amp; Sphaera silhouettes with advanced audio, capture and Meta AI.
-              </p>
-              <Link to="/smart-glasses" className="inline-flex items-center gap-2 text-sm font-semibold text-electric">
-                Shop Oakley Meta <ArrowUpRight className="size-4" />
-              </Link>
-            </div>
-          </div>
-          <div className="rounded-3xl bg-electric text-white p-8 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">Limited</span>
-              <p className="mt-3 text-3xl font-bold leading-tight">Up to 30% off smart eyewear</p>
-            </div>
-            <p className="text-white/85 text-sm mt-6">
-              Visit any branch for an in-person demo. Stock moves quickly.
-            </p>
-            <Link to="/stores" className="mt-6 inline-flex items-center gap-2 bg-white text-electric px-5 py-3 rounded-full text-sm font-semibold w-fit">
-              Find a store <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ============== NEW ARRIVALS ============== */}
       <section id="brands" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32">
@@ -488,26 +412,121 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ============== WHY CHOOSE ============== */}
-      <section id="about" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28 bg-secondary/60 border-y border-border">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl mb-14">
-            <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Why Clear Sight</span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tighter">
-              The trusted name in Hyderabad eyewear,{" "}
-              <span className="font-serif italic font-medium text-electric">for over a decade.</span>
+      {/* ============== RAY-BAN META — HERO SHOWCASE ============== */}
+      <section id="smart-glasses" className="relative scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 text-white">
+            <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-electric/90">
+              <span className="size-1.5 rounded-full bg-electric" />
+              Ray-Ban Meta
+            </div>
+            <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tighter">
+              Iconic frames.
+              <br />
+              <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
             </h2>
+            <p className="mt-6 text-white/70 text-base sm:text-lg max-w-md leading-relaxed">
+              Capture, call, and ask Meta AI — without ever reaching for your phone. The Wayfarer you know, reimagined.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/contact" className="bg-electric text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-ink transition-colors">
+                Try in store
+              </Link>
+              <Link to="/services" className="border border-white/25 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
+                Learn more
+              </Link>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {WHY.map((w) => (
-              <div key={w.title} className="bg-background rounded-2xl p-7 border border-border">
-                <span className="size-11 rounded-full bg-electric/10 grid place-items-center mb-5">
-                  <w.icon className="size-5 text-electric" />
-                </span>
-                <h3 className="font-bold text-lg">{w.title}</h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{w.desc}</p>
-              </div>
-            ))}
+          <div className="lg:col-span-7 relative">
+            <div className="absolute -inset-10 bg-electric/20 blur-3xl rounded-full pointer-events-none" />
+            <img
+              src={raybanMetaHero}
+              alt="Ray-Ban Meta smart glasses on an obsidian pedestal with electric-blue rim lighting"
+              width={1600}
+              height={1024}
+              loading="lazy"
+              className="relative w-full h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ============== OAKLEY COMPANION + OFFER ============== */}
+      <section className="px-6 lg:px-10 py-16 lg:py-24 bg-secondary/60">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="md:col-span-2 relative rounded-3xl overflow-hidden bg-ink text-white p-8 sm:p-10 flex flex-col justify-between min-h-[260px]">
+            <img src={oakleyMeta} alt="Oakley Meta performance glasses" width={1024} height={1024} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
+            <div className="relative">
+              <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur text-[10px] font-bold uppercase tracking-widest border border-white/15">
+                Performance
+              </span>
+              <h3 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight max-w-md">
+                Oakley Meta — for the way you move.
+              </h3>
+            </div>
+            <div className="relative flex flex-wrap items-center justify-between gap-4">
+              <p className="text-white/70 text-sm max-w-sm">
+                HSTN &amp; Sphaera silhouettes with advanced audio, capture and Meta AI.
+              </p>
+              <Link to="/smart-glasses" className="inline-flex items-center gap-2 text-sm font-semibold text-electric">
+                Shop Oakley Meta <ArrowUpRight className="size-4" />
+              </Link>
+            </div>
+          </div>
+          <div className="rounded-3xl bg-electric text-white p-8 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">Limited</span>
+              <p className="mt-3 text-3xl font-bold leading-tight">Up to 30% off smart eyewear</p>
+            </div>
+            <p className="text-white/85 text-sm mt-6">
+              Visit any branch for an in-person demo. Stock moves quickly.
+            </p>
+            <Link to="/stores" className="mt-6 inline-flex items-center gap-2 bg-white text-electric px-5 py-3 rounded-full text-sm font-semibold w-fit">
+              Find a store <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============== VIRTUAL TRY-ON ============== */}
+      <TryOnSection id="try-on" />
+
+      {/* ============== OFFERS CTA ============== */}
+      <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="bg-electric text-white rounded-3xl p-10 lg:p-14 relative overflow-hidden">
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Smart Glasses</span>
+            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
+              Save up to ₹12,000 on Ray-Ban &amp; Oakley Meta.
+            </h3>
+            <p className="mt-5 text-white/85 max-w-md">
+              Launch pricing across all three Hyderabad locations. In-store only.
+            </p>
+            <Link
+              to="/offers"
+              className="mt-8 inline-flex items-center gap-2 bg-white text-electric px-7 py-3.5 rounded-full text-sm font-semibold"
+            >
+              View all offers <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+          <div className="bg-secondary rounded-3xl p-10 lg:p-14">
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-electric">Eye Test</span>
+            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
+              Comprehensive eye test, <span className="font-serif italic font-medium text-electric">on us.</span>
+            </h3>
+            <p className="mt-5 text-muted-foreground max-w-md">
+              Complimentary digital eye examination with every frame purchase.
+              Walk-ins welcome, or book a slot.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-ink text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-electric transition-colors">
+                Book Eye Test
+              </Link>
+              <Link to="/stores" className="inline-flex items-center gap-2 border-2 border-ink/15 px-7 py-3 rounded-full text-sm font-semibold hover:border-electric hover:text-electric transition-colors">
+                Visit a store
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -577,6 +596,30 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ============== WHY CHOOSE ============== */}
+      <section id="about" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28 bg-secondary/60 border-y border-border">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl mb-14">
+            <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Why Clear Sight</span>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tighter">
+              The trusted name in Hyderabad eyewear,{" "}
+              <span className="font-serif italic font-medium text-electric">for over a decade.</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {WHY.map((w) => (
+              <div key={w.title} className="bg-background rounded-2xl p-7 border border-border">
+                <span className="size-11 rounded-full bg-electric/10 grid place-items-center mb-5">
+                  <w.icon className="size-5 text-electric" />
+                </span>
+                <h3 className="font-bold text-lg">{w.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{w.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============== TESTIMONIALS ============== */}
       <section className="px-6 lg:px-10 py-20 lg:py-28 bg-ink text-white">
         <div className="mx-auto max-w-7xl">
@@ -605,48 +648,6 @@ function HomePage() {
                 </figcaption>
               </figure>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============== VIRTUAL TRY-ON ============== */}
-      <TryOnSection id="try-on" />
-
-      {/* ============== OFFERS CTA ============== */}
-      <section id="offers" className="scroll-mt-24 px-6 lg:px-10 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-electric text-white rounded-3xl p-10 lg:p-14 relative overflow-hidden">
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Smart Glasses</span>
-            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
-              Save up to ₹12,000 on Ray-Ban &amp; Oakley Meta.
-            </h3>
-            <p className="mt-5 text-white/85 max-w-md">
-              Launch pricing across all three Hyderabad locations. In-store only.
-            </p>
-            <Link
-              to="/offers"
-              className="mt-8 inline-flex items-center gap-2 bg-white text-electric px-7 py-3.5 rounded-full text-sm font-semibold"
-            >
-              View all offers <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-          <div className="bg-secondary rounded-3xl p-10 lg:p-14">
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-electric">Eye Test</span>
-            <h3 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
-              Comprehensive eye test, <span className="font-serif italic font-medium text-electric">on us.</span>
-            </h3>
-            <p className="mt-5 text-muted-foreground max-w-md">
-              Complimentary digital eye examination with every frame purchase.
-              Walk-ins welcome, or book a slot.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-ink text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-electric transition-colors">
-                Book Eye Test
-              </Link>
-              <Link to="/stores" className="inline-flex items-center gap-2 border-2 border-ink/15 px-7 py-3 rounded-full text-sm font-semibold hover:border-electric hover:text-electric transition-colors">
-                Visit a store
-              </Link>
-            </div>
           </div>
         </div>
       </section>
