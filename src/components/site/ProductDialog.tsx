@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { MagnifyLens } from "@/components/motion/MagnifyLens";
+import { ZoomViewer } from "@/components/motion/ZoomViewer";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ArrowUpRight } from "lucide-react";
 import type { ColorVariant } from "@/lib/brand-catalog";
@@ -32,18 +32,25 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger }: Pr
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Gallery */}
           <div className="bg-white p-6 flex flex-col gap-4">
-            <MagnifyLens
-              lensSize={160}
-              className="aspect-[3/2] flex items-center justify-center cursor-zoom-in"
-            >
-              <img
-                src={variant.images[view]}
-                alt={`${brand} ${model} — ${variant.name}, ${view} view`}
-                width={900}
-                height={320}
-                className="w-full h-auto object-contain"
-              />
-            </MagnifyLens>
+            <ZoomViewer
+              src={variant.images[view]}
+              alt={`${brand} ${model} — ${variant.name}, ${view} view`}
+              trigger={
+                <button
+                  type="button"
+                  aria-label="Open zoom view"
+                  className="aspect-[3/2] flex items-center justify-center cursor-zoom-in"
+                >
+                  <img
+                    src={variant.images[view]}
+                    alt={`${brand} ${model} — ${variant.name}, ${view} view`}
+                    width={900}
+                    height={320}
+                    className="w-full h-auto object-contain"
+                  />
+                </button>
+              }
+            />
             <div className="flex items-center justify-center gap-3">
               {ORIENTATIONS.map((o) => (
                 <button

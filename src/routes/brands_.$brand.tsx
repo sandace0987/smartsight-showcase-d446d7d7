@@ -7,7 +7,7 @@ import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ProductDialog } from "@/components/site/ProductDialog";
 import { Reveal } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
-import { MagnifyLens } from "@/components/motion/MagnifyLens";
+
 
 export const Route = createFileRoute("/brands_/$brand")({
   head: ({ params }) => {
@@ -134,7 +134,7 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
               className="my-7 block rounded-2xl bg-white p-4 cursor-zoom-in"
               aria-label={`View ${m.model} details`}
             >
-              <MagnifyLens lensSize={150} className="flex items-center justify-center h-28">
+              <div className="flex items-center justify-center h-28">
                 <img
                   src={variant.images.front}
                   alt={`${brandName} ${m.model} — ${variant.name}`}
@@ -143,17 +143,14 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
                   loading="lazy"
                   className="w-full max-w-[260px] h-auto object-contain"
                 />
-              </MagnifyLens>
+              </div>
             </button>
           }
         />
       ) : (
-        <MagnifyLens
-          lensSize={150}
-          className="my-8 flex items-center justify-center h-28 cursor-zoom-in text-foreground/85 group-hover:text-electric transition-colors"
-        >
+        <div className="my-8 flex items-center justify-center h-28 text-foreground/85 group-hover:text-electric transition-colors">
           <GlassSilhouette shape={m.shape} className="w-full max-w-[220px] h-auto" />
-        </MagnifyLens>
+        </div>
       )}
 
       <h3 className="text-xl font-bold tracking-tight">{m.model}</h3>
