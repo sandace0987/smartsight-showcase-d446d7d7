@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { MagneticButton } from "@/components/motion/MagneticButton";
-import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
+import { HOUSES } from "@/lib/brand-catalog";
 
 export const Route = createFileRoute("/brands")({
   head: () => ({
