@@ -16,27 +16,28 @@ export const Route = createFileRoute("/stores")({
 
 const STORES = [
   {
-    name: "Kukatpally Flagship",
-    tag: "Main Branch",
-    address: "Shop No 4, HIG 455 & 456, JNTU Rd, KPHB Phase 6, Kukatpally, Hyderabad, Telangana 500085",
+    name: "Kukatpally (KPHB)",
+    tag: "Flagship",
+    address: "Shop #4, Padmaja Complex, 6th Phase, JNTU Road, KPHB, Kukatpally, Hyderabad, Telangana",
+    phone: "+91 99999 99999",
+    hours: "Mon–Sun · 10:00 AM – 9:30 PM",
+  },
+  {
+    name: "Nizampet",
+    tag: "Studio",
+    address: "Beside Vazra Nirman Pushpak, Nizampet Colony, Hyderabad, Telangana",
+    phone: "+91 99999 99999",
+    hours: "Mon–Sun · 10:00 AM – 9:30 PM",
+  },
+  {
+    name: "Bowenpally",
+    tag: "Studio",
+    address: "Near Delhi Public School, Sikh Village Road, Bowenpally, Hyderabad, Telangana",
     phone: "+91 99999 99999",
     hours: "Mon–Sun · 10:00 AM – 9:00 PM",
   },
-  {
-    name: "Banjara Hills Studio",
-    tag: "Boutique",
-    address: "Road No. 12, Banjara Hills, Hyderabad, Telangana 500034",
-    phone: "+91 99999 88888",
-    hours: "Mon–Sun · 11:00 AM – 9:30 PM",
-  },
-  {
-    name: "Jubilee Hills Lounge",
-    tag: "Smart Glasses Hub",
-    address: "Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033",
-    phone: "+91 99999 77777",
-    hours: "Mon–Sun · 11:00 AM – 9:00 PM",
-  },
 ];
+
 
 function StoresPage() {
   return (
