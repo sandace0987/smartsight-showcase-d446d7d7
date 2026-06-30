@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ZoomViewer } from "@/components/motion/ZoomViewer";
+import { HoverLens } from "@/components/motion/HoverLens";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ArrowUpRight } from "lucide-react";
 import type { ColorVariant } from "@/lib/brand-catalog";
@@ -38,15 +39,16 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger }: Pr
               trigger={
                 <button
                   type="button"
-                  aria-label="Open zoom view"
-                  className="aspect-[3/2] flex items-center justify-center cursor-zoom-in"
+                  aria-label="Hover to magnify · click for fullscreen zoom"
+                  className="aspect-[3/2] block w-full overflow-hidden rounded-lg"
                 >
-                  <img
+                  <HoverLens
                     src={variant.images[view]}
                     alt={`${brand} ${model} — ${variant.name}, ${view} view`}
                     width={900}
                     height={320}
-                    className="w-full h-auto object-contain"
+                    className="h-full w-full flex items-center justify-center"
+                    imgClassName="max-h-full"
                   />
                 </button>
               }
