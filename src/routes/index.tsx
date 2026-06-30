@@ -648,14 +648,14 @@ function HomePage() {
       </section>
 
       {/* ============== TESTIMONIALS ============== */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28 bg-ink text-white">
+      <section className="px-6 lg:px-10 py-20 lg:py-28 bg-secondary/40 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tighter max-w-2xl">
               Loved by Hyderabad's{" "}
               <span className="font-serif italic font-medium text-electric">most particular wearers.</span>
             </h2>
-            <div className="hidden md:flex items-center gap-2 text-sm text-white/60">
+            <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="size-4 fill-electric text-electric" />
@@ -666,12 +666,12 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col gap-6">
+              <figure key={t.name} className="bg-card border border-border rounded-3xl p-8 flex flex-col gap-6 shadow-sm">
                 <Quote className="size-6 text-electric" />
-                <blockquote className="text-lg leading-relaxed text-white/90 flex-1">"{t.quote}"</blockquote>
+                <blockquote className="text-lg leading-relaxed text-foreground/90 flex-1">"{t.quote}"</blockquote>
                 <figcaption>
                   <p className="font-bold">{t.name}</p>
-                  <p className="text-xs text-white/50 font-serif italic mt-1">{t.context}</p>
+                  <p className="text-xs text-muted-foreground font-serif italic mt-1">{t.context}</p>
                 </figcaption>
               </figure>
             ))}
@@ -679,54 +679,56 @@ function HomePage() {
         </div>
       </section>
 
+
       {/* ============== BOOKING / CONTACT ============== */}
-      <section id="contact" className="scroll-mt-24 px-6 lg:px-10 pb-20 lg:pb-32">
-        <div className="mx-auto max-w-7xl bg-ink text-white rounded-[28px] lg:rounded-[40px] p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section id="contact" className="scroll-mt-24 px-6 lg:px-10 pt-20 lg:pt-28 pb-20 lg:pb-32">
+        <div className="mx-auto max-w-7xl bg-secondary border border-border text-foreground rounded-[28px] lg:rounded-[40px] p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 shadow-sm">
           <div className="lg:col-span-5">
             <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter leading-[1.02]">
               Book a private{" "}
               <span className="font-serif italic font-medium text-electric">consultation</span> today.
             </h2>
-            <p className="mt-6 text-white/65 max-w-md leading-relaxed">
+            <p className="mt-6 text-muted-foreground max-w-md leading-relaxed">
               Eye tests, frame styling, smart glasses demos — one of our specialists
               will be expecting you.
             </p>
-            <div className="mt-10 space-y-4 text-sm text-white/80">
+            <div className="mt-10 space-y-4 text-sm text-foreground/80">
               <p className="inline-flex items-center gap-3"><Phone className="size-4 shrink-0 text-electric" /><span>+91 94405 25789</span></p>
               <p className="inline-flex items-center gap-3"><Mail className="size-4 shrink-0 text-electric" /><span>hello@clearsight.in</span></p>
               <p className="inline-flex items-start gap-3"><MapPin className="size-4 shrink-0 text-electric mt-0.5" /><span>Kukatpally (KPHB), Nizampet, Bowenpally</span></p>
             </div>
           </div>
-          <form className="lg:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form className="lg:col-span-7 bg-card border border-border rounded-3xl p-8 lg:p-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <label className="flex flex-col gap-2 sm:col-span-1">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Full name</span>
-              <input type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-electric placeholder:text-white/30 transition-colors" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Full name</span>
+              <input type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
             </label>
             <label className="flex flex-col gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Mobile</span>
-              <input type="tel" placeholder="+91 …" className="bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-electric placeholder:text-white/30 transition-colors" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Mobile</span>
+              <input type="tel" placeholder="+91 …" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Preferred store</span>
-              <select className="bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-electric transition-colors">
-                <option className="bg-ink">Kukatpally (KPHB)</option>
-                <option className="bg-ink">Nizampet</option>
-                <option className="bg-ink">Bowenpally</option>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Preferred store</span>
+              <select className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
+                <option className="bg-card text-foreground">Kukatpally (KPHB)</option>
+                <option className="bg-card text-foreground">Nizampet</option>
+                <option className="bg-card text-foreground">Bowenpally</option>
               </select>
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">What brings you in?</span>
-              <textarea rows={3} placeholder="Eye test, smart glasses demo, frame styling…" className="bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-electric placeholder:text-white/30 transition-colors resize-none" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">What brings you in?</span>
+              <textarea rows={3} placeholder="Eye test, smart glasses demo, frame styling…" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors resize-none" />
             </label>
             <button
               type="button"
-              className="sm:col-span-2 mt-2 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:bg-white hover:text-electric transition-colors"
+              className="sm:col-span-2 mt-2 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:opacity-90 transition-opacity"
             >
               Request appointment
             </button>
           </form>
         </div>
       </section>
+
     </div>
   );
 }
