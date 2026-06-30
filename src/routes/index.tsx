@@ -2,7 +2,7 @@ import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
   ArrowUpRight,
-  Heart,
+  
   Sparkles,
   Cpu,
   Eye,
