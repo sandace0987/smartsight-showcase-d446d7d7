@@ -17,11 +17,53 @@ const NAV = [
   { to: "/", hash: "contact", label: "Contact" },
 ] as const;
 
+const SECTION_IDS = NAV.filter((n) => n.hash).map((n) => n.hash as string);
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | undefined>(undefined);
   const { location } = useRouterState();
 
   useEffect(() => setOpen(false), [location.pathname]);
+
+  // Scrollspy — highlight the nav item for the section currently in view
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSection(undefined);
+      return;
+    }
+    const sections = SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (!sections.length) return;
+
+    const visible = new Map<string, number>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.set(entry.target.id, entry.intersectionRatio);
+          else visible.delete(entry.target.id);
+        }
+        // Top of page → no section highlighted ("Home")
+        if (window.scrollY < 120) {
+          setActiveSection(undefined);
+          return;
+        }
+        let best: string | undefined;
+        let bestRatio = 0;
+        for (const [id, ratio] of visible) {
+          if (ratio >= bestRatio) {
+            bestRatio = ratio;
+            best = id;
+          }
+        }
+        if (best) setActiveSection(best);
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   const handleHashClick = (hash: string | undefined) => (e: React.MouseEvent) => {
     if (location.pathname !== "/") return; // let router handle cross-route nav
