@@ -22,10 +22,6 @@ import heroPortrait from "@/assets/hero-portrait.jpg";
 
 import raybanMetaHero from "@/assets/rayban-meta-hero.jpg";
 import oakleyMeta from "@/assets/oakley-meta.jpg";
-import productTortoise from "@/assets/product-tortoise.jpg";
-import productAviator from "@/assets/product-aviator.jpg";
-import productGoldWire from "@/assets/product-gold-wire.jpg";
-import productAzure from "@/assets/product-azure.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import { TryOnSection } from "@/components/try-on/TryOnSection";
 import { KineticHeading } from "@/components/motion/KineticHeading";
