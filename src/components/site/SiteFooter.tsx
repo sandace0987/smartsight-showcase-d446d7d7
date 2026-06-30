@@ -34,7 +34,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm">
             <li><Link to="/brands" className="hover:text-electric">Brands</Link></li>
             <li><Link to="/smart-glasses" className="hover:text-electric">Smart Glasses</Link></li>
-            <li><Link to="/offers" className="hover:text-electric">Offers</Link></li>
+            <li><Link to="/" hash="offers" className="hover:text-electric">Offers</Link></li>
             <li><Link to="/stores" className="hover:text-electric">Store Locator</Link></li>
             <li><Link to="/about" className="hover:text-electric">About</Link></li>
           </ul>
