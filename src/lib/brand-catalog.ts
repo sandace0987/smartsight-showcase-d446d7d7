@@ -34,6 +34,9 @@ import liquidBlackSide from "@/assets/products/maui-jim-liquid-sunshine/601-02_s
 import liquidRoseFront from "@/assets/products/maui-jim-liquid-sunshine/R601-04_front.webp.asset.json";
 import liquidRoseQuarter from "@/assets/products/maui-jim-liquid-sunshine/R601-04_quarter.webp.asset.json";
 import liquidRoseSide from "@/assets/products/maui-jim-liquid-sunshine/R601-04_side.webp.asset.json";
+import mekalaSilverFront from "@/assets/products/maui-jim-mekala/690-16_front.webp.asset.json";
+import mekalaSilverQuarter from "@/assets/products/maui-jim-mekala/690-16_quarter.webp.asset.json";
+import mekalaSilverSide from "@/assets/products/maui-jim-mekala/690-16_side.webp.asset.json";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export type ColorVariant = {
@@ -190,6 +193,21 @@ export const BRANDS: BrandData[] = [
             lens: "Maui Rose\u00ae",
             swatch: "linear-gradient(135deg, #4a2230 0%, #8a4a52 50%, #c98a8a 100%)",
             images: { front: liquidRoseFront.url, quarter: liquidRoseQuarter.url, side: liquidRoseSide.url },
+          },
+        ],
+      },
+      {
+        model: "Mekala",
+        shape: "rectangle",
+        colour: "Matte Silver",
+        priceFrom: 27590,
+        variants: [
+          {
+            id: "silver",
+            name: "Matte Silver",
+            lens: "Hawaii Seashine",
+            swatch: "linear-gradient(135deg, #b8bcc0 0%, #e3e6e8 50%, #9a9ea2 100%)",
+            images: { front: mekalaSilverFront.url, quarter: mekalaSilverQuarter.url, side: mekalaSilverSide.url },
           },
         ],
       },
