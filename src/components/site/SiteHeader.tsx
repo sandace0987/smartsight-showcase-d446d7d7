@@ -149,19 +149,27 @@ export function SiteHeader() {
 
         {/* Secondary nav */}
         <nav className="hidden md:flex justify-center gap-8 lg:gap-10 pb-3 -mt-1 text-[12px] font-medium uppercase tracking-[0.18em]">
-          {NAV.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              hash={item.hash}
-              onClick={handleHashClick(item.hash)}
-              activeOptions={{ exact: true, includeHash: true }}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              activeProps={{ className: "text-electric" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV.map((item) => {
+            const isActive =
+              location.pathname === "/" &&
+              (item.hash ? item.hash === activeSection : activeSection === undefined);
+            return (
+              <Link
+                key={item.label}
+                to={item.to}
+                hash={item.hash}
+                onClick={handleHashClick(item.hash)}
+                className={cn(
+                  "transition-colors",
+                  isActive
+                    ? "text-electric font-bold"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
 
