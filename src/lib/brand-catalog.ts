@@ -171,6 +171,28 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "Liquid Sunshine",
+        shape: "rectangle",
+        colour: "Black / Red Tortoise",
+        priceFrom: 13990,
+        variants: [
+          {
+            id: "black",
+            name: "Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
+            images: { front: liquidBlackFront.url, quarter: liquidBlackQuarter.url, side: liquidBlackSide.url },
+          },
+          {
+            id: "red-tortoise",
+            name: "Red Tortoise",
+            lens: "Maui Rose\u00ae",
+            swatch: "linear-gradient(135deg, #4a2230 0%, #8a4a52 50%, #c98a8a 100%)",
+            images: { front: liquidRoseFront.url, quarter: liquidRoseQuarter.url, side: liquidRoseSide.url },
+          },
+        ],
+      },
     ],
   },
   {
