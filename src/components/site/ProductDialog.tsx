@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { MagnifyLens } from "@/components/motion/MagnifyLens";
+import { ZoomViewer } from "@/components/motion/ZoomViewer";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ArrowUpRight } from "lucide-react";
 import type { ColorVariant } from "@/lib/brand-catalog";
