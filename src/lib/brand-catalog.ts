@@ -67,6 +67,28 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "Castles",
+        shape: "aviator",
+        colour: "Matte Black / Matte Chocolate",
+        priceFrom: 22290,
+        variants: [
+          {
+            id: "black",
+            name: "Matte Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #2b2b2d 0%, #4a4a4d 50%, #1a1a1c 100%)",
+            images: { front: castlesBlackFront.url, quarter: castlesBlackQuarter.url, side: castlesBlackSide.url },
+          },
+          {
+            id: "chocolate",
+            name: "Matte Chocolate",
+            lens: "HCL\u00ae Bronze",
+            swatch: "linear-gradient(135deg, #3a261a 0%, #7a4f30 50%, #b5824c 100%)",
+            images: { front: castlesChocFront.url, quarter: castlesChocQuarter.url, side: castlesChocSide.url },
+          },
+        ],
+      },
     ],
   },
   {
