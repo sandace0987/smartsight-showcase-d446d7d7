@@ -28,6 +28,12 @@ import kokuaTortoiseSide from "@/assets/products/maui-jim-kokua/H638-10_side.web
 import kokuaGreenFront from "@/assets/products/maui-jim-kokua/GM638-02_front.webp.asset.json";
 import kokuaGreenQuarter from "@/assets/products/maui-jim-kokua/GM638-02_quarter.webp.asset.json";
 import kokuaGreenSide from "@/assets/products/maui-jim-kokua/GM638-02_side.webp.asset.json";
+import liquidBlackFront from "@/assets/products/maui-jim-liquid-sunshine/601-02_front.webp.asset.json";
+import liquidBlackQuarter from "@/assets/products/maui-jim-liquid-sunshine/601-02_quarter.webp.asset.json";
+import liquidBlackSide from "@/assets/products/maui-jim-liquid-sunshine/601-02_side.webp.asset.json";
+import liquidRoseFront from "@/assets/products/maui-jim-liquid-sunshine/R601-04_front.webp.asset.json";
+import liquidRoseQuarter from "@/assets/products/maui-jim-liquid-sunshine/R601-04_quarter.webp.asset.json";
+import liquidRoseSide from "@/assets/products/maui-jim-liquid-sunshine/R601-04_side.webp.asset.json";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export type ColorVariant = {
@@ -162,6 +168,28 @@ export const BRANDS: BrandData[] = [
             lens: "MAUIGreen\u00ae",
             swatch: "linear-gradient(135deg, #0c1f12 0%, #1f6b2e 50%, #2fd25a 100%)",
             images: { front: kokuaGreenFront.url, quarter: kokuaGreenQuarter.url, side: kokuaGreenSide.url },
+          },
+        ],
+      },
+      {
+        model: "Liquid Sunshine",
+        shape: "rectangle",
+        colour: "Black / Red Tortoise",
+        priceFrom: 13990,
+        variants: [
+          {
+            id: "black",
+            name: "Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
+            images: { front: liquidBlackFront.url, quarter: liquidBlackQuarter.url, side: liquidBlackSide.url },
+          },
+          {
+            id: "red-tortoise",
+            name: "Red Tortoise",
+            lens: "Maui Rose\u00ae",
+            swatch: "linear-gradient(135deg, #4a2230 0%, #8a4a52 50%, #c98a8a 100%)",
+            images: { front: liquidRoseFront.url, quarter: liquidRoseQuarter.url, side: liquidRoseSide.url },
           },
         ],
       },
