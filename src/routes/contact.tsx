@@ -48,7 +48,10 @@ function ContactPage() {
               <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">Main Address</h3>
               <p className="text-sm text-muted-foreground leading-relaxed inline-flex items-start gap-3">
                 <MapPin className="size-5 text-electric mt-0.5" />
-                Shop No 4, HIG 455 &amp; 456, JNTU Rd, KPHB Phase 6, Kukatpally, Hyderabad, Telangana 500085
+                Shop #4, Padmaja Complex, 6th Phase, JNTU Road, KPHB, Kukatpally, Hyderabad, Telangana
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Also at Nizampet &amp; Bowenpally · Open daily 10:00 AM – 9:30 PM
               </p>
             </div>
           </aside>
@@ -69,9 +72,9 @@ function ContactPage() {
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Preferred store</span>
               <select className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
-                <option>Kukatpally Flagship</option>
-                <option>Banjara Hills Studio</option>
-                <option>Jubilee Hills Lounge</option>
+                <option>Kukatpally (KPHB)</option>
+                <option>Nizampet</option>
+                <option>Bowenpally</option>
               </select>
             </label>
             <label className="flex flex-col gap-2">
