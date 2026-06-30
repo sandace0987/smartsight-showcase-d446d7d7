@@ -156,6 +156,13 @@ export const BRANDS: BrandData[] = [
             swatch: "linear-gradient(135deg, #3a2113 0%, #7a4420 50%, #c0772f 100%)",
             images: { front: kokuaTortoiseFront.url, quarter: kokuaTortoiseQuarter.url, side: kokuaTortoiseSide.url },
           },
+          {
+            id: "black-green",
+            name: "Matte Black",
+            lens: "MAUIGreen\u00ae",
+            swatch: "linear-gradient(135deg, #0c1f12 0%, #1f6b2e 50%, #2fd25a 100%)",
+            images: { front: kokuaGreenFront.url, quarter: kokuaGreenQuarter.url, side: kokuaGreenSide.url },
+          },
         ],
       },
     ],
