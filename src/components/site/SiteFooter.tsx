@@ -45,7 +45,7 @@ export function SiteFooter() {
           <p className="text-sm text-white/70 leading-relaxed">
             Shop #4, Padmaja Complex,<br />
             6th Phase, JNTU Road, KPHB,<br />
-            Kukatpally, Hyderabad, Telangana
+            Kukatpally, Hyderabad - 500085
           </p>
           <p className="mt-3 text-sm text-white/70">
             Also at Nizampet &amp; Bowenpally · Open daily 10:00 AM – 9:30 PM
