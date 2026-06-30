@@ -61,12 +61,6 @@ export const Route = createFileRoute("/")({
 
 const BRANDS = ["RAY·BAN", "OAKLEY", "PRADA", "GUCCI", "BURBERRY", "PERSOL", "CARRERA", "TOM FORD", "VOGUE", "POLICE"];
 
-const PRODUCTS = [
-  { name: "Vanguard Tortoise", category: "Clear Sight Signature", price: "₹14,500", badge: "Best Seller", img: productTortoise },
-  { name: "Eclipse Aviator", category: "Prada Linea Rossa", price: "₹22,900", badge: "Limited", img: productAviator },
-  { name: "Aura Gold Wire", category: "Gucci Collection", price: "₹31,000", img: productGoldWire },
-  { name: "Azure Square", category: "Clear Sight Studio", price: "₹12,800", img: productAzure },
-];
 
 const COLLECTIONS = [
   { title: "Eyeglasses", count: "320+ frames" },
