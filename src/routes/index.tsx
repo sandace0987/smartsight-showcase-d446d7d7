@@ -90,21 +90,21 @@ const STORES = [
     name: "Kukatpally (KPHB)",
     tag: "Flagship",
     address: "Shop #4, Padmaja Complex, 6th Phase, JNTU Road, KPHB, Kukatpally, Hyderabad, Telangana",
-    phone: "+91 99999 99999",
+    phone: "+91 94405 25789",
     hours: "10:00 AM – 9:30 PM",
   },
   {
     name: "Nizampet",
     tag: "Studio",
     address: "Beside Vazra Nirman Pushpak, Nizampet Colony, Hyderabad, Telangana",
-    phone: "+91 99999 99999",
+    phone: "+91 94405 25789",
     hours: "10:00 AM – 9:30 PM",
   },
   {
     name: "Bowenpally",
     tag: "Studio",
     address: "Near Delhi Public School, Sikh Village Road, Bowenpally, Hyderabad, Telangana",
-    phone: "+91 99999 99999",
+    phone: "+91 94405 25789",
     hours: "10:00 AM – 9:00 PM",
   },
 ];
@@ -664,7 +664,7 @@ function HomePage() {
               will be expecting you.
             </p>
             <div className="mt-10 space-y-4 text-sm text-white/80">
-              <p className="inline-flex items-center gap-3"><Phone className="size-4 shrink-0 text-electric" /><span>+91 99999 99999</span></p>
+              <p className="inline-flex items-center gap-3"><Phone className="size-4 shrink-0 text-electric" /><span>+91 94405 25789</span></p>
               <p className="inline-flex items-center gap-3"><Mail className="size-4 shrink-0 text-electric" /><span>hello@clearsight.in</span></p>
               <p className="inline-flex items-start gap-3"><MapPin className="size-4 shrink-0 text-electric mt-0.5" /><span>Kukatpally (KPHB), Nizampet, Bowenpally</span></p>
             </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Phone, Send } from "lucide-react";
 
-const SHOP_WHATSAPP = "919999999999"; // shop number, digits only, country code first
+const SHOP_WHATSAPP = "919440525789"; // shop number, digits only, country code first
 
 type Props = {
   brand: string;

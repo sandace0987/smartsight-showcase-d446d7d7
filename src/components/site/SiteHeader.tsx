@@ -63,7 +63,7 @@ export function SiteHeader() {
           {/* Desktop right */}
           <div className="hidden md:flex flex-1 items-center justify-end gap-3">
             <a
-              href="tel:+919999999999"
+              href="tel:+919440525789"
               className="hidden lg:inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-4 py-2 text-sm font-medium hover:bg-foreground hover:text-background transition-colors"
             >
               <Phone className="size-4" /> Call

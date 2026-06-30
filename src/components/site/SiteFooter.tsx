@@ -50,8 +50,8 @@ export function SiteFooter() {
           <p className="mt-3 text-sm text-white/70">
             Also at Nizampet &amp; Bowenpally · Open daily 10:00 AM – 9:30 PM
           </p>
-          <a href="tel:+919999999999" className="mt-4 inline-block text-sm font-semibold text-white hover:text-electric">
-            +91 99999 99999
+          <a href="tel:+919440525789" className="mt-4 inline-block text-sm font-semibold text-white hover:text-electric">
+            +91 94405 25789
           </a>
         </div>
       </div>

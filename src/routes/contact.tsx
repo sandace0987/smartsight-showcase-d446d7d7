@@ -27,13 +27,13 @@ function ContactPage() {
           <aside className="lg:col-span-4 space-y-8">
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">Call</h3>
-              <a href="tel:+919999999999" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
-                <Phone className="size-5 text-electric" /> +91 99999 99999
+              <a href="tel:+919440525789" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
+                <Phone className="size-5 text-electric" /> +91 94405 25789
               </a>
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">WhatsApp</h3>
-              <a href="https://wa.me/919999999999" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
+              <a href="https://wa.me/919440525789" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
                 <MessageCircle className="size-5 text-electric" /> Chat with us
               </a>
             </div>
