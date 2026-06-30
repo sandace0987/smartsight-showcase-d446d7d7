@@ -107,3 +107,90 @@ function BrandPage() {
     </div>
   );
 }
+
+function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brandName: string }) {
+  const hasVariants = !!m.variants && m.variants.length > 0;
+  const [variantId, setVariantId] = React.useState(m.variants?.[0].id ?? "");
+  const variant = m.variants?.find((v) => v.id === variantId) ?? m.variants?.[0];
+
+  return (
+    <article className="group bg-secondary/60 border border-border rounded-3xl p-7 flex flex-col h-full">
+      <div className="flex items-start justify-between">
+        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+          0{index + 1}
+        </span>
+        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-electric">{m.shape}</span>
+      </div>
+
+      {hasVariants && variant ? (
+        <ProductDialog
+          brand={brandName}
+          model={m.model}
+          priceFrom={m.priceFrom}
+          variants={m.variants!}
+          trigger={
+            <button
+              type="button"
+              className="my-7 block rounded-2xl bg-white p-4 cursor-zoom-in"
+              aria-label={`View ${m.model} details`}
+            >
+              <MagnifyLens zoom={2.4} lensSize={150} className="flex items-center justify-center h-28">
+                <img
+                  src={variant.images.front}
+                  alt={`${brandName} ${m.model} — ${variant.name}`}
+                  width={900}
+                  height={320}
+                  loading="lazy"
+                  className="w-full max-w-[260px] h-auto object-contain"
+                />
+              </MagnifyLens>
+            </button>
+          }
+        />
+      ) : (
+        <MagnifyLens
+          zoom={2.4}
+          lensSize={150}
+          className="my-8 flex items-center justify-center h-28 cursor-zoom-in text-foreground/85 group-hover:text-electric transition-colors"
+        >
+          <GlassSilhouette shape={m.shape} className="w-full max-w-[220px] h-auto" />
+        </MagnifyLens>
+      )}
+
+      <h3 className="text-xl font-bold tracking-tight">{m.model}</h3>
+      <p className="text-xs text-muted-foreground mt-1 font-serif italic">
+        {hasVariants && variant ? variant.name : m.colour}
+      </p>
+      <p className="text-sm font-semibold mt-3">From ₹{m.priceFrom.toLocaleString("en-IN")}</p>
+
+      {hasVariants && (
+        <div className="mt-3 flex items-center gap-2">
+          {m.variants!.map((v) => (
+            <button
+              key={v.id}
+              type="button"
+              onClick={() => setVariantId(v.id)}
+              aria-label={v.name}
+              title={v.name}
+              className={`size-6 rounded-full border transition-all ${
+                v.id === variantId ? "ring-2 ring-electric ring-offset-2 ring-offset-secondary border-transparent" : "border-border"
+              }`}
+              style={{ background: v.swatch }}
+            />
+          ))}
+        </div>
+      )}
+
+      <EnquireDialog
+        brand={brandName}
+        model={m.model}
+        colour={hasVariants && variant ? variant.name : undefined}
+        trigger={
+          <button className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-ink text-white py-3 rounded-full text-[11px] font-bold uppercase tracking-[0.18em] hover:bg-electric transition-colors">
+            Enquire <ArrowUpRight className="size-3.5" />
+          </button>
+        }
+      />
+    </article>
+  );
+}
