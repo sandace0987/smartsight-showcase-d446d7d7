@@ -71,6 +71,12 @@ function BrandPage() {
             ) : (
               <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter">{brand.name}</h1>
             )}
+            {brand.slug === "maui-jim" && (
+              <div className="mt-4 inline-flex items-center gap-2 bg-electric/10 border border-electric/30 text-electric rounded-full px-3 py-1.5 text-xs font-semibold">
+                <span className="size-1.5 rounded-full bg-electric animate-pulse" />
+                Leading supplier in Hyderabad &amp; nearby areas
+              </div>
+            )}
             <p className="mt-5 text-muted-foreground max-w-2xl text-lg">{brand.blurb}</p>
           </div>
           <div className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">

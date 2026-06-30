@@ -62,12 +62,6 @@ function BrandsPage() {
                   <p className="mt-4 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
                     {h.note}
                   </p>
-                  {h.slug === "maui-jim" && (
-                    <div className="mt-4 inline-flex items-center gap-2 bg-electric/10 border border-electric/30 text-electric rounded-full px-3 py-1.5 text-xs font-semibold">
-                      <span className="size-1.5 rounded-full bg-electric animate-pulse" />
-                      Leading supplier in Hyderabad &amp; nearby areas
-                    </div>
-                  )}
                 </Link>
               </TiltCard>
             </Reveal>
