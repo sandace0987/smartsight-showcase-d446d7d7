@@ -4,6 +4,12 @@ import crystalSide from "@/assets/products/maui-jim-alika/crystal-side.webp.asse
 import tortoiseFront from "@/assets/products/maui-jim-alika/tortoise-front.webp.asset.json";
 import tortoiseQuarter from "@/assets/products/maui-jim-alika/tortoise-quarter.webp.asset.json";
 import tortoiseSide from "@/assets/products/maui-jim-alika/tortoise-side.webp.asset.json";
+import castlesBlackFront from "@/assets/products/maui-jim-castles/728-2M_front.webp.asset.json";
+import castlesBlackQuarter from "@/assets/products/maui-jim-castles/728-2M_quarter.webp.asset.json";
+import castlesBlackSide from "@/assets/products/maui-jim-castles/728-2M_side.webp.asset.json";
+import castlesChocFront from "@/assets/products/maui-jim-castles/H728-01M_front.webp.asset.json";
+import castlesChocQuarter from "@/assets/products/maui-jim-castles/H728-01M_quarter.webp.asset.json";
+import castlesChocSide from "@/assets/products/maui-jim-castles/H728-01M_side.webp.asset.json";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export type ColorVariant = {
@@ -58,6 +64,28 @@ export const BRANDS: BrandData[] = [
             lens: "HCL\u00ae Bronze",
             swatch: "linear-gradient(135deg, #5a3320 0%, #8a5230 50%, #c08a4a 100%)",
             images: { front: tortoiseFront.url, quarter: tortoiseQuarter.url, side: tortoiseSide.url },
+          },
+        ],
+      },
+      {
+        model: "Castles",
+        shape: "aviator",
+        colour: "Matte Black / Matte Chocolate",
+        priceFrom: 22290,
+        variants: [
+          {
+            id: "black",
+            name: "Matte Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #2b2b2d 0%, #4a4a4d 50%, #1a1a1c 100%)",
+            images: { front: castlesBlackFront.url, quarter: castlesBlackQuarter.url, side: castlesBlackSide.url },
+          },
+          {
+            id: "chocolate",
+            name: "Matte Chocolate",
+            lens: "HCL\u00ae Bronze",
+            swatch: "linear-gradient(135deg, #3a261a 0%, #7a4f30 50%, #b5824c 100%)",
+            images: { front: castlesChocFront.url, quarter: castlesChocQuarter.url, side: castlesChocSide.url },
           },
         ],
       },
