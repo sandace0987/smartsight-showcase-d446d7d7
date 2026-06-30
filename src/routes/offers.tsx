@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/offers")({
   head: () => ({
     meta: [
-      { title: "Offers — Clear Sight Opticians" },
+      { title: "Offers | Clear Sight Opticians" },
       { name: "description", content: "Limited-time deals on Ray-Ban Meta, Oakley Meta, luxury frames and complete prescription packages." },
-      { property: "og:title", content: "Offers — Clear Sight Opticians" },
+      { property: "og:title", content: "Offers | Clear Sight Opticians" },
       { property: "og:description", content: "Premium eyewear deals across all Hyderabad branches." },
     ],
   }),
@@ -31,7 +31,7 @@ function OffersPage() {
           Limited-time <span className="font-serif italic font-medium text-electric">offers.</span>
         </h1>
         <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
-          Quietly generous deals on the brands you love — refreshed every season,
+          Quietly generous deals on the brands you love, refreshed every season,
           honoured at every branch.
         </p>
 

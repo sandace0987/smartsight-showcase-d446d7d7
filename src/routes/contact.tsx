@@ -4,9 +4,9 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Book Eye Test — Clear Sight Opticians" },
+      { title: "Contact & Book Eye Test | Clear Sight Opticians" },
       { name: "description", content: "Book an eye test, smart glasses demo or styling consultation at Clear Sight Opticians, Hyderabad." },
-      { property: "og:title", content: "Contact & Book — Clear Sight Opticians" },
+      { property: "og:title", content: "Contact & Book | Clear Sight Opticians" },
       { property: "og:description", content: "Get in touch or reserve a private consultation." },
     ],
   }),

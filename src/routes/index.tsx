@@ -39,13 +39,13 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clear Sight Opticians — Luxury Eyewear & Smart Glasses in Hyderabad" },
+      { title: "Clear Sight Opticians | Luxury Eyewear & Smart Glasses in Hyderabad" },
       {
         name: "description",
         content:
           "Curated luxury frames, smart eyewear and clinical eye care across Hyderabad. Ray-Ban Meta & Oakley Meta now with launch pricing.",
       },
-      { property: "og:title", content: "Clear Sight Opticians — Luxury Eyewear in Hyderabad" },
+      { property: "og:title", content: "Clear Sight Opticians | Luxury Eyewear in Hyderabad" },
       {
         property: "og:description",
         content: "Premium prescription glasses, sunglasses, contact lenses and smart eyewear.",
@@ -78,7 +78,7 @@ const COLLECTIONS = [
 
 const WHY = [
   { icon: Eye, title: "Expert optical guidance", desc: "Certified optometrists with 15+ years on the floor." },
-  { icon: Gem, title: "Luxury & designer brands", desc: "From Prada to Persol — the world's finest, in one place." },
+  { icon: Gem, title: "Luxury & designer brands", desc: "From Prada to Persol, the world's finest, in one place." },
   { icon: Cpu, title: "Smart eyewear, fitted", desc: "Ray-Ban Meta & Oakley Meta with on-site demos." },
   { icon: Store, title: "Multi-store convenience", desc: "Three Hyderabad locations, same expert care." },
   { icon: ShieldCheck, title: "Lifetime fitting service", desc: "Free adjustments and tune-ups, forever." },
@@ -112,7 +112,7 @@ const STORES = [
 const TESTIMONIALS = [
   {
     quote:
-      "Picked up the Ray-Ban Meta at Kukatpally — the team walked me through every feature, fitted them, and even helped with the app. Genuinely premium.",
+      "Picked up the Ray-Ban Meta at Kukatpally. The team walked me through every feature, fitted them, and even helped with the app. Genuinely premium.",
     name: "Aarav Reddy",
     context: "Purchased Ray-Ban Meta Wayfarer",
   },
@@ -272,7 +272,7 @@ function HomePage() {
               >
                 <p className="text-white/85 text-base sm:text-lg max-w-md leading-relaxed">
                   Premium eyewear curated for the visionary. Discover Ray-Ban Meta,
-                  Oakley Meta and the world's finest luxury frames — fitted by experts.
+                  Oakley Meta and the world's finest luxury frames, fitted by experts.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <MagneticButton>
@@ -345,7 +345,7 @@ function HomePage() {
               <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
             </h2>
             <p className="mt-6 text-white/70 text-base sm:text-lg max-w-md leading-relaxed">
-              Capture, call, and ask Meta AI — without ever reaching for your phone. The Wayfarer you know, reimagined.
+              Capture, call, and ask Meta AI without ever reaching for your phone. The Wayfarer you know, reimagined.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="bg-electric text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-ink transition-colors">
@@ -381,7 +381,7 @@ function HomePage() {
                 Performance
               </span>
               <h3 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight max-w-md">
-                Oakley Meta — for the way you move.
+                Oakley Meta, for the way you move.
               </h3>
             </div>
             <div className="relative flex flex-wrap items-center justify-between gap-4">
@@ -418,7 +418,7 @@ function HomePage() {
                 Hand-picked, this season.
               </h2>
               <p className="text-muted-foreground mt-3 max-w-lg">
-                A small, considered edit from the world's best houses — and our own studio.
+                A small, considered edit from the world's best houses and our own studio.
               </p>
             </div>
             <Link to="/brands" className="text-sm font-bold border-b-2 border-electric pb-1 tracking-[0.2em] uppercase w-fit">
@@ -660,7 +660,7 @@ function HomePage() {
               <span className="font-serif italic font-medium text-electric">consultation</span> today.
             </h2>
             <p className="mt-6 text-white/65 max-w-md leading-relaxed">
-              Eye tests, frame styling, smart glasses demos — one of our specialists
+              Eye tests, frame styling, smart glasses demos. One of our specialists
               will be expecting you.
             </p>
             <div className="mt-10 space-y-4 text-sm text-white/80">

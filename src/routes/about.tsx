@@ -5,9 +5,9 @@ import storeInterior from "@/assets/store-interior.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Clear Sight Opticians" },
-      { name: "description", content: "Hyderabad's trusted optical destination since 2012 — curated luxury eyewear and clinical eye care." },
-      { property: "og:title", content: "About — Clear Sight Opticians" },
+      { title: "About | Clear Sight Opticians" },
+      { name: "description", content: "Hyderabad's trusted optical destination since 2012, curated luxury eyewear and clinical eye care." },
+      { property: "og:title", content: "About | Clear Sight Opticians" },
       { property: "og:description", content: "A decade of vision care, fitted by experts." },
     ],
   }),
@@ -31,7 +31,7 @@ function AboutPage() {
             A quiet obsession with <span className="font-serif italic font-medium text-electric">how you see, and how you're seen.</span>
           </h1>
           <p className="mt-8 text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Clear Sight Opticians began in Kukatpally in 2012 with a simple idea — that
+            Clear Sight Opticians began in Kukatpally in 2012 with a simple idea, that
             buying glasses in Hyderabad should feel as considered as the frames themselves.
             Twelve years on, we run three studios, fit more than fifty premium and luxury
             houses, and remain the first Hyderabad address for Ray-Ban Meta and Oakley Meta.
@@ -64,7 +64,7 @@ function AboutPage() {
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
               We carry fewer frames than a department store on purpose. Every house on our
-              wall earns its place — through craft, design or sheer originality. The result
+              wall earns its place, through craft, design or sheer originality. The result
               is a smaller, sharper edit, and a buying experience that respects your time.
             </p>
           </div>
@@ -75,7 +75,7 @@ function AboutPage() {
             <p className="mt-5 text-muted-foreground leading-relaxed">
               Our optometrists are senior, certified and unhurried. Eye tests take as long
               as they need to. Lens fitting happens on-site, in our own lab. And the styling
-              conversation is yours to lead — we just bring the options.
+              conversation is yours to lead. We just bring the options.
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ function AboutPage() {
       <section className="px-6 lg:px-10 pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl bg-ink text-white rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           <h2 className="text-3xl lg:text-5xl font-bold tracking-tighter max-w-2xl">
-            Come say hello — at any of our three Hyderabad studios.
+            Come say hello at any of our three Hyderabad studios.
           </h2>
           <Link to="/stores" className="bg-electric text-white px-8 py-4 rounded-full text-sm font-semibold inline-flex items-center gap-2">
             Find a store <ArrowUpRight className="size-4" />

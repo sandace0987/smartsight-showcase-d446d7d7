@@ -6,10 +6,10 @@ import oakleyMeta from "@/assets/oakley-meta.jpg";
 export const Route = createFileRoute("/smart-glasses")({
   head: () => ({
     meta: [
-      { title: "Smart Glasses — Ray-Ban Meta & Oakley Meta | Clear Sight" },
+      { title: "Smart Glasses | Ray-Ban Meta & Oakley Meta | Clear Sight" },
       { name: "description", content: "Ray-Ban Meta and Oakley Meta smart glasses with launch pricing. In-store demos across Hyderabad." },
-      { property: "og:title", content: "Smart Glasses — Ray-Ban Meta & Oakley Meta" },
-      { property: "og:description", content: "Hands-free capture, calls and Meta AI — in the frames you already love." },
+      { property: "og:title", content: "Smart Glasses | Ray-Ban Meta & Oakley Meta" },
+      { property: "og:description", content: "Hands-free capture, calls and Meta AI in the frames you already love." },
     ],
   }),
   component: SmartGlassesPage,
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/smart-glasses")({
 
 const FEATURES = [
   { icon: Camera, title: "12MP camera", desc: "Capture POV photo & 1080p video, hands-free." },
-  { icon: Headphones, title: "Open-ear audio", desc: "Music and calls — without earbuds in." },
+  { icon: Headphones, title: "Open-ear audio", desc: "Music and calls, without earbuds in." },
   { icon: Cpu, title: "Meta AI", desc: "Ask, translate and identify, in real time." },
   { icon: Mic, title: "5-mic array", desc: "Studio-clear voice for calls and recording." },
   { icon: BatteryCharging, title: "All-day case", desc: "Up to 36 hours via the charging case." },
@@ -34,7 +34,7 @@ function SmartGlassesPage() {
             Eyewear that <span className="font-serif italic font-medium text-electric">listens, looks</span> and remembers.
           </h1>
           <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
-            Ray-Ban Meta and Oakley Meta — the iconic silhouettes you know, with Meta AI,
+            Ray-Ban Meta and Oakley Meta, the iconic silhouettes you know, with Meta AI,
             an ultra-wide camera and open-ear audio built in. Now with launch pricing
             across all three Hyderabad branches.
           </p>
@@ -51,7 +51,7 @@ function SmartGlassesPage() {
             <h2 className="mt-6 text-4xl lg:text-5xl font-bold tracking-tighter">
               Ray-Ban Meta <span className="font-serif italic font-medium text-electric">Wayfarer</span>
             </h2>
-            <p className="mt-3 text-muted-foreground max-w-md">The icon, reimagined. Smart silently — looks unmistakably Ray-Ban.</p>
+            <p className="mt-3 text-muted-foreground max-w-md">The icon, reimagined. Smart silently, looks unmistakably Ray-Ban.</p>
             <div className="mt-auto pt-8 grid grid-cols-2 items-end gap-6">
               <img src={raybanMeta} alt="Ray-Ban Meta Wayfarer" width={1024} height={1024} loading="lazy" className="w-full rounded-2xl bg-white" />
               <div>
@@ -73,7 +73,7 @@ function SmartGlassesPage() {
             <h2 className="mt-6 text-4xl lg:text-5xl font-bold tracking-tighter">
               Oakley Meta <span className="font-serif italic font-medium text-electric">HSTN</span>
             </h2>
-            <p className="mt-3 text-white/65 max-w-md">Built for the way you move. Capture, listen, talk to AI — without breaking stride.</p>
+            <p className="mt-3 text-white/65 max-w-md">Built for the way you move. Capture, listen, talk to AI, without breaking stride.</p>
             <div className="mt-auto pt-8 grid grid-cols-2 items-end gap-6">
               <img src={oakleyMeta} alt="Oakley Meta HSTN" width={1024} height={1024} loading="lazy" className="w-full rounded-2xl" />
               <div>
@@ -115,7 +115,7 @@ function SmartGlassesPage() {
               Book a private smart glasses demo.
             </h2>
             <p className="mt-4 text-white/85 max-w-lg">
-              Try Meta AI, capture and audio in person — at any of our three Hyderabad studios.
+              Try Meta AI, capture and audio in person at any of our three Hyderabad studios.
             </p>
           </div>
           <Link to="/contact" className="bg-white text-electric px-8 py-4 rounded-full text-sm font-semibold inline-flex items-center gap-2">

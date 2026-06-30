@@ -36,7 +36,7 @@ export function TryOnSection({ id }: Props) {
               <Sparkles className="size-3.5" /> Virtual Try-On · Live
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
-              See how they look —{" "}
+              See how they look,{" "}
               <span className="font-serif italic font-medium text-electric">
                 no appointment needed.
               </span>

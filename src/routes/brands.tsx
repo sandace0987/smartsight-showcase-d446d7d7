@@ -8,9 +8,9 @@ import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 export const Route = createFileRoute("/brands")({
   head: () => ({
     meta: [
-      { title: "Brands — Clear Sight Opticians" },
-      { name: "description", content: "Maui Jim, Ray-Ban, Oakley, Prada, Gucci, Persol and more — curated luxury eyewear in Hyderabad." },
-      { property: "og:title", content: "Brands — Clear Sight Opticians" },
+      { title: "Brands | Clear Sight Opticians" },
+      { name: "description", content: "Maui Jim, Ray-Ban, Oakley, Prada, Gucci, Persol and more, curated luxury eyewear in Hyderabad." },
+      { property: "og:title", content: "Brands | Clear Sight Opticians" },
       { property: "og:description", content: "Curated luxury eyewear houses, in one place." },
     ],
   }),
@@ -42,7 +42,7 @@ function BrandsPage() {
           A curated edit of the world's <span className="font-serif italic font-medium text-electric">finest eyewear.</span>
         </h1>
         <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
-          From Italian ateliers to American icons — each brand we carry is hand-selected
+          From Italian ateliers to American icons, each brand we carry is hand-selected
           and stocked across our three Hyderabad studios.
         </p>
 
@@ -89,7 +89,7 @@ function BrandsPage() {
               Looking for a brand we haven't listed?
             </h2>
             <p className="text-white/65 mt-3 max-w-lg">
-              We source on request — tell us what you're after.
+              We source on request, tell us what you're after.
             </p>
           </div>
           <MagneticButton>

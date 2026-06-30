@@ -27,7 +27,7 @@ export function EnquireDialog({ brand, model, colour: initialColour, trigger }: 
 
   const buildMessage = (withDetails: boolean) => {
     if (!withDetails) {
-      return `Hi Clear Sight Opticians, I'd like to enquire about the ${brand} — ${model}.`;
+      return `Hi Clear Sight Opticians, I'd like to enquire about the ${brand} ${model}.`;
     }
     return [
       `Hi Clear Sight Opticians, I'd like to enquire about:`,
@@ -53,7 +53,7 @@ export function EnquireDialog({ brand, model, colour: initialColour, trigger }: 
       <DialogContent className="max-w-lg sm:rounded-2xl">
         <DialogHeader className="pr-28">
           <DialogTitle className="text-xl font-bold tracking-tight">
-            Enquire — {brand}
+            Enquire · {brand}
             <span className="block text-xs font-medium uppercase tracking-[0.22em] text-electric mt-1">{model}</span>
           </DialogTitle>
         </DialogHeader>
@@ -93,9 +93,9 @@ export function EnquireDialog({ brand, model, colour: initialColour, trigger }: 
             <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">Prescription needed?</span>
             <select value={prescription} onChange={(e) => setPrescription(e.target.value)} className="bg-transparent border-b border-border py-2 focus:outline-none focus:border-electric transition-colors">
               <option>No</option>
-              <option>Yes — single vision</option>
-              <option>Yes — progressive</option>
-              <option>Yes — reading</option>
+              <option>Yes, single vision</option>
+              <option>Yes, progressive</option>
+              <option>Yes, reading</option>
             </select>
           </label>
           <label className="flex flex-col gap-1.5 sm:col-span-2">

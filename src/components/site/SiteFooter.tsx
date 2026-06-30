@@ -13,7 +13,7 @@ export function SiteFooter() {
             className="h-16 w-auto mb-6 brightness-0 invert opacity-90"
           />
           <p className="text-white/60 max-w-sm leading-relaxed">
-            The premier optical destination in Hyderabad — luxury frames, smart eyewear
+            The premier optical destination in Hyderabad: luxury frames, smart eyewear
             and clinical-grade eye care, fitted by experts.
           </p>
           <div className="mt-6 flex gap-4">

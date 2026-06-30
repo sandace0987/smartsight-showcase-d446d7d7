@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Clear Sight Opticians — Luxury Eyewear & Smart Glasses in Hyderabad" },
+      { title: "Clear Sight Opticians | Luxury Eyewear & Smart Glasses in Hyderabad" },
       { name: "description", content: "Hyderabad's premium destination for luxury eyewear, prescription glasses, sunglasses, contact lenses and Ray-Ban Meta & Oakley Meta smart glasses." },
       { name: "author", content: "Clear Sight Opticians" },
-      { property: "og:title", content: "Clear Sight Opticians — Luxury Eyewear & Smart Glasses" },
+      { property: "og:title", content: "Clear Sight Opticians | Luxury Eyewear & Smart Glasses" },
       { property: "og:description", content: "Curated luxury frames and next-generation smart glasses, fitted by experts across Hyderabad." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

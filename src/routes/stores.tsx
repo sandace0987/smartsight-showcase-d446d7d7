@@ -5,9 +5,9 @@ import storeInterior from "@/assets/store-interior.jpg";
 export const Route = createFileRoute("/stores")({
   head: () => ({
     meta: [
-      { title: "Stores — Clear Sight Opticians, Hyderabad" },
+      { title: "Stores | Clear Sight Opticians, Hyderabad" },
       { name: "description", content: "Visit Clear Sight Opticians in Kukatpally (KPHB), Nizampet and Bowenpally, Hyderabad." },
-      { property: "og:title", content: "Stores — Clear Sight Opticians, Hyderabad" },
+      { property: "og:title", content: "Stores | Clear Sight Opticians, Hyderabad" },
       { property: "og:description", content: "Three Hyderabad studios. One standard of care." },
     ],
   }),
@@ -48,7 +48,7 @@ function StoresPage() {
           Three Hyderabad <span className="font-serif italic font-medium text-electric">studios.</span>
         </h1>
         <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
-          Walk-ins welcome. Bring your prescription — or get one done with us, on the house.
+          Walk-ins welcome. Bring your prescription, or get one done with us, on the house.
         </p>
 
         <div className="mt-16 flex flex-col gap-6">

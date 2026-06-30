@@ -36,7 +36,7 @@ export const BRANDS: BrandData[] = [
     slug: "maui-jim",
     name: "Maui Jim",
     tag: "Hawaii-born",
-    blurb: "Born on Wailea Beach in 1980. PolarizedPlus2® lenses cut glare and pump colour — sunglasses engineered for island light.",
+    blurb: "Born on Wailea Beach in 1980. PolarizedPlus2® lenses cut glare and pump colour, sunglasses engineered for island light.",
     logo: mauiJimLogo.url,
     models: [
       {
@@ -67,7 +67,7 @@ export const BRANDS: BrandData[] = [
     slug: "ray-ban",
     name: "Ray-Ban",
     tag: "American icon",
-    blurb: "Since 1937. The original Aviator and Wayfarer — engineered in Italy, worn worldwide.",
+    blurb: "Since 1937. The original Aviator and Wayfarer, engineered in Italy, worn worldwide.",
     models: [
       { model: "Wayfarer Classic", shape: "wayfarer", colour: "Black", priceFrom: 8490 },
       { model: "Aviator Gold", shape: "aviator", colour: "Gold / Green G-15", priceFrom: 9990 },
@@ -81,7 +81,7 @@ export const BRANDS: BrandData[] = [
     slug: "oakley",
     name: "Oakley",
     tag: "Performance",
-    blurb: "Sport-built optics with Prizm lens tech — for the road, the trail and the everyday.",
+    blurb: "Sport-built optics with Prizm lens tech for the road, the trail and the everyday.",
     models: [
       { model: "Holbrook", shape: "wayfarer", colour: "Matte Black / Prizm", priceFrom: 11990 },
       { model: "Radar EV Path", shape: "shield", colour: "Polished Black", priceFrom: 16990 },
@@ -95,7 +95,7 @@ export const BRANDS: BrandData[] = [
     slug: "prada",
     name: "Prada",
     tag: "Italian luxury",
-    blurb: "Linea Rossa, Symbole and the iconic triangle plaque — refined, sculptural Milanese eyewear.",
+    blurb: "Linea Rossa, Symbole and the iconic triangle plaque. Refined, sculptural Milanese eyewear.",
     models: [
       { model: "Symbole Oval", shape: "oversized", colour: "Black / Smoke", priceFrom: 28990 },
       { model: "Linea Rossa Sport", shape: "shield", colour: "Rubber Black", priceFrom: 22990 },
@@ -109,7 +109,7 @@ export const BRANDS: BrandData[] = [
     slug: "gucci",
     name: "Gucci",
     tag: "Italian luxury",
-    blurb: "Maximalist Florence — oversized silhouettes, GG monograms and web-stripe temples.",
+    blurb: "Maximalist Florence: oversized silhouettes, GG monograms and web-stripe temples.",
     models: [
       { model: "GG Oversized Square", shape: "oversized", colour: "Black / Gold", priceFrom: 29990 },
       { model: "Web Cat-Eye", shape: "cateye", colour: "Havana / Web", priceFrom: 27490 },
@@ -137,7 +137,7 @@ export const BRANDS: BrandData[] = [
     slug: "persol",
     name: "Persol",
     tag: "Handmade Italy",
-    blurb: "Turin's craft house — Meflecto temples, crystal lenses and the unmistakable arrow.",
+    blurb: "Turin's craft house: Meflecto temples, crystal lenses and the unmistakable arrow.",
     models: [
       { model: "649 Original", shape: "rectangle", colour: "Havana / Crystal Green", priceFrom: 21990 },
       { model: "714 Folding", shape: "wayfarer", colour: "Black / Polar", priceFrom: 26990 },
@@ -179,7 +179,7 @@ export const BRANDS: BrandData[] = [
     slug: "vogue-eyewear",
     name: "Vogue Eyewear",
     tag: "Fashion forward",
-    blurb: "Trend-led capsules co-designed with style icons — accessible fashion eyewear.",
+    blurb: "Trend-led capsules co-designed with style icons. Accessible fashion eyewear.",
     models: [
       { model: "Gigi Cat-Eye", shape: "cateye", colour: "Tortoise", priceFrom: 5990 },
       { model: "Hailey Square", shape: "rectangle", colour: "Black", priceFrom: 5490 },
@@ -193,7 +193,7 @@ export const BRANDS: BrandData[] = [
     slug: "police",
     name: "Police",
     tag: "Italian cool",
-    blurb: "Streetwise Italian style — sport meets lifestyle with attitude.",
+    blurb: "Streetwise Italian style where sport meets lifestyle with attitude.",
     models: [
       { model: "Origins Aviator", shape: "aviator", colour: "Gunmetal", priceFrom: 7990 },
       { model: "Lewis Rectangle", shape: "rectangle", colour: "Matte Black", priceFrom: 6990 },
@@ -207,7 +207,7 @@ export const BRANDS: BrandData[] = [
     slug: "fastrack",
     name: "Fastrack",
     tag: "Everyday",
-    blurb: "Light, durable, affordable — designed for everyday Indian wear.",
+    blurb: "Light, durable and affordable, designed for everyday Indian wear.",
     models: [
       { model: "Wayfarer Pop", shape: "wayfarer", colour: "Black", priceFrom: 1495 },
       { model: "Round Metal", shape: "round", colour: "Gold", priceFrom: 1295 },
@@ -221,7 +221,7 @@ export const BRANDS: BrandData[] = [
     slug: "titan-eyeplus",
     name: "Titan Eyeplus",
     tag: "Indian premium",
-    blurb: "Quietly premium optical favourites — clean Indian design, all-day comfort.",
+    blurb: "Quietly premium optical favourites with clean Indian design and all-day comfort.",
     models: [
       { model: "Classic Rectangle", shape: "rectangle", colour: "Black", priceFrom: 2990 },
       { model: "Round Heritage", shape: "round", colour: "Havana", priceFrom: 3290 },
