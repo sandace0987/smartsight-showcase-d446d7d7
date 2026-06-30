@@ -60,7 +60,17 @@ function BrandPage() {
         <div className="mt-6 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
             <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">{brand.tag}</span>
-            <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter">{brand.name}</h1>
+            {brand.logo ? (
+              <img
+                src={brand.logo}
+                alt={`${brand.name} logo`}
+                width={420}
+                height={210}
+                className="mt-4 h-16 lg:h-24 w-auto object-contain object-left dark:invert"
+              />
+            ) : (
+              <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter">{brand.name}</h1>
+            )}
             <p className="mt-5 text-muted-foreground max-w-2xl text-lg">{brand.blurb}</p>
           </div>
           <div className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
