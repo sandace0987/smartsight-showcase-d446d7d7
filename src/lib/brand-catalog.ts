@@ -16,6 +16,15 @@ import hookipaBlackSide from "@/assets/products/maui-jim-hookipa/407-02_side.web
 import hookipaBlueFront from "@/assets/products/maui-jim-hookipa/B407-11_front.webp.asset.json";
 import hookipaBlueQuarter from "@/assets/products/maui-jim-hookipa/B407-11_quarter.webp.asset.json";
 import hookipaBlueSide from "@/assets/products/maui-jim-hookipa/B407-11_side.webp.asset.json";
+import kokuaBlackFront from "@/assets/products/maui-jim-kokua/638-02_front.webp.asset.json";
+import kokuaBlackQuarter from "@/assets/products/maui-jim-kokua/638-02_quarter.webp.asset.json";
+import kokuaBlackSide from "@/assets/products/maui-jim-kokua/638-02_side.webp.asset.json";
+import kokuaTealFront from "@/assets/products/maui-jim-kokua/B638-03_front.webp.asset.json";
+import kokuaTealQuarter from "@/assets/products/maui-jim-kokua/B638-03_quarter.webp.asset.json";
+import kokuaTealSide from "@/assets/products/maui-jim-kokua/B638-03_side.webp.asset.json";
+import kokuaTortoiseFront from "@/assets/products/maui-jim-kokua/H638-10_front.webp.asset.json";
+import kokuaTortoiseQuarter from "@/assets/products/maui-jim-kokua/H638-10_quarter.webp.asset.json";
+import kokuaTortoiseSide from "@/assets/products/maui-jim-kokua/H638-10_side.webp.asset.json";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export type ColorVariant = {
@@ -114,6 +123,35 @@ export const BRANDS: BrandData[] = [
             lens: "Blue Hawaii",
             swatch: "linear-gradient(135deg, #3a4654 0%, #5f6f80 50%, #1f7fc4 100%)",
             images: { front: hookipaBlueFront.url, quarter: hookipaBlueQuarter.url, side: hookipaBlueSide.url },
+          },
+        ],
+      },
+      {
+        model: "Kokua",
+        shape: "rectangle",
+        colour: "Matte Black / Teal / Tortoise",
+        priceFrom: 13190,
+        variants: [
+          {
+            id: "black",
+            name: "Matte Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
+            images: { front: kokuaBlackFront.url, quarter: kokuaBlackQuarter.url, side: kokuaBlackSide.url },
+          },
+          {
+            id: "teal",
+            name: "Teal",
+            lens: "Blue Hawaii",
+            swatch: "linear-gradient(135deg, #155e63 0%, #1f8a8f 50%, #2bb3d6 100%)",
+            images: { front: kokuaTealFront.url, quarter: kokuaTealQuarter.url, side: kokuaTealSide.url },
+          },
+          {
+            id: "tortoise",
+            name: "Tortoise",
+            lens: "HCL\u00ae Bronze",
+            swatch: "linear-gradient(135deg, #3a2113 0%, #7a4420 50%, #c0772f 100%)",
+            images: { front: kokuaTortoiseFront.url, quarter: kokuaTortoiseQuarter.url, side: kokuaTortoiseSide.url },
           },
         ],
       },
