@@ -37,6 +37,12 @@ import liquidRoseSide from "@/assets/products/maui-jim-liquid-sunshine/R601-04_s
 import mekalaSilverFront from "@/assets/products/maui-jim-mekala/690-16_front.webp.asset.json";
 import mekalaSilverQuarter from "@/assets/products/maui-jim-mekala/690-16_quarter.webp.asset.json";
 import mekalaSilverSide from "@/assets/products/maui-jim-mekala/690-16_side.webp.asset.json";
+import sugarBlackFront from "@/assets/products/maui-jim-sugar-beach/421-02_front.webp.asset.json";
+import sugarBlackQuarter from "@/assets/products/maui-jim-sugar-beach/421-02_quarter.webp.asset.json";
+import sugarBlackSide from "@/assets/products/maui-jim-sugar-beach/421-02_side.webp.asset.json";
+import sugarKhakiFront from "@/assets/products/maui-jim-sugar-beach/HT421-15_front.webp.asset.json";
+import sugarKhakiQuarter from "@/assets/products/maui-jim-sugar-beach/HT421-15_quarter.webp.asset.json";
+import sugarKhakiSide from "@/assets/products/maui-jim-sugar-beach/HT421-15_side.webp.asset.json";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export type ColorVariant = {
@@ -208,6 +214,28 @@ export const BRANDS: BrandData[] = [
             lens: "Hawaii Seashine",
             swatch: "linear-gradient(135deg, #b8bcc0 0%, #e3e6e8 50%, #9a9ea2 100%)",
             images: { front: mekalaSilverFront.url, quarter: mekalaSilverQuarter.url, side: mekalaSilverSide.url },
+          },
+        ],
+      },
+      {
+        model: "Sugar Beach",
+        shape: "aviator",
+        colour: "Gloss Black / Khaki Green",
+        priceFrom: 13190,
+        variants: [
+          {
+            id: "black",
+            name: "Gloss Black",
+            lens: "Neutral Grey",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
+            images: { front: sugarBlackFront.url, quarter: sugarBlackQuarter.url, side: sugarBlackSide.url },
+          },
+          {
+            id: "khaki-green",
+            name: "Shiny Transparent Khaki Green",
+            lens: "Maui HT\u2122",
+            swatch: "linear-gradient(135deg, #3d4226 0%, #6f7a3e 50%, #9fae5c 100%)",
+            images: { front: sugarKhakiFront.url, quarter: sugarKhakiQuarter.url, side: sugarKhakiSide.url },
           },
         ],
       },
