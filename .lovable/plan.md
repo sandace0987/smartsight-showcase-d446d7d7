@@ -1,26 +1,51 @@
 ## Goal
+Add the first real product — **Maui Jim → Alika** — as a single model with **2 colour variants**, each with **3 orientation photos** (front, quarter, side). Colour options appear on the product card and inside a product detail view. Also add the Maui Jim logo, optimize images, and handle dark mode.
 
-Make the animated shuffling wordmark ("Clear Sight Opticians") — and its flip/blur animation — visible on mobile and smaller viewports, not just desktop.
+## Confirmed
+1. Maui Jim added as a **new brand house**. 2. Card shows the **front photo** as default. 3. "Out of stock" badges **omitted** (shown as enquire/available).
 
-## Current behavior
-
-In `src/components/site/SiteHeader.tsx`, the centered wordmark link is wrapped with `hidden md:inline-flex`, so the `AnimatedWordmark` component only renders at `md` (≥768px) and up. On mobile the header shows just the logo image plus the action buttons (Book Eye Test, theme toggle, menu).
+## Source data
+- **Alika** · ₹36,590 · geometric/panto shape
+- **Crystal with Silver** (lens Blue Hawaii) → B837-05 front/quarter/side
+- **Tortoise with Gold** (lens HCL® Bronze) → H837-10 front/quarter/side
 
 ## Plan
 
-1. **Add a mobile-visible wordmark row in `SiteHeader.tsx`.**
-   Mobile space is tight (logo left + 3 action buttons right), so rather than forcing the wordmark into the top bar, render it as a centered strip directly under the top bar on small screens. Approach:
-   - Keep the existing desktop absolutely-centered wordmark (`hidden md:inline-flex`) untouched.
-   - Add a new `md:hidden` block beneath the top flex row containing a centered `<AnimatedWordmark />` (wrapped in a `Link to="/"`), with light vertical padding and a subtle divider so it reads as part of the header.
-   - Use a slightly smaller text size on mobile (the component already scales via `text-[13px] lg:text-[15px]`), and keep `whitespace-nowrap` so the three shuffling words stay on one line; reduce the gap if needed to fit narrow phones.
+### 1. Assets (already optimal for fast loading)
+The 6 product photos are 900×320 WebP, 5–10 KB each — no further compression needed. The Maui Jim logo (transparent PNG) is converted to WebP (~smaller). All uploaded to the CDN via `lovable-assets`, pointer JSONs stored under `src/assets/products/maui-jim-alika/` and `src/assets/brands/`. Images use `loading="lazy"` + width/height to avoid layout shift.
 
-2. **Verify the animation runs on mobile.**
-   The shuffle/flip/blur animation is driven by the component's own `useEffect` timers and runs regardless of viewport, so simply rendering it on mobile restores the animation. No changes to `AnimatedWordmark.tsx` are required.
+### 2. Catalog data model (`src/lib/brand-catalog.ts`)
+Add optional photo/variant support, leaving silhouette models untouched:
+```text
+ColorVariant = { id, name, lens, swatch (css), images: { front, quarter, side } }
+GlassItem    = { model, shape, colour, priceFrom, variants? }
+```
+Add **Maui Jim** brand (`slug: "maui-jim"`, tag "Hawaii-born", PolarizedPlus2 blurb, `logo` field) with one model — Alika — carrying both variants and their asset URLs. Crystal swatch = light silver gradient; Tortoise = brown tortoise.
 
-3. **Responsiveness check.**
-   Confirm at ~360px width the three words don't overflow the header; if they do, drop the inter-word `gap` from `gap-2` and/or nudge the base font size down for the mobile instance only.
+### 3. Brands grid (`src/routes/brands.tsx`)
+Add Maui Jim to `HOUSES` and the page `head()` description. (There is no separate logo carousel in the app today; the "brands carousel" = this brands grid + the per-brand "Other houses" row. The Maui Jim card/header will show its logo.)
+
+### 4. Product card (`src/routes/brands_.$brand.tsx`)
+For models with `variants`:
+- Show the selected variant's **front photo** inside `MagnifyLens`, on a **light photo surface** (a white/neutral-light rounded panel kept light in both themes) so white-background product shots look intentional in dark mode. Silhouette models stay exactly as today.
+- **Colour swatch dots** under the price; clicking swaps photo + frame/lens label.
+- Clicking the image/title opens the new **ProductDialog**.
+- Real price ₹36,590.
+
+### 5. Product detail view — new `src/components/site/ProductDialog.tsx`
+Mirrors the Maui Jim reference layout:
+- Large main image on a light surface, with the magnifier lens.
+- **Orientation thumbnails** (front/quarter/side) to switch the main image.
+- **Colour swatches** to switch variant (updates image, thumbnails, frame/lens text).
+- Model name, price, Frame + Lens colour.
+- **Enquire** button opening the existing `EnquireDialog`, pre-filling brand/model and the selected colour.
+
+### 6. Maui Jim logo + dark mode
+- Brand detail header: show the logo for Maui Jim (replacing/above the text name) using `dark:invert` so the black signature flips to white in dark mode.
+- Brands grid Maui Jim card: show the small logo with the same `dark:invert` treatment.
+- Product photo surfaces stay light in both themes; lens swatches and UI use existing semantic tokens.
 
 ### Technical notes
-
-- Only `src/components/site/SiteHeader.tsx` changes; `AnimatedWordmark.tsx` stays as-is.
-- No logic/business changes — purely presentational responsive markup.
+- Files: `src/lib/brand-catalog.ts`, `src/routes/brands.tsx`, `src/routes/brands_.$brand.tsx`, new `src/components/site/ProductDialog.tsx`, `EnquireDialog.tsx` (optional `colour` prop), + asset pointer JSONs.
+- `MagnifyLens` wraps `<img>` unchanged. `EnquireDialog` colour prop is backward compatible.
+- Only Maui Jim Alika gets real photos; all other brands keep silhouettes.

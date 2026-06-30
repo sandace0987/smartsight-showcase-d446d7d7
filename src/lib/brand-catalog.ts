@@ -1,8 +1,25 @@
+import crystalFront from "@/assets/products/maui-jim-alika/crystal-front.webp.asset.json";
+import crystalQuarter from "@/assets/products/maui-jim-alika/crystal-quarter.webp.asset.json";
+import crystalSide from "@/assets/products/maui-jim-alika/crystal-side.webp.asset.json";
+import tortoiseFront from "@/assets/products/maui-jim-alika/tortoise-front.webp.asset.json";
+import tortoiseQuarter from "@/assets/products/maui-jim-alika/tortoise-quarter.webp.asset.json";
+import tortoiseSide from "@/assets/products/maui-jim-alika/tortoise-side.webp.asset.json";
+import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
+
+export type ColorVariant = {
+  id: string;
+  name: string;
+  lens: string;
+  swatch: string;
+  images: { front: string; quarter: string; side: string };
+};
+
 export type GlassItem = {
   model: string;
   shape: string;
   colour: string;
   priceFrom: number;
+  variants?: ColorVariant[];
 };
 
 export type BrandData = {
@@ -10,10 +27,42 @@ export type BrandData = {
   name: string;
   tag: string;
   blurb: string;
+  logo?: string;
   models: GlassItem[];
 };
 
 export const BRANDS: BrandData[] = [
+  {
+    slug: "maui-jim",
+    name: "Maui Jim",
+    tag: "Hawaii-born",
+    blurb: "Born on Wailea Beach in 1980. PolarizedPlus2® lenses cut glare and pump colour — sunglasses engineered for island light.",
+    logo: mauiJimLogo.url,
+    models: [
+      {
+        model: "Alika",
+        shape: "geometric",
+        colour: "Crystal with Silver / Tortoise with Gold",
+        priceFrom: 36590,
+        variants: [
+          {
+            id: "crystal",
+            name: "Crystal with Silver",
+            lens: "Blue Hawaii",
+            swatch: "linear-gradient(135deg, #e8edf2 0%, #c4ccd4 50%, #f4f6f8 100%)",
+            images: { front: crystalFront.url, quarter: crystalQuarter.url, side: crystalSide.url },
+          },
+          {
+            id: "tortoise",
+            name: "Tortoise with Gold",
+            lens: "HCL\u00ae Bronze",
+            swatch: "linear-gradient(135deg, #5a3320 0%, #8a5230 50%, #c08a4a 100%)",
+            images: { front: tortoiseFront.url, quarter: tortoiseQuarter.url, side: tortoiseSide.url },
+          },
+        ],
+      },
+    ],
+  },
   {
     slug: "ray-ban",
     name: "Ray-Ban",

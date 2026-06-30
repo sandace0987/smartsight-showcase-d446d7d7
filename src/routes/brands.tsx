@@ -3,12 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
 
 export const Route = createFileRoute("/brands")({
   head: () => ({
     meta: [
       { title: "Brands — Clear Sight Opticians" },
-      { name: "description", content: "Ray-Ban, Oakley, Prada, Gucci, Burberry, Persol, Carrera and more — curated luxury eyewear in Hyderabad." },
+      { name: "description", content: "Maui Jim, Ray-Ban, Oakley, Prada, Gucci, Persol and more — curated luxury eyewear in Hyderabad." },
       { property: "og:title", content: "Brands — Clear Sight Opticians" },
       { property: "og:description", content: "Curated luxury eyewear houses, in one place." },
     ],
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/brands")({
 });
 
 const HOUSES = [
+  { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo.url },
   { slug: "ray-ban", name: "Ray-Ban", tag: "American icon", note: "Wayfarer, Aviator & Meta editions" },
   { slug: "oakley", name: "Oakley", tag: "Performance", note: "Sport, lifestyle & Meta HSTN" },
   { slug: "prada", name: "Prada", tag: "Italian luxury", note: "Linea Rossa & Symbole" },
@@ -59,7 +61,18 @@ function BrandsPage() {
                     </span>
                     <ArrowUpRight className="size-5 opacity-40 group-hover:opacity-100 group-hover:text-electric transition-all" />
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
+                  {h.logo ? (
+                    <img
+                      src={h.logo}
+                      alt={`${h.name} logo`}
+                      width={160}
+                      height={80}
+                      loading="lazy"
+                      className="h-9 w-auto object-contain object-left dark:invert group-hover:invert"
+                    />
+                  ) : (
+                    <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
+                  )}
                   <p className="text-xs uppercase tracking-[0.18em] text-electric mt-2 font-bold">{h.tag}</p>
                   <p className="mt-4 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
                     {h.note}
