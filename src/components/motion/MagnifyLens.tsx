@@ -17,7 +17,7 @@ type Props = {
  * - Desktop: the lens follows the cursor on hover.
  * - Touch: tap to toggle magnify mode, then drag a finger to pan the lens.
  */
-export function MagnifyLens({ children, zoom = 2.4, lensSize = 150, className }: Props) {
+export function MagnifyLens({ children, zoom = 3, lensSize = 150, className }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -89,7 +89,7 @@ export function MagnifyLens({ children, zoom = 2.4, lensSize = 150, className }:
             height: lensSize,
             left: pos.x - lensSize / 2,
             top: pos.y - lensSize / 2,
-            transition: "left 90ms ease-out, top 90ms ease-out",
+            transition: "left 220ms cubic-bezier(0.16, 1, 0.3, 1), top 220ms cubic-bezier(0.16, 1, 0.3, 1)",
             willChange: "left, top",
           }}
         >

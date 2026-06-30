@@ -33,7 +33,6 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger }: Pr
           {/* Gallery */}
           <div className="bg-white p-6 flex flex-col gap-4">
             <MagnifyLens
-              zoom={2.4}
               lensSize={160}
               className="aspect-[3/2] flex items-center justify-center cursor-zoom-in"
             >

@@ -134,7 +134,7 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
               className="my-7 block rounded-2xl bg-white p-4 cursor-zoom-in"
               aria-label={`View ${m.model} details`}
             >
-              <MagnifyLens zoom={2.4} lensSize={150} className="flex items-center justify-center h-28">
+              <MagnifyLens lensSize={150} className="flex items-center justify-center h-28">
                 <img
                   src={variant.images.front}
                   alt={`${brandName} ${m.model} — ${variant.name}`}
@@ -149,7 +149,6 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
         />
       ) : (
         <MagnifyLens
-          zoom={2.4}
           lensSize={150}
           className="my-8 flex items-center justify-center h-28 cursor-zoom-in text-foreground/85 group-hover:text-electric transition-colors"
         >
