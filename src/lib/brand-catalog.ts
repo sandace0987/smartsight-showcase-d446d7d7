@@ -234,3 +234,27 @@ export const BRANDS: BrandData[] = [
 ];
 
 export const getBrand = (slug: string) => BRANDS.find((b) => b.slug === slug);
+
+export type House = {
+  slug: string;
+  name: string;
+  tag: string;
+  note: string;
+  logo?: string;
+};
+
+export const HOUSES: House[] = [
+  { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo.url },
+  { slug: "ray-ban", name: "Ray-Ban", tag: "American icon", note: "Wayfarer, Aviator & Meta editions" },
+  { slug: "oakley", name: "Oakley", tag: "Performance", note: "Sport, lifestyle & Meta HSTN" },
+  { slug: "prada", name: "Prada", tag: "Italian luxury", note: "Linea Rossa & Symbole" },
+  { slug: "gucci", name: "Gucci", tag: "Italian luxury", note: "Optical & oversized sun" },
+  { slug: "burberry", name: "Burberry", tag: "British heritage", note: "Check & monogram series" },
+  { slug: "persol", name: "Persol", tag: "Handmade Italy", note: "649 & 714 collection" },
+  { slug: "carrera", name: "Carrera", tag: "Motorsport DNA", note: "Aviator & retro sport" },
+  { slug: "tom-ford", name: "Tom Ford", tag: "Modern luxury", note: "Optical & oversize sun" },
+  { slug: "vogue-eyewear", name: "Vogue Eyewear", tag: "Fashion forward", note: "Trend-led capsule" },
+  { slug: "police", name: "Police", tag: "Italian cool", note: "Sport & lifestyle" },
+  { slug: "fastrack", name: "Fastrack", tag: "Everyday", note: "Affordable, all-day" },
+  { slug: "titan-eyeplus", name: "Titan Eyeplus", tag: "Indian premium", note: "Optical favourites" },
+];
