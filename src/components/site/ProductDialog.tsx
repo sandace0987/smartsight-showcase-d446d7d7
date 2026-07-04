@@ -29,9 +29,15 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
   const variant = variants.find((v) => v.id === variantId) ?? variants[0];
 
   return (
+    // Stop synthetic click events from Radix's portal bubbling up the React tree
+    // to a clickable parent (which would instantly re-open the dialog on close).
+    <span onClick={(e) => e.stopPropagation()}>
     <Dialog open={open} onOpenChange={onOpenChange}>
       {trigger ? <DialogTrigger asChild>{trigger}</DialogTrigger> : null}
-      <DialogContent className="max-w-3xl sm:rounded-2xl p-0 overflow-hidden">
+      <DialogContent
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-3xl sm:rounded-2xl p-0 overflow-hidden"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Gallery */}
           <div className="bg-white p-6 flex flex-col gap-4">
@@ -125,5 +131,6 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
         </div>
       </DialogContent>
     </Dialog>
+    </span>
   );
 }

@@ -46,18 +46,26 @@ function BrandsPage() {
                     </span>
                     <ArrowUpRight className="size-5 opacity-40 group-hover:opacity-100 group-hover:text-electric transition-all" />
                   </div>
-                  {h.logo ? (
-                    <img
-                      src={h.logo}
-                      alt={`${h.name} logo`}
-                      width={160}
-                      height={80}
-                      loading="lazy"
-                      className="h-9 w-auto object-contain object-left dark:invert group-hover:invert"
-                    />
-                  ) : (
-                    <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
-                  )}
+                  {(() => {
+                    const logoDevKey = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY;
+                    const src = h.logo
+                      ? h.logo
+                      : h.domain && logoDevKey
+                        ? `https://img.logo.dev/${h.domain}?token=${logoDevKey}&size=160&format=png&theme=dark`
+                        : null;
+                    return src ? (
+                      <img
+                        src={src}
+                        alt={`${h.name} logo`}
+                        width={160}
+                        height={80}
+                        loading="lazy"
+                        className="h-9 w-auto max-w-[160px] object-contain object-left dark:invert group-hover:invert"
+                      />
+                    ) : (
+                      <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
+                    );
+                  })()}
                   <p className="text-xs uppercase tracking-[0.18em] text-electric mt-2 font-bold">{h.tag}</p>
                   <p className="mt-4 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
                     {h.note}
