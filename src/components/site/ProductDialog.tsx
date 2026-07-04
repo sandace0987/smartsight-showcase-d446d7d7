@@ -131,5 +131,6 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
         </div>
       </DialogContent>
     </Dialog>
+    </span>
   );
 }
