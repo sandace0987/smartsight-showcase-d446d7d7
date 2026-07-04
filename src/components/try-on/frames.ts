@@ -1,24 +1,28 @@
-import rayban from "@/assets/try-on/rayban-wayfarer.png";
-import aviator from "@/assets/try-on/rayban-aviator.png";
-import oakley from "@/assets/try-on/oakley-holbrook.png";
-import meta from "@/assets/try-on/rayban-meta.png";
-import round from "@/assets/try-on/round-tortoise.png";
+import prada from "@/assets/try-on/prada-cateye.png";
+import pradaRect from "@/assets/try-on/prada-rectangle.png";
+import burberry from "@/assets/try-on/burberry-square.png";
+import burberryWay from "@/assets/try-on/burberry-wayfarer.png";
+import mauiAviator from "@/assets/try-on/mauijim-aviator.png";
+import mauiSport from "@/assets/try-on/mauijim-sport.png";
 
 export type Frame = {
   id: string;
   name: string;
   brand: string;
+  /** frame style / genre */
+  genre: string;
   src: string;
-  /** glasses width as multiple of inter-eye-corner distance */
+  /** glasses front width as multiple of temple-to-temple face width */
   widthRatio: number;
   /** vertical offset as fraction of glasses height (positive = down) */
   yOffsetRatio: number;
 };
 
 export const FRAMES: Frame[] = [
-  { id: "wayfarer", name: "Wayfarer",       brand: "Ray-Ban",      src: rayban,  widthRatio: 1.05, yOffsetRatio: 0.05 },
-  { id: "aviator",  name: "Aviator",        brand: "Ray-Ban",      src: aviator, widthRatio: 1.08, yOffsetRatio: 0.10 },
-  { id: "holbrook", name: "Holbrook",       brand: "Oakley",       src: oakley,  widthRatio: 1.06, yOffsetRatio: 0.05 },
-  { id: "meta",     name: "Meta Wayfarer",  brand: "Ray-Ban Meta", src: meta,    widthRatio: 1.05, yOffsetRatio: 0.05 },
-  { id: "round",    name: "Round Tortoise", brand: "Clear Sight",  src: round,   widthRatio: 1.00, yOffsetRatio: 0.05 },
+  { id: "prada-cateye",      name: "Cat-Eye",   brand: "Prada",     genre: "Cat-Eye",   src: prada,       widthRatio: 0.98, yOffsetRatio: 0.02 },
+  { id: "burberry-square",   name: "Square",    brand: "Burberry",  genre: "Square",    src: burberry,    widthRatio: 1.00, yOffsetRatio: 0.04 },
+  { id: "mauijim-aviator",   name: "Aviator",   brand: "Maui Jim",  genre: "Aviator",   src: mauiAviator, widthRatio: 1.04, yOffsetRatio: 0.10 },
+  { id: "prada-rectangle",   name: "Rectangle", brand: "Prada",     genre: "Rectangle", src: pradaRect,   widthRatio: 0.98, yOffsetRatio: 0.13 },
+  { id: "burberry-wayfarer", name: "Wayfarer",  brand: "Burberry",  genre: "Wayfarer",  src: burberryWay, widthRatio: 1.02, yOffsetRatio: 0.04 },
+  { id: "mauijim-sport",     name: "Sport",     brand: "Maui Jim",  genre: "Sport",     src: mauiSport,   widthRatio: 1.04, yOffsetRatio: 0.06 },
 ];
