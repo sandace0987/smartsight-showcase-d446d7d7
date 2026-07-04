@@ -123,6 +123,8 @@ export type GlassItem = {
   colour: string;
   priceFrom: number;
   variants?: ColorVariant[];
+  /** flags a model as trending — shows a "Selling fast" pill on the card */
+  is_hot?: boolean;
 };
 
 export type Category = "glasses" | "lenses" | "kids";
