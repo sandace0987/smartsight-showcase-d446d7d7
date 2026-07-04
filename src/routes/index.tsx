@@ -197,7 +197,7 @@ function HomePage() {
           {/* Top badge */}
           <div className="absolute top-6 left-6 sm:top-8 sm:left-8 flex items-center gap-2 text-white/85 text-[11px] font-semibold uppercase tracking-[0.22em]">
             <span className="size-1.5 rounded-full bg-electric" />
-            Hyderabad · Est. 2012
+            Hyderabad · Est. 2009
           </div>
 
           {/* Content */}
