@@ -159,25 +159,46 @@ export default function TryOnLive({ onClose, initialFrameId }: Props) {
         const rty = rT.y * canvas.height;
 
         // Center horizontally on temples, vertically on eyes
-        const cx = (ltx + rtx) / 2;
-        const cy = ((lE.y + rE.y) / 2) * canvas.height;
+        const rawCx = (ltx + rtx) / 2;
+        const rawCy = ((lE.y + rE.y) / 2) * canvas.height;
 
         const dx = rtx - ltx;
         const dy = rty - lty;
         const faceWidth = Math.hypot(dx, dy);
-        const angle = Math.atan2(dy, dx);
+        const rawAngle = Math.atan2(dy, dx);
 
-        const targetWidth = faceWidth * frame.widthRatio;
+        // Exponential smoothing → stable fit across face shapes & motion.
+        // Angle smoothed in vector space to avoid wrap-around glitches.
+        const prev = smoothRef.current;
+        const a = 0.35; // responsiveness (higher = snappier)
+        let s: { cx: number; cy: number; w: number; angle: number };
+        if (!prev) {
+          s = { cx: rawCx, cy: rawCy, w: faceWidth, angle: rawAngle };
+        } else {
+          const sin = (1 - a) * Math.sin(prev.angle) + a * Math.sin(rawAngle);
+          const cos = (1 - a) * Math.cos(prev.angle) + a * Math.cos(rawAngle);
+          s = {
+            cx: prev.cx + (rawCx - prev.cx) * a,
+            cy: prev.cy + (rawCy - prev.cy) * a,
+            w: prev.w + (faceWidth - prev.w) * a,
+            angle: Math.atan2(sin, cos),
+          };
+        }
+        smoothRef.current = s;
+
+        const targetWidth = s.w * frame.widthRatio;
         const aspect = img.naturalHeight / img.naturalWidth;
         const targetHeight = targetWidth * aspect;
         const yOffset = targetHeight * frame.yOffsetRatio;
 
         ctx.save();
-        ctx.translate(cx, cy + yOffset);
-        ctx.rotate(angle);
+        ctx.translate(s.cx, s.cy + yOffset);
+        ctx.rotate(s.angle);
         ctx.drawImage(img, -targetWidth / 2, -targetHeight / 2, targetWidth, targetHeight);
         ctx.restore();
-      }
+      } else {
+        smoothRef.current = null;
+
 
       rafRef.current = requestAnimationFrame(tick);
     };
