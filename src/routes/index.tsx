@@ -193,7 +193,6 @@ const OFFERS = [
 
 const HERO_SLIDES: { src: string; alt: string }[] = [
   { src: heroPortrait, alt: "Person wearing clear-frame luxury eyewear in cinematic blue light" },
-  { src: pradaModelFemale, alt: "Model wearing Prada luxury eyewear" },
   { src: storeInterior, alt: "Interior of Clear Sight Opticians studio" },
   { src: raybanMetaHero, alt: "Ray-Ban Meta smart glasses" },
 ];
