@@ -348,11 +348,21 @@ function HomePage() {
 
       {/* ============== BRAND MARQUEE ============== */}
       <section className="py-10 lg:py-14 border-y border-border overflow-hidden">
-        <div className="flex w-max animate-[marquee_38s_linear_infinite] opacity-40">
+        <div className="flex w-max animate-[marquee_60s_linear_infinite] items-center">
           {[...BRANDS, ...BRANDS].map((b, i) => (
-            <span key={i} className="px-10 text-xl lg:text-2xl font-bold tracking-[0.18em] whitespace-nowrap">
-              {b}
-            </span>
+            <div key={i} className="relative flex items-center justify-center px-10 shrink-0">
+              <img
+                src={logoUrl(b.domain)}
+                alt={`${b.name} logo`}
+                loading="lazy"
+                className="h-8 lg:h-10 w-auto max-w-[140px] object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+              />
+              {b.ai && (
+                <span className="absolute -top-2 -right-1 rounded-full bg-accent px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-accent-foreground shadow-sm">
+                  +AI
+                </span>
+              )}
+            </div>
           ))}
         </div>
       </section>
