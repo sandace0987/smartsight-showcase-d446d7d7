@@ -29,14 +29,22 @@ function BrandsPage() {
   return (
     <div className="px-6 lg:px-10 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">The Houses</span>
-        <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter max-w-3xl">
-          A curated edit of the world's <span className="font-serif italic font-medium text-electric">finest eyewear.</span>
-        </h1>
-        <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
-          From Italian ateliers to American icons — each brand we carry is hand-selected
-          and stocked across our three Hyderabad studios.
-        </p>
+        <div className="relative">
+          <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">The Houses</span>
+          <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter max-w-3xl">
+            A curated edit of the world's <span className="font-serif italic font-medium text-electric">finest eyewear.</span>
+          </h1>
+          <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
+            From Italian ateliers to American icons — each brand we carry is hand-selected
+            and stocked across our three Hyderabad studios.
+          </p>
+          <img
+            src={pradaModelMale}
+            alt="Male model wearing Prada sunglasses"
+            loading="lazy"
+            className="hidden lg:block absolute -top-8 -right-4 w-[320px] h-auto object-contain pointer-events-none z-10"
+          />
+        </div>
 
         {/* Section tabs */}
         <div className="mt-10 sticky top-20 lg:top-24 z-30 -mx-4 px-4 py-3 bg-background/85 backdrop-blur-xl border-b border-border/60 flex flex-wrap gap-2">
