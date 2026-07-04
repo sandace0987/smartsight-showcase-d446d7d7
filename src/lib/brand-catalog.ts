@@ -284,20 +284,6 @@ export const BRANDS: BrandData[] = [
     ],
   },
   {
-    slug: "gucci",
-    name: "Gucci",
-    tag: "Italian luxury",
-    blurb: "Maximalist Florence — oversized silhouettes, GG monograms and web-stripe temples.",
-    models: [
-      { model: "GG Oversized Square", shape: "oversized", colour: "Black / Gold", priceFrom: 29990 },
-      { model: "Web Cat-Eye", shape: "cateye", colour: "Havana / Web", priceFrom: 27490 },
-      { model: "Pilot Metal", shape: "aviator", colour: "Gold", priceFrom: 26990 },
-      { model: "Round Acetate", shape: "round", colour: "Crystal Pink", priceFrom: 24490 },
-      { model: "Bold Rectangle", shape: "rectangle", colour: "Black", priceFrom: 23990 },
-      { model: "Shield Mask", shape: "shield", colour: "Silver Mirror", priceFrom: 32990 },
-    ],
-  },
-  {
     slug: "burberry",
     name: "Burberry",
     tag: "British heritage",
