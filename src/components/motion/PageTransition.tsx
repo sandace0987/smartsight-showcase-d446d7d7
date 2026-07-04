@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRouterState } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useLayoutEffect, type ReactNode } from "react";
 import { useReducedMotion } from "@/hooks/use-motion-prefs";
 import { pageTransition } from "@/lib/motion-variants";
 
@@ -11,7 +11,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
   // Always start each route from a clean state: jump to the top instantly the
   // moment the path changes, before the new page paints. This prevents a new
   // subpage from appearing mid-scroll.
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
   }, [pathname]);
 
