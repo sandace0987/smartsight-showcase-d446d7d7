@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { MagneticButton } from "@/components/motion/MagneticButton";
-import { HOUSES } from "@/lib/brand-catalog";
+import { HOUSES, type House } from "@/lib/brand-catalog";
 
 export const Route = createFileRoute("/brands")({
   head: () => ({
@@ -35,46 +35,12 @@ function BrandsPage() {
           {HOUSES.map((h, i) => (
             <Reveal key={h.name} delay={(i % 3) * 0.05}>
               <TiltCard max={5}>
-                <Link
-                  to="/brands/$brand"
-                  params={{ brand: h.slug }}
-                  className="group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full"
-                >
-                  <div className="flex items-start justify-between mb-12">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground group-hover:text-white/50">
-                      0{i + 1 < 10 ? i + 1 : i + 1}
-                    </span>
-                    <ArrowUpRight className="size-5 opacity-40 group-hover:opacity-100 group-hover:text-electric transition-all" />
-                  </div>
-                  {(() => {
-                    const logoDevKey = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY;
-                    const src = h.logo
-                      ? h.logo
-                      : h.domain && logoDevKey
-                        ? `https://img.logo.dev/${h.domain}?token=${logoDevKey}&size=160&format=png&theme=dark`
-                        : null;
-                    return src ? (
-                      <img
-                        src={src}
-                        alt={`${h.name} logo`}
-                        width={160}
-                        height={80}
-                        loading="lazy"
-                        className="h-9 w-auto max-w-[160px] object-contain object-left dark:invert group-hover:invert"
-                      />
-                    ) : (
-                      <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
-                    );
-                  })()}
-                  <p className="text-xs uppercase tracking-[0.18em] text-electric mt-2 font-bold">{h.tag}</p>
-                  <p className="mt-4 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
-                    {h.note}
-                  </p>
-                </Link>
+                <BrandCard h={h} index={i} />
               </TiltCard>
             </Reveal>
           ))}
         </div>
+
 
         <div className="mt-20 bg-ink text-white rounded-3xl p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           <div>
@@ -95,3 +61,55 @@ function BrandsPage() {
     </div>
   );
 }
+
+function BrandCard({ h, index }: { h: House; index: number }) {
+  const logoDevKey = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY;
+  const logoSrc = h.logo
+    ? h.logo
+    : h.domain && logoDevKey
+      ? `https://img.logo.dev/${h.domain}?token=${logoDevKey}&size=200&format=png&retina=true`
+      : null;
+
+  const inner = (
+    <>
+      <div className="flex items-start justify-between gap-4 mb-10">
+        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground group-hover:text-white/50">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        {logoSrc ? (
+          <div className="shrink-0 rounded-2xl bg-white p-3.5 shadow-sm ring-1 ring-black/5 flex items-center justify-center h-20 w-32">
+            <img
+              src={logoSrc}
+              alt={`${h.name} logo`}
+              width={200}
+              height={100}
+              loading="lazy"
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+        ) : (
+          h.slug && (
+            <ArrowUpRight className="size-5 opacity-40 group-hover:opacity-100 group-hover:text-electric transition-all" />
+          )
+        )}
+      </div>
+      <h3 className="text-2xl font-bold tracking-tight">{h.name}</h3>
+      <p className="mt-3 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
+        {h.note}
+      </p>
+    </>
+  );
+
+  const className =
+    "group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full";
+
+  if (h.slug) {
+    return (
+      <Link to="/brands/$brand" params={{ brand: h.slug }} className={className}>
+        {inner}
+      </Link>
+    );
+  }
+  return <div className={className}>{inner}</div>;
+}
+

@@ -798,7 +798,7 @@ export const BRANDS: BrandData[] = [
 export const getBrand = (slug: string) => BRANDS.find((b) => b.slug === slug);
 
 export type House = {
-  slug: string;
+  slug?: string;
   name: string;
   tag: string;
   note: string;
@@ -810,10 +810,20 @@ export const HOUSES: House[] = [
   { slug: "ray-ban", name: "Ray-Ban", tag: "American icon", note: "Wayfarer, Aviator & Meta editions", domain: "ray-ban.com" },
   { slug: "oakley", name: "Oakley", tag: "Performance", note: "Sport, lifestyle & Meta HSTN", domain: "oakley.com" },
   { slug: "prada", name: "Prada", tag: "Italian luxury", note: "Linea Rossa & Symbole", domain: "prada.com" },
+  { name: "Montblanc", tag: "German maison", note: "Refined optical & sun", domain: "montblanc.com" },
+  { name: "Puma", tag: "Sport", note: "Active & everyday eyewear", domain: "puma.com" },
+  { name: "Silhouette", tag: "Austrian craft", note: "Rimless lightweight titanium", domain: "silhouette.com" },
   { slug: "tom-ford", name: "Tom Ford", tag: "Modern luxury", note: "Optical & oversize sun", domain: "tomford.com" },
   { slug: "burberry", name: "Burberry", tag: "British heritage", note: "Check & monogram series", domain: "burberry.com" },
-  { slug: "police", name: "Police", tag: "Italian cool", note: "Sport & lifestyle", domain: "police.com" },
+  { name: "Philipp Plein", tag: "Statement", note: "Bold, embellished frames", domain: "plein.com" },
+  { name: "Versace", tag: "Italian luxury", note: "Baroque icon eyewear", domain: "versace.com" },
+  { name: "Porsche Design", tag: "Engineered", note: "Precision minimalism", domain: "porsche-design.com" },
+  { name: "Guess", tag: "Fashion", note: "Fashion-forward everyday", domain: "guess.com" },
+  { slug: "police", name: "Police", tag: "Italian cool", note: "Sport & lifestyle", domain: "policelifestyle.com" },
   { slug: "carrera", name: "Carrera", tag: "Motorsport DNA", note: "Aviator & retro sport", domain: "carreraworld.com" },
+  { name: "Modo", tag: "Urban design", note: "Ultra-light city frames", domain: "modo.com" },
   { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo.url, domain: "mauijim.com" },
+  { name: "Stepper", tag: "Skin-friendly", note: "SI-line comfort frames", domain: "steppereyewear.com" },
 ];
+
 
