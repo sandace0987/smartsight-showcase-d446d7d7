@@ -78,6 +78,13 @@ const BRANDS: MarqueeBrand[] = [
   { name: "Modo", domain: "modo.com" },
   { name: "Maui Jim", domain: "mauijim.com" },
   { name: "Stepper", domain: "steppereyewear.com" },
+  { name: "CooperVision", domain: "coopervision.com" },
+  { name: "Johnson & Johnson", domain: "jnj.com" },
+  { name: "Bausch & Lomb", domain: "bausch.com.au" },
+  { name: "Alcon", domain: "alcon.com" },
+  { name: "ZEISS", domain: "zeiss.com" },
+  { name: "Hoya", domain: "hoyavision.com" },
+  { name: "Essilor", domain: "essilor.com" },
 ];
 
 const logoUrl = (domain: string) =>
