@@ -67,9 +67,14 @@ export function SiteHeader() {
     return () => observer.disconnect();
   }, [location.pathname]);
 
-  const handleHashClick = (hash: string | undefined) => (e: React.MouseEvent) => {
-    if (location.pathname !== "/") return; // let router handle cross-route nav
-    if (!hash) {
+  const handleNavClick = (item: NavItem) => (e: React.MouseEvent) => {
+    if (item.route) {
+      // Separate page route — let the router navigate.
+      setOpen(false);
+      return;
+    }
+    if (location.pathname !== "/") return; // let router handle cross-route nav to homepage
+    if (!item.hash) {
       // "Home" — scroll to top
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -77,7 +82,7 @@ export function SiteHeader() {
       return;
     }
     e.preventDefault();
-    const el = document.getElementById(hash);
+    const el = document.getElementById(item.hash);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     setOpen(false);
   };
