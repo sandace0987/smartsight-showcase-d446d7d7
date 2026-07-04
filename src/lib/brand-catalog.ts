@@ -446,6 +446,25 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "VPR 18W",
+        shape: "cateye",
+        colour: "Blue",
+        priceFrom: 28800,
+        variants: [
+          {
+            id: "blue",
+            name: "Blue",
+            lens: "Optical / Clear",
+            swatch: "linear-gradient(135deg, #16303f 0%, #1f4a63 50%, #0d2331 100%)",
+            images: {
+              front: pradaVpr18wFront.url,
+              quarter: pradaVpr18wQuarter.url,
+              side: pradaVpr18wSide.url,
+            },
+          },
+        ],
+      },
       { model: "Symbole Oval", shape: "oversized", colour: "Black / Smoke", priceFrom: 28990 },
       { model: "Linea Rossa Sport", shape: "shield", colour: "Rubber Black", priceFrom: 22990 },
       { model: "Cinéma Cat-Eye", shape: "cateye", colour: "Havana", priceFrom: 26490 },
