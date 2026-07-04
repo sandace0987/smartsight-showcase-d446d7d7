@@ -2,7 +2,6 @@ import * as React from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { getBrand, BRANDS, HOUSES, priorityIndex, type BrandData, type GlassItem } from "@/lib/brand-catalog";
-import pradaModelMale from "@/assets/brands/prada-model-male.jpg";
 import { GlassSilhouette } from "@/components/site/GlassSilhouette";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ProductDialog } from "@/components/site/ProductDialog";
