@@ -203,7 +203,7 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
 
       {hasVariants && variant ? (
         <>
-          <div className="my-7 block rounded-2xl bg-white p-4">
+          <div className="my-7 block overflow-hidden rounded-2xl bg-white p-4">
             <div className="flex items-center justify-center h-28">
               <img
                 src={variant.images.front}
@@ -211,7 +211,7 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
                 width={900}
                 height={320}
                 loading="lazy"
-                className="w-full max-w-[260px] h-auto object-contain"
+                className="max-h-full max-w-full w-auto object-contain"
               />
             </div>
           </div>
