@@ -29,6 +29,9 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
   const variant = variants.find((v) => v.id === variantId) ?? variants[0];
 
   return (
+    // Stop synthetic click events from Radix's portal bubbling up the React tree
+    // to a clickable parent (which would instantly re-open the dialog on close).
+    <span onClick={(e) => e.stopPropagation()}>
     <Dialog open={open} onOpenChange={onOpenChange}>
       {trigger ? <DialogTrigger asChild>{trigger}</DialogTrigger> : null}
       <DialogContent
