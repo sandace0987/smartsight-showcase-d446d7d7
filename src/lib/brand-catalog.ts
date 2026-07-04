@@ -80,6 +80,9 @@ import pradaPs03rvSide from "@/assets/products/prada-ps-03rv/side.jpg.asset.json
 import burberryB2378Front from "@/assets/products/burberry-b2378/front.webp.asset.json";
 import burberryB2378Quarter from "@/assets/products/burberry-b2378/quarter.webp.asset.json";
 import burberryB2378Side from "@/assets/products/burberry-b2378/side.webp.asset.json";
+import burberryB2409Front from "@/assets/products/burberry-b2409/front.avif.asset.json";
+import burberryB2409Quarter from "@/assets/products/burberry-b2409/quarter.webp.asset.json";
+import burberryB2409Side from "@/assets/products/burberry-b2409/side.avif.asset.json";
 
 export type ColorVariant = {
   id: string;
@@ -541,6 +544,25 @@ export const BRANDS: BrandData[] = [
               front: burberryB2378Front.url,
               quarter: burberryB2378Quarter.url,
               side: burberryB2378Side.url,
+            },
+          },
+        ],
+      },
+      {
+        model: "B2409",
+        shape: "wayfarer",
+        colour: "Black",
+        priceFrom: 22290,
+        variants: [
+          {
+            id: "black",
+            name: "Black",
+            lens: "Optical / Clear",
+            swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
+            images: {
+              front: burberryB2409Front.url,
+              quarter: burberryB2409Quarter.url,
+              side: burberryB2409Side.url,
             },
           },
         ],
