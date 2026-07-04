@@ -101,6 +101,9 @@ import burberryB2413dSide from "@/assets/products/burberry-b2413d/side.png.asset
 import burberryB4335Front from "@/assets/products/burberry-b4335/front.webp.asset.json";
 import burberryB4335Quarter from "@/assets/products/burberry-b4335/quarter.webp.asset.json";
 import burberryB4335Side from "@/assets/products/burberry-b4335/side.webp.asset.json";
+import burberryB4403Front from "@/assets/products/burberry-b4403/front.webp.asset.json";
+import burberryB4403Quarter from "@/assets/products/burberry-b4403/quarter.webp.asset.json";
+import burberryB4403Side from "@/assets/products/burberry-b4403/side.webp.asset.json";
 
 export type ColorVariant = {
   id: string;
@@ -695,6 +698,25 @@ export const BRANDS: BrandData[] = [
               front: burberryB4335Front.url,
               quarter: burberryB4335Quarter.url,
               side: burberryB4335Side.url,
+            },
+          },
+        ],
+      },
+      {
+        model: "BE4403",
+        shape: "rectangle",
+        colour: "Black",
+        priceFrom: 19880,
+        variants: [
+          {
+            id: "black-grey",
+            name: "Black / Grey",
+            lens: "Sunglasses / Dark Grey",
+            swatch: "linear-gradient(135deg, #2b2b2b 0%, #5a5a5a 50%, #1a1a1a 100%)",
+            images: {
+              front: burberryB4403Front.url,
+              quarter: burberryB4403Quarter.url,
+              side: burberryB4403Side.url,
             },
           },
         ],
