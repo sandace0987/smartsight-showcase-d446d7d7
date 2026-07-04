@@ -1,112 +1,112 @@
-import crystalFront from "@/assets/products/maui-jim-alika/crystal-front.webp.asset.json";
-import crystalQuarter from "@/assets/products/maui-jim-alika/crystal-quarter.webp.asset.json";
-import crystalSide from "@/assets/products/maui-jim-alika/crystal-side.webp.asset.json";
-import tortoiseFront from "@/assets/products/maui-jim-alika/tortoise-front.webp.asset.json";
-import tortoiseQuarter from "@/assets/products/maui-jim-alika/tortoise-quarter.webp.asset.json";
-import tortoiseSide from "@/assets/products/maui-jim-alika/tortoise-side.webp.asset.json";
-import castlesBlackFront from "@/assets/products/maui-jim-castles/728-2M_front.webp.asset.json";
-import castlesBlackQuarter from "@/assets/products/maui-jim-castles/728-2M_quarter.webp.asset.json";
-import castlesBlackSide from "@/assets/products/maui-jim-castles/728-2M_side.webp.asset.json";
-import castlesChocFront from "@/assets/products/maui-jim-castles/H728-01M_front.webp.asset.json";
-import castlesChocQuarter from "@/assets/products/maui-jim-castles/H728-01M_quarter.webp.asset.json";
-import castlesChocSide from "@/assets/products/maui-jim-castles/H728-01M_side.webp.asset.json";
-import hookipaBlackFront from "@/assets/products/maui-jim-hookipa/407-02_front.webp.asset.json";
-import hookipaBlackQuarter from "@/assets/products/maui-jim-hookipa/407-02_quarter.webp.asset.json";
-import hookipaBlackSide from "@/assets/products/maui-jim-hookipa/407-02_side.webp.asset.json";
-import hookipaBlueFront from "@/assets/products/maui-jim-hookipa/B407-11_front.webp.asset.json";
-import hookipaBlueQuarter from "@/assets/products/maui-jim-hookipa/B407-11_quarter.webp.asset.json";
-import hookipaBlueSide from "@/assets/products/maui-jim-hookipa/B407-11_side.webp.asset.json";
-import kokuaBlackFront from "@/assets/products/maui-jim-kokua/638-02_front.webp.asset.json";
-import kokuaBlackQuarter from "@/assets/products/maui-jim-kokua/638-02_quarter.webp.asset.json";
-import kokuaBlackSide from "@/assets/products/maui-jim-kokua/638-02_side.webp.asset.json";
-import kokuaTealFront from "@/assets/products/maui-jim-kokua/B638-03_front.webp.asset.json";
-import kokuaTealQuarter from "@/assets/products/maui-jim-kokua/B638-03_quarter.webp.asset.json";
-import kokuaTealSide from "@/assets/products/maui-jim-kokua/B638-03_side.webp.asset.json";
-import kokuaTortoiseFront from "@/assets/products/maui-jim-kokua/H638-10_front.webp.asset.json";
-import kokuaTortoiseQuarter from "@/assets/products/maui-jim-kokua/H638-10_quarter.webp.asset.json";
-import kokuaTortoiseSide from "@/assets/products/maui-jim-kokua/H638-10_side.webp.asset.json";
-import kokuaGreenFront from "@/assets/products/maui-jim-kokua/GM638-02_front.webp.asset.json";
-import kokuaGreenQuarter from "@/assets/products/maui-jim-kokua/GM638-02_quarter.webp.asset.json";
-import kokuaGreenSide from "@/assets/products/maui-jim-kokua/GM638-02_side.webp.asset.json";
-import liquidBlackFront from "@/assets/products/maui-jim-liquid-sunshine/601-02_front.webp.asset.json";
-import liquidBlackQuarter from "@/assets/products/maui-jim-liquid-sunshine/601-02_quarter.webp.asset.json";
-import liquidBlackSide from "@/assets/products/maui-jim-liquid-sunshine/601-02_side.webp.asset.json";
-import liquidRoseFront from "@/assets/products/maui-jim-liquid-sunshine/R601-04_front.webp.asset.json";
-import liquidRoseQuarter from "@/assets/products/maui-jim-liquid-sunshine/R601-04_quarter.webp.asset.json";
-import liquidRoseSide from "@/assets/products/maui-jim-liquid-sunshine/R601-04_side.webp.asset.json";
-import mekalaSilverFront from "@/assets/products/maui-jim-mekala/690-16_front.webp.asset.json";
-import mekalaSilverQuarter from "@/assets/products/maui-jim-mekala/690-16_quarter.webp.asset.json";
-import mekalaSilverSide from "@/assets/products/maui-jim-mekala/690-16_side.webp.asset.json";
-import sugarBlackFront from "@/assets/products/maui-jim-sugar-beach/421-02_front.webp.asset.json";
-import sugarBlackQuarter from "@/assets/products/maui-jim-sugar-beach/421-02_quarter.webp.asset.json";
-import sugarBlackSide from "@/assets/products/maui-jim-sugar-beach/421-02_side.webp.asset.json";
-import sugarKhakiFront from "@/assets/products/maui-jim-sugar-beach/HT421-15_front.webp.asset.json";
-import sugarKhakiQuarter from "@/assets/products/maui-jim-sugar-beach/HT421-15_quarter.webp.asset.json";
-import sugarKhakiSide from "@/assets/products/maui-jim-sugar-beach/HT421-15_side.webp.asset.json";
-import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp.asset.json";
-import pradaPs03qv2azFront from "@/assets/products/prada-ps03qv/2az-front.jpg.asset.json";
-import pradaPs03qv2azQuarter from "@/assets/products/prada-ps03qv/2az-quarter.jpg.asset.json";
-import pradaPs03qv2azSide from "@/assets/products/prada-ps03qv/2az-side.png.asset.json";
-import pradaPs03qvDgFront from "@/assets/products/prada-ps03qv/dg-front.png.asset.json";
-import pradaPs03qvDgQuarter from "@/assets/products/prada-ps03qv/dg-quarter.png.asset.json";
-import pradaPs03qvDgSide from "@/assets/products/prada-ps03qv/dg-side.png.asset.json";
-import pradaSprA16Front from "@/assets/products/prada-spr-a16/havana-front.webp.asset.json";
-import pradaSprA16Quarter from "@/assets/products/prada-spr-a16/havana-quarter.webp.asset.json";
-import pradaSprA16Side from "@/assets/products/prada-spr-a16/havana-side.webp.asset.json";
-import pradaSpr17wFront from "@/assets/products/prada-spr-17w/front.png.asset.json";
-import pradaSpr17wQuarter from "@/assets/products/prada-spr-17w/quarter.png.asset.json";
-import pradaSpr17wSide from "@/assets/products/prada-spr-17w/side.png.asset.json";
-import pradaSpr27zFront from "@/assets/products/prada-spr-27z/front.png.asset.json";
-import pradaSpr27zQuarter from "@/assets/products/prada-spr-27z/quarter.png.asset.json";
-import pradaSpr27zSide from "@/assets/products/prada-spr-27z/side.png.asset.json";
-import pradaSprA17Front from "@/assets/products/prada-spr-a17/front.png.asset.json";
-import pradaSprA17Quarter from "@/assets/products/prada-spr-a17/quarter.png.asset.json";
-import pradaSprA17Side from "@/assets/products/prada-spr-a17/side.png.asset.json";
-import pradaVprB54Front from "@/assets/products/prada-vpr-b54/front.png.asset.json";
-import pradaVprB54Quarter from "@/assets/products/prada-vpr-b54/quarter.png.asset.json";
-import pradaVprB54Side from "@/assets/products/prada-vpr-b54/side.png.asset.json";
-import pradaVprA16vFront from "@/assets/products/prada-vpr-a16v/front.png.asset.json";
-import pradaVprA16vQuarter from "@/assets/products/prada-vpr-a16v/quarter.png.asset.json";
-import pradaVprA16vSide from "@/assets/products/prada-vpr-a16v/side.png.asset.json";
-import pradaVpr18wFront from "@/assets/products/prada-vpr-18w/front.png.asset.json";
-import pradaVpr18wQuarter from "@/assets/products/prada-vpr-18w/quarter.png.asset.json";
-import pradaVpr18wSide from "@/assets/products/prada-vpr-18w/side.png.asset.json";
-import pradaVpr19wFront from "@/assets/products/prada-vpr-19w/front.png.asset.json";
-import pradaVpr19wQuarter from "@/assets/products/prada-vpr-19w/quarter.png.asset.json";
-import pradaVpr19wSide from "@/assets/products/prada-vpr-19w/side.png.asset.json";
-import pradaPs03rvFront from "@/assets/products/prada-ps-03rv/front.jpg.asset.json";
-import pradaPs03rvQuarter from "@/assets/products/prada-ps-03rv/quarter.png.asset.json";
-import pradaPs03rvSide from "@/assets/products/prada-ps-03rv/side.jpg.asset.json";
-import burberryB2378Front from "@/assets/products/burberry-b2378/front.webp.asset.json";
-import burberryB2378Quarter from "@/assets/products/burberry-b2378/quarter.webp.asset.json";
-import burberryB2378Side from "@/assets/products/burberry-b2378/side.webp.asset.json";
-import burberryB2409Front from "@/assets/products/burberry-b2409/front.avif.asset.json";
-import burberryB2409Quarter from "@/assets/products/burberry-b2409/quarter.webp.asset.json";
-import burberryB2409Side from "@/assets/products/burberry-b2409/side.avif.asset.json";
-import burberryB2255qfFront from "@/assets/products/burberry-b2255qf/front.avif.asset.json";
-import burberryB2255qfQuarter from "@/assets/products/burberry-b2255qf/quarter.avif.asset.json";
-import burberryB2255qfSide from "@/assets/products/burberry-b2255qf/side.avif.asset.json";
-import burberryB2379uFront from "@/assets/products/burberry-b2379u/front.webp.asset.json";
-import burberryB2379uQuarter from "@/assets/products/burberry-b2379u/quarter.webp.asset.json";
-import burberryB2379uSide from "@/assets/products/burberry-b2379u/side.webp.asset.json";
-import burberryB2389Front from "@/assets/products/burberry-b2389/front.webp.asset.json";
-import burberryB2389Quarter from "@/assets/products/burberry-b2389/quarter.webp.asset.json";
-import burberryB2389Side from "@/assets/products/burberry-b2389/side.webp.asset.json";
-import burberryB2403Front from "@/assets/products/burberry-b2403/front.avif.asset.json";
-import burberryB2403Quarter from "@/assets/products/burberry-b2403/quarter.avif.asset.json";
-import burberryB2403Side from "@/assets/products/burberry-b2403/side.avif.asset.json";
-import burberryB2413dFront from "@/assets/products/burberry-b2413d/front.png.asset.json";
-import burberryB2413dQuarter from "@/assets/products/burberry-b2413d/quarter.png.asset.json";
-import burberryB2413dSide from "@/assets/products/burberry-b2413d/side.png.asset.json";
-import burberryB4335Front from "@/assets/products/burberry-b4335/front.webp.asset.json";
-import burberryB4335Quarter from "@/assets/products/burberry-b4335/quarter.webp.asset.json";
-import burberryB4335Side from "@/assets/products/burberry-b4335/side.webp.asset.json";
-import burberryB4403Front from "@/assets/products/burberry-b4403/front.webp.asset.json";
-import burberryB4403Quarter from "@/assets/products/burberry-b4403/quarter.webp.asset.json";
-import burberryB4403Side from "@/assets/products/burberry-b4403/side.webp.asset.json";
-import burberryBe2387Front from "@/assets/products/burberry-be2387/front.webp.asset.json";
-import burberryBe2387Quarter from "@/assets/products/burberry-be2387/quarter.webp.asset.json";
-import burberryBe2387Side from "@/assets/products/burberry-be2387/side.webp.asset.json";
+import crystalFront from "@/assets/products/maui-jim-alika/crystal-front.webp";
+import crystalQuarter from "@/assets/products/maui-jim-alika/crystal-quarter.webp";
+import crystalSide from "@/assets/products/maui-jim-alika/crystal-side.webp";
+import tortoiseFront from "@/assets/products/maui-jim-alika/tortoise-front.webp";
+import tortoiseQuarter from "@/assets/products/maui-jim-alika/tortoise-quarter.webp";
+import tortoiseSide from "@/assets/products/maui-jim-alika/tortoise-side.webp";
+import castlesBlackFront from "@/assets/products/maui-jim-castles/728-2M_front.webp";
+import castlesBlackQuarter from "@/assets/products/maui-jim-castles/728-2M_quarter.webp";
+import castlesBlackSide from "@/assets/products/maui-jim-castles/728-2M_side.webp";
+import castlesChocFront from "@/assets/products/maui-jim-castles/H728-01M_front.webp";
+import castlesChocQuarter from "@/assets/products/maui-jim-castles/H728-01M_quarter.webp";
+import castlesChocSide from "@/assets/products/maui-jim-castles/H728-01M_side.webp";
+import hookipaBlackFront from "@/assets/products/maui-jim-hookipa/407-02_front.webp";
+import hookipaBlackQuarter from "@/assets/products/maui-jim-hookipa/407-02_quarter.webp";
+import hookipaBlackSide from "@/assets/products/maui-jim-hookipa/407-02_side.webp";
+import hookipaBlueFront from "@/assets/products/maui-jim-hookipa/B407-11_front.webp";
+import hookipaBlueQuarter from "@/assets/products/maui-jim-hookipa/B407-11_quarter.webp";
+import hookipaBlueSide from "@/assets/products/maui-jim-hookipa/B407-11_side.webp";
+import kokuaBlackFront from "@/assets/products/maui-jim-kokua/638-02_front.webp";
+import kokuaBlackQuarter from "@/assets/products/maui-jim-kokua/638-02_quarter.webp";
+import kokuaBlackSide from "@/assets/products/maui-jim-kokua/638-02_side.webp";
+import kokuaTealFront from "@/assets/products/maui-jim-kokua/B638-03_front.webp";
+import kokuaTealQuarter from "@/assets/products/maui-jim-kokua/B638-03_quarter.webp";
+import kokuaTealSide from "@/assets/products/maui-jim-kokua/B638-03_side.webp";
+import kokuaTortoiseFront from "@/assets/products/maui-jim-kokua/H638-10_front.webp";
+import kokuaTortoiseQuarter from "@/assets/products/maui-jim-kokua/H638-10_quarter.webp";
+import kokuaTortoiseSide from "@/assets/products/maui-jim-kokua/H638-10_side.webp";
+import kokuaGreenFront from "@/assets/products/maui-jim-kokua/GM638-02_front.webp";
+import kokuaGreenQuarter from "@/assets/products/maui-jim-kokua/GM638-02_quarter.webp";
+import kokuaGreenSide from "@/assets/products/maui-jim-kokua/GM638-02_side.webp";
+import liquidBlackFront from "@/assets/products/maui-jim-liquid-sunshine/601-02_front.webp";
+import liquidBlackQuarter from "@/assets/products/maui-jim-liquid-sunshine/601-02_quarter.webp";
+import liquidBlackSide from "@/assets/products/maui-jim-liquid-sunshine/601-02_side.webp";
+import liquidRoseFront from "@/assets/products/maui-jim-liquid-sunshine/R601-04_front.webp";
+import liquidRoseQuarter from "@/assets/products/maui-jim-liquid-sunshine/R601-04_quarter.webp";
+import liquidRoseSide from "@/assets/products/maui-jim-liquid-sunshine/R601-04_side.webp";
+import mekalaSilverFront from "@/assets/products/maui-jim-mekala/690-16_front.webp";
+import mekalaSilverQuarter from "@/assets/products/maui-jim-mekala/690-16_quarter.webp";
+import mekalaSilverSide from "@/assets/products/maui-jim-mekala/690-16_side.webp";
+import sugarBlackFront from "@/assets/products/maui-jim-sugar-beach/421-02_front.webp";
+import sugarBlackQuarter from "@/assets/products/maui-jim-sugar-beach/421-02_quarter.webp";
+import sugarBlackSide from "@/assets/products/maui-jim-sugar-beach/421-02_side.webp";
+import sugarKhakiFront from "@/assets/products/maui-jim-sugar-beach/HT421-15_front.webp";
+import sugarKhakiQuarter from "@/assets/products/maui-jim-sugar-beach/HT421-15_quarter.webp";
+import sugarKhakiSide from "@/assets/products/maui-jim-sugar-beach/HT421-15_side.webp";
+import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp";
+import pradaPs03qv2azFront from "@/assets/products/prada-ps03qv/2az-front.jpg";
+import pradaPs03qv2azQuarter from "@/assets/products/prada-ps03qv/2az-quarter.jpg";
+import pradaPs03qv2azSide from "@/assets/products/prada-ps03qv/2az-side.png";
+import pradaPs03qvDgFront from "@/assets/products/prada-ps03qv/dg-front.png";
+import pradaPs03qvDgQuarter from "@/assets/products/prada-ps03qv/dg-quarter.png";
+import pradaPs03qvDgSide from "@/assets/products/prada-ps03qv/dg-side.png";
+import pradaSprA16Front from "@/assets/products/prada-spr-a16/havana-front.webp";
+import pradaSprA16Quarter from "@/assets/products/prada-spr-a16/havana-quarter.webp";
+import pradaSprA16Side from "@/assets/products/prada-spr-a16/havana-side.webp";
+import pradaSpr17wFront from "@/assets/products/prada-spr-17w/front.png";
+import pradaSpr17wQuarter from "@/assets/products/prada-spr-17w/quarter.png";
+import pradaSpr17wSide from "@/assets/products/prada-spr-17w/side.png";
+import pradaSpr27zFront from "@/assets/products/prada-spr-27z/front.png";
+import pradaSpr27zQuarter from "@/assets/products/prada-spr-27z/quarter.png";
+import pradaSpr27zSide from "@/assets/products/prada-spr-27z/side.png";
+import pradaSprA17Front from "@/assets/products/prada-spr-a17/front.png";
+import pradaSprA17Quarter from "@/assets/products/prada-spr-a17/quarter.png";
+import pradaSprA17Side from "@/assets/products/prada-spr-a17/side.png";
+import pradaVprB54Front from "@/assets/products/prada-vpr-b54/front.png";
+import pradaVprB54Quarter from "@/assets/products/prada-vpr-b54/quarter.png";
+import pradaVprB54Side from "@/assets/products/prada-vpr-b54/side.png";
+import pradaVprA16vFront from "@/assets/products/prada-vpr-a16v/front.png";
+import pradaVprA16vQuarter from "@/assets/products/prada-vpr-a16v/quarter.png";
+import pradaVprA16vSide from "@/assets/products/prada-vpr-a16v/side.png";
+import pradaVpr18wFront from "@/assets/products/prada-vpr-18w/front.png";
+import pradaVpr18wQuarter from "@/assets/products/prada-vpr-18w/quarter.png";
+import pradaVpr18wSide from "@/assets/products/prada-vpr-18w/side.png";
+import pradaVpr19wFront from "@/assets/products/prada-vpr-19w/front.png";
+import pradaVpr19wQuarter from "@/assets/products/prada-vpr-19w/quarter.png";
+import pradaVpr19wSide from "@/assets/products/prada-vpr-19w/side.png";
+import pradaPs03rvFront from "@/assets/products/prada-ps-03rv/front.jpg";
+import pradaPs03rvQuarter from "@/assets/products/prada-ps-03rv/quarter.png";
+import pradaPs03rvSide from "@/assets/products/prada-ps-03rv/side.jpg";
+import burberryB2378Front from "@/assets/products/burberry-b2378/front.webp";
+import burberryB2378Quarter from "@/assets/products/burberry-b2378/quarter.webp";
+import burberryB2378Side from "@/assets/products/burberry-b2378/side.webp";
+import burberryB2409Front from "@/assets/products/burberry-b2409/front.avif";
+import burberryB2409Quarter from "@/assets/products/burberry-b2409/quarter.webp";
+import burberryB2409Side from "@/assets/products/burberry-b2409/side.avif";
+import burberryB2255qfFront from "@/assets/products/burberry-b2255qf/front.avif";
+import burberryB2255qfQuarter from "@/assets/products/burberry-b2255qf/quarter.avif";
+import burberryB2255qfSide from "@/assets/products/burberry-b2255qf/side.avif";
+import burberryB2379uFront from "@/assets/products/burberry-b2379u/front.webp";
+import burberryB2379uQuarter from "@/assets/products/burberry-b2379u/quarter.webp";
+import burberryB2379uSide from "@/assets/products/burberry-b2379u/side.webp";
+import burberryB2389Front from "@/assets/products/burberry-b2389/front.webp";
+import burberryB2389Quarter from "@/assets/products/burberry-b2389/quarter.webp";
+import burberryB2389Side from "@/assets/products/burberry-b2389/side.webp";
+import burberryB2403Front from "@/assets/products/burberry-b2403/front.avif";
+import burberryB2403Quarter from "@/assets/products/burberry-b2403/quarter.avif";
+import burberryB2403Side from "@/assets/products/burberry-b2403/side.avif";
+import burberryB2413dFront from "@/assets/products/burberry-b2413d/front.png";
+import burberryB2413dQuarter from "@/assets/products/burberry-b2413d/quarter.png";
+import burberryB2413dSide from "@/assets/products/burberry-b2413d/side.png";
+import burberryB4335Front from "@/assets/products/burberry-b4335/front.webp";
+import burberryB4335Quarter from "@/assets/products/burberry-b4335/quarter.webp";
+import burberryB4335Side from "@/assets/products/burberry-b4335/side.webp";
+import burberryB4403Front from "@/assets/products/burberry-b4403/front.webp";
+import burberryB4403Quarter from "@/assets/products/burberry-b4403/quarter.webp";
+import burberryB4403Side from "@/assets/products/burberry-b4403/side.webp";
+import burberryBe2387Front from "@/assets/products/burberry-be2387/front.webp";
+import burberryBe2387Quarter from "@/assets/products/burberry-be2387/quarter.webp";
+import burberryBe2387Side from "@/assets/products/burberry-be2387/side.webp";
 
 export type ColorVariant = {
   id: string;
@@ -139,7 +139,7 @@ export const BRANDS: BrandData[] = [
     name: "Maui Jim",
     tag: "Hawaii-born",
     blurb: "Born on Wailea Beach in 1980. PolarizedPlus2® lenses cut glare and pump colour — sunglasses engineered for island light.",
-    logo: mauiJimLogo.url,
+    logo: mauiJimLogo,
     models: [
       {
         model: "Alika",
@@ -152,14 +152,14 @@ export const BRANDS: BrandData[] = [
             name: "Crystal with Silver",
             lens: "Blue Hawaii",
             swatch: "linear-gradient(135deg, #e8edf2 0%, #c4ccd4 50%, #f4f6f8 100%)",
-            images: { front: crystalFront.url, quarter: crystalQuarter.url, side: crystalSide.url },
+            images: { front: crystalFront, quarter: crystalQuarter, side: crystalSide },
           },
           {
             id: "tortoise",
             name: "Tortoise with Gold",
             lens: "HCL\u00ae Bronze",
             swatch: "linear-gradient(135deg, #5a3320 0%, #8a5230 50%, #c08a4a 100%)",
-            images: { front: tortoiseFront.url, quarter: tortoiseQuarter.url, side: tortoiseSide.url },
+            images: { front: tortoiseFront, quarter: tortoiseQuarter, side: tortoiseSide },
           },
         ],
       },
@@ -174,14 +174,14 @@ export const BRANDS: BrandData[] = [
             name: "Matte Black",
             lens: "Neutral Grey",
             swatch: "linear-gradient(135deg, #2b2b2d 0%, #4a4a4d 50%, #1a1a1c 100%)",
-            images: { front: castlesBlackFront.url, quarter: castlesBlackQuarter.url, side: castlesBlackSide.url },
+            images: { front: castlesBlackFront, quarter: castlesBlackQuarter, side: castlesBlackSide },
           },
           {
             id: "chocolate",
             name: "Matte Chocolate",
             lens: "HCL\u00ae Bronze",
             swatch: "linear-gradient(135deg, #3a261a 0%, #7a4f30 50%, #b5824c 100%)",
-            images: { front: castlesChocFront.url, quarter: castlesChocQuarter.url, side: castlesChocSide.url },
+            images: { front: castlesChocFront, quarter: castlesChocQuarter, side: castlesChocSide },
           },
         ],
       },
@@ -196,14 +196,14 @@ export const BRANDS: BrandData[] = [
             name: "Gloss Black",
             lens: "Neutral Grey",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
-            images: { front: hookipaBlackFront.url, quarter: hookipaBlackQuarter.url, side: hookipaBlackSide.url },
+            images: { front: hookipaBlackFront, quarter: hookipaBlackQuarter, side: hookipaBlackSide },
           },
           {
             id: "smoke-blue",
             name: "Smoke Grey",
             lens: "Blue Hawaii",
             swatch: "linear-gradient(135deg, #3a4654 0%, #5f6f80 50%, #1f7fc4 100%)",
-            images: { front: hookipaBlueFront.url, quarter: hookipaBlueQuarter.url, side: hookipaBlueSide.url },
+            images: { front: hookipaBlueFront, quarter: hookipaBlueQuarter, side: hookipaBlueSide },
           },
         ],
       },
@@ -218,28 +218,28 @@ export const BRANDS: BrandData[] = [
             name: "Matte Black",
             lens: "Neutral Grey",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
-            images: { front: kokuaBlackFront.url, quarter: kokuaBlackQuarter.url, side: kokuaBlackSide.url },
+            images: { front: kokuaBlackFront, quarter: kokuaBlackQuarter, side: kokuaBlackSide },
           },
           {
             id: "teal",
             name: "Teal",
             lens: "Blue Hawaii",
             swatch: "linear-gradient(135deg, #155e63 0%, #1f8a8f 50%, #2bb3d6 100%)",
-            images: { front: kokuaTealFront.url, quarter: kokuaTealQuarter.url, side: kokuaTealSide.url },
+            images: { front: kokuaTealFront, quarter: kokuaTealQuarter, side: kokuaTealSide },
           },
           {
             id: "tortoise",
             name: "Tortoise",
             lens: "HCL\u00ae Bronze",
             swatch: "linear-gradient(135deg, #3a2113 0%, #7a4420 50%, #c0772f 100%)",
-            images: { front: kokuaTortoiseFront.url, quarter: kokuaTortoiseQuarter.url, side: kokuaTortoiseSide.url },
+            images: { front: kokuaTortoiseFront, quarter: kokuaTortoiseQuarter, side: kokuaTortoiseSide },
           },
           {
             id: "black-green",
             name: "Matte Black",
             lens: "MAUIGreen\u00ae",
             swatch: "linear-gradient(135deg, #0c1f12 0%, #1f6b2e 50%, #2fd25a 100%)",
-            images: { front: kokuaGreenFront.url, quarter: kokuaGreenQuarter.url, side: kokuaGreenSide.url },
+            images: { front: kokuaGreenFront, quarter: kokuaGreenQuarter, side: kokuaGreenSide },
           },
         ],
       },
@@ -254,14 +254,14 @@ export const BRANDS: BrandData[] = [
             name: "Black",
             lens: "Neutral Grey",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
-            images: { front: liquidBlackFront.url, quarter: liquidBlackQuarter.url, side: liquidBlackSide.url },
+            images: { front: liquidBlackFront, quarter: liquidBlackQuarter, side: liquidBlackSide },
           },
           {
             id: "red-tortoise",
             name: "Red Tortoise",
             lens: "Maui Rose\u00ae",
             swatch: "linear-gradient(135deg, #4a2230 0%, #8a4a52 50%, #c98a8a 100%)",
-            images: { front: liquidRoseFront.url, quarter: liquidRoseQuarter.url, side: liquidRoseSide.url },
+            images: { front: liquidRoseFront, quarter: liquidRoseQuarter, side: liquidRoseSide },
           },
         ],
       },
@@ -276,7 +276,7 @@ export const BRANDS: BrandData[] = [
             name: "Matte Silver",
             lens: "Hawaii Seashine",
             swatch: "linear-gradient(135deg, #b8bcc0 0%, #e3e6e8 50%, #9a9ea2 100%)",
-            images: { front: mekalaSilverFront.url, quarter: mekalaSilverQuarter.url, side: mekalaSilverSide.url },
+            images: { front: mekalaSilverFront, quarter: mekalaSilverQuarter, side: mekalaSilverSide },
           },
         ],
       },
@@ -291,14 +291,14 @@ export const BRANDS: BrandData[] = [
             name: "Gloss Black",
             lens: "Neutral Grey",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #111113 100%)",
-            images: { front: sugarBlackFront.url, quarter: sugarBlackQuarter.url, side: sugarBlackSide.url },
+            images: { front: sugarBlackFront, quarter: sugarBlackQuarter, side: sugarBlackSide },
           },
           {
             id: "khaki-green",
             name: "Shiny Transparent Khaki Green",
             lens: "Maui HT\u2122",
             swatch: "linear-gradient(135deg, #3d4226 0%, #6f7a3e 50%, #9fae5c 100%)",
-            images: { front: sugarKhakiFront.url, quarter: sugarKhakiQuarter.url, side: sugarKhakiSide.url },
+            images: { front: sugarKhakiFront, quarter: sugarKhakiQuarter, side: sugarKhakiSide },
           },
         ],
       },
@@ -350,9 +350,9 @@ export const BRANDS: BrandData[] = [
             lens: "Clear Demo",
             swatch: "linear-gradient(135deg, #e8edf2 0%, #c4ccd4 50%, #f4f6f8 100%)",
             images: {
-              front: pradaPs03qv2azFront.url,
-              quarter: pradaPs03qv2azQuarter.url,
-              side: pradaPs03qv2azSide.url,
+              front: pradaPs03qv2azFront,
+              quarter: pradaPs03qv2azQuarter,
+              side: pradaPs03qv2azSide,
             },
           },
           {
@@ -361,9 +361,9 @@ export const BRANDS: BrandData[] = [
             lens: "Clear Demo",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #c0182f 100%)",
             images: {
-              front: pradaPs03qvDgFront.url,
-              quarter: pradaPs03qvDgQuarter.url,
-              side: pradaPs03qvDgSide.url,
+              front: pradaPs03qvDgFront,
+              quarter: pradaPs03qvDgQuarter,
+              side: pradaPs03qvDgSide,
             },
           },
         ],
@@ -380,9 +380,9 @@ export const BRANDS: BrandData[] = [
             lens: "Green Polarized",
             swatch: "linear-gradient(135deg, #3a2113 0%, #7a4420 50%, #c0772f 100%)",
             images: {
-              front: pradaSprA16Front.url,
-              quarter: pradaSprA16Quarter.url,
-              side: pradaSprA16Side.url,
+              front: pradaSprA16Front,
+              quarter: pradaSprA16Quarter,
+              side: pradaSprA16Side,
             },
           },
         ],
@@ -399,9 +399,9 @@ export const BRANDS: BrandData[] = [
             lens: "Green",
             swatch: "linear-gradient(135deg, #3a3f24 0%, #5a6030 50%, #7d8542 100%)",
             images: {
-              front: pradaSpr17wFront.url,
-              quarter: pradaSpr17wQuarter.url,
-              side: pradaSpr17wSide.url,
+              front: pradaSpr17wFront,
+              quarter: pradaSpr17wQuarter,
+              side: pradaSpr17wSide,
             },
           },
         ],
@@ -418,9 +418,9 @@ export const BRANDS: BrandData[] = [
             lens: "Yellow",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #0d0d0e 100%)",
             images: {
-              front: pradaSpr27zFront.url,
-              quarter: pradaSpr27zQuarter.url,
-              side: pradaSpr27zSide.url,
+              front: pradaSpr27zFront,
+              quarter: pradaSpr27zQuarter,
+              side: pradaSpr27zSide,
             },
           },
         ],
@@ -437,9 +437,9 @@ export const BRANDS: BrandData[] = [
             lens: "Green Polarized",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #0d0d0e 100%)",
             images: {
-              front: pradaSprA17Front.url,
-              quarter: pradaSprA17Quarter.url,
-              side: pradaSprA17Side.url,
+              front: pradaSprA17Front,
+              quarter: pradaSprA17Quarter,
+              side: pradaSprA17Side,
             },
           },
         ],
@@ -456,9 +456,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #e8d9a8 0%, #f0c9b0 50%, #d9b877 100%)",
             images: {
-              front: pradaVprB54Front.url,
-              quarter: pradaVprB54Quarter.url,
-              side: pradaVprB54Side.url,
+              front: pradaVprB54Front,
+              quarter: pradaVprB54Quarter,
+              side: pradaVprB54Side,
             },
           },
         ],
@@ -475,9 +475,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #0d0d0e 100%)",
             images: {
-              front: pradaVprA16vFront.url,
-              quarter: pradaVprA16vQuarter.url,
-              side: pradaVprA16vSide.url,
+              front: pradaVprA16vFront,
+              quarter: pradaVprA16vQuarter,
+              side: pradaVprA16vSide,
             },
           },
         ],
@@ -494,9 +494,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #16303f 0%, #1f4a63 50%, #0d2331 100%)",
             images: {
-              front: pradaVpr18wFront.url,
-              quarter: pradaVpr18wQuarter.url,
-              side: pradaVpr18wSide.url,
+              front: pradaVpr18wFront,
+              quarter: pradaVpr18wQuarter,
+              side: pradaVpr18wSide,
             },
           },
         ],
@@ -513,9 +513,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2a3542 0%, #47586b 50%, #1c2530 100%)",
             images: {
-              front: pradaVpr19wFront.url,
-              quarter: pradaVpr19wQuarter.url,
-              side: pradaVpr19wSide.url,
+              front: pradaVpr19wFront,
+              quarter: pradaVpr19wQuarter,
+              side: pradaVpr19wSide,
             },
           },
         ],
@@ -532,9 +532,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #9a9ea1 0%, #c2c6c9 50%, #7d8184 100%)",
             images: {
-              front: pradaPs03rvFront.url,
-              quarter: pradaPs03rvQuarter.url,
-              side: pradaPs03rvSide.url,
+              front: pradaPs03rvFront,
+              quarter: pradaPs03rvQuarter,
+              side: pradaPs03rvSide,
             },
           },
         ],
@@ -565,9 +565,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #e6e8ea 0%, #f6f7f8 50%, #d3d6d9 100%)",
             images: {
-              front: burberryB2378Front.url,
-              quarter: burberryB2378Quarter.url,
-              side: burberryB2378Side.url,
+              front: burberryB2378Front,
+              quarter: burberryB2378Quarter,
+              side: burberryB2378Side,
             },
           },
         ],
@@ -584,9 +584,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB2409Front.url,
-              quarter: burberryB2409Quarter.url,
-              side: burberryB2409Side.url,
+              front: burberryB2409Front,
+              quarter: burberryB2409Quarter,
+              side: burberryB2409Side,
             },
           },
         ],
@@ -603,9 +603,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB2255qfFront.url,
-              quarter: burberryB2255qfQuarter.url,
-              side: burberryB2255qfSide.url,
+              front: burberryB2255qfFront,
+              quarter: burberryB2255qfQuarter,
+              side: burberryB2255qfSide,
             },
           },
         ],
@@ -622,9 +622,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB2379uFront.url,
-              quarter: burberryB2379uQuarter.url,
-              side: burberryB2379uSide.url,
+              front: burberryB2379uFront,
+              quarter: burberryB2379uQuarter,
+              side: burberryB2379uSide,
             },
           },
         ],
@@ -641,9 +641,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB2389Front.url,
-              quarter: burberryB2389Quarter.url,
-              side: burberryB2389Side.url,
+              front: burberryB2389Front,
+              quarter: burberryB2389Quarter,
+              side: burberryB2389Side,
             },
           },
         ],
@@ -660,9 +660,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB2403Front.url,
-              quarter: burberryB2403Quarter.url,
-              side: burberryB2403Side.url,
+              front: burberryB2403Front,
+              quarter: burberryB2403Quarter,
+              side: burberryB2403Side,
             },
           },
         ],
@@ -679,9 +679,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #1a1a1a 0%, #caa24a 50%, #2b2b2b 100%)",
             images: {
-              front: burberryB2413dFront.url,
-              quarter: burberryB2413dQuarter.url,
-              side: burberryB2413dSide.url,
+              front: burberryB2413dFront,
+              quarter: burberryB2413dQuarter,
+              side: burberryB2413dSide,
             },
           },
         ],
@@ -698,9 +698,9 @@ export const BRANDS: BrandData[] = [
             lens: "Sunglasses / Grey Gradient",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #6b6b6b 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB4335Front.url,
-              quarter: burberryB4335Quarter.url,
-              side: burberryB4335Side.url,
+              front: burberryB4335Front,
+              quarter: burberryB4335Quarter,
+              side: burberryB4335Side,
             },
           },
         ],
@@ -717,9 +717,9 @@ export const BRANDS: BrandData[] = [
             lens: "Sunglasses / Dark Grey",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #5a5a5a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryB4403Front.url,
-              quarter: burberryB4403Quarter.url,
-              side: burberryB4403Side.url,
+              front: burberryB4403Front,
+              quarter: burberryB4403Quarter,
+              side: burberryB4403Side,
             },
           },
         ],
@@ -736,9 +736,9 @@ export const BRANDS: BrandData[] = [
             lens: "Optical / Clear",
             swatch: "linear-gradient(135deg, #2b2b2b 0%, #4a4a4a 50%, #1a1a1a 100%)",
             images: {
-              front: burberryBe2387Front.url,
-              quarter: burberryBe2387Quarter.url,
-              side: burberryBe2387Side.url,
+              front: burberryBe2387Front,
+              quarter: burberryBe2387Quarter,
+              side: burberryBe2387Side,
             },
           },
         ],
@@ -822,7 +822,7 @@ export const HOUSES: House[] = [
   { slug: "police", name: "Police", tag: "Italian cool", note: "Sport & lifestyle", domain: "policelifestyle.com" },
   { slug: "carrera", name: "Carrera", tag: "Motorsport DNA", note: "Aviator & retro sport", domain: "carreraworld.com" },
   { name: "Modo", tag: "Urban design", note: "Ultra-light city frames", domain: "modo.com" },
-  { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo.url, domain: "mauijim.com" },
+  { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo, domain: "mauijim.com" },
   { name: "Stepper", tag: "Skin-friendly", note: "SI-line comfort frames", domain: "steppereyewear.com" },
   { name: "CooperVision", tag: "Contact lenses", note: "Daily & monthly soft lenses", domain: "coopervision.com" },
   { name: "Johnson & Johnson", tag: "Contact lenses", note: "Acuvue daily & bi-weekly", domain: "jnj.com" },
