@@ -336,7 +336,25 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
-      { model: "Symbole Oval", shape: "oversized", colour: "Black / Smoke", priceFrom: 28990 },
+      {
+        model: "SPR 17W",
+        shape: "geometric",
+        colour: "Green",
+        priceFrom: 38490,
+        variants: [
+          {
+            id: "green",
+            name: "Green",
+            lens: "Green",
+            swatch: "linear-gradient(135deg, #3a3f24 0%, #5a6030 50%, #7d8542 100%)",
+            images: {
+              front: pradaSpr17wFront.url,
+              quarter: pradaSpr17wQuarter.url,
+              side: pradaSpr17wSide.url,
+            },
+          },
+        ],
+      },
       { model: "Linea Rossa Sport", shape: "shield", colour: "Rubber Black", priceFrom: 22990 },
       { model: "Cinéma Cat-Eye", shape: "cateye", colour: "Havana", priceFrom: 26490 },
       { model: "Heritage Round", shape: "round", colour: "Tortoise", priceFrom: 24990 },
