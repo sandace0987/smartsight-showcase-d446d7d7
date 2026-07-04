@@ -236,6 +236,20 @@ function HomePage() {
             Hyderabad · Est. 2009
           </div>
 
+          {/* Top-right CTA */}
+          <div className="absolute top-5 right-5 sm:top-7 sm:right-7 z-10">
+            <MagneticButton>
+              <Link
+                to="/brands"
+                className="inline-flex items-center gap-2 bg-white text-ink px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full text-sm font-semibold hover:bg-electric hover:text-white transition-colors shadow-lg"
+              >
+                Explore Brands
+                <ArrowUpRight className="size-4" />
+              </Link>
+            </MagneticButton>
+          </div>
+
+
           {/* Content */}
           <div className="absolute inset-0 flex flex-col justify-end px-6 sm:px-10 lg:px-16 pb-12 sm:pb-16 lg:pb-20">
             <div className="max-w-3xl">
