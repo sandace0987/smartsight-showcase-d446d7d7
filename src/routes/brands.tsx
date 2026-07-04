@@ -68,8 +68,7 @@ function BrandsPage() {
               </h2>
               {section.id === "kids" && (
                 <p className="mt-3 text-muted-foreground max-w-2xl">
-                  Myopia-control lenses like ZEISS MyoCare and Hoya MiYOSMART, plus durable kids frames.
-                  Full range coming soon — enquire in store.
+                  ZEISS offers advanced optical solutions for children, featuring specific lines tailored to digital lifestyles and myopia management. Their primary offerings include ZEISS SmartLife Young for everyday digital vision and ZEISS MyoCare for slowing myopia progression in growing eyes.
                 </p>
               )}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
