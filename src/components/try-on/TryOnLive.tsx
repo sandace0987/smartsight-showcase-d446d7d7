@@ -33,6 +33,8 @@ export default function TryOnLive({ onClose, initialFrameId }: Props) {
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef<number | null>(null);
   const frameImgRef = useRef<HTMLImageElement | null>(null);
+  // smoothed transform for jitter-free tracking across face types
+  const smoothRef = useRef<{ cx: number; cy: number; w: number; angle: number } | null>(null);
 
   const [frame, setFrame] = useState<Frame>(
     FRAMES.find((f) => f.id === initialFrameId) ?? FRAMES[0],
