@@ -17,7 +17,7 @@ export function FloatingVideoCard() {
 
   return (
     <>
-      <div className="hidden md:flex fixed bottom-6 right-6 lg:bottom-8 lg:right-8 z-40 bg-card text-card-foreground p-4 rounded-2xl shadow-2xl gap-4 items-center max-w-xs animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_0.6s_both] border border-border/60">
+      <div className="hidden md:flex fixed bottom-28 right-6 lg:bottom-28 lg:right-8 z-40 bg-card text-card-foreground p-4 rounded-2xl shadow-2xl gap-4 items-center max-w-xs animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_0.6s_both] border border-border/60">
         <button
           type="button"
           onClick={() => setOpen(true)}

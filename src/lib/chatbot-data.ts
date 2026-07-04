@@ -20,9 +20,14 @@ export const chatbotQA: ChatQA[] = [
       "Yes! We are ZEISS Certified Vision Experts — the first eye-care professionals in Telangana to partner with ZEISS. We fit ClearMind and SmartLife lenses with DuraVision, BlueGuard and UVProtect coatings.",
   },
   {
-    question: "Where are your stores?",
+    question: "What are your shop timings?",
     answer:
-      "We have three Hyderabad studios — Kukatpally (KPHB), Nizampet and Bowenpally. Open 10:00 AM – 9:30 PM. See the Stores page for maps and directions.",
+      "All three studios are open every day from <strong>10:00 AM to 9:30 PM</strong>. Walk-ins are welcome, and we recommend booking an eye test in advance during weekends.",
+  },
+  {
+    question: "Where are your stores located?",
+    answer:
+      "We have three Hyderabad studios:<br/>• <strong>Kukatpally (KPHB)</strong><br/>• <strong>Nizampet</strong><br/>• <strong>Bowenpally</strong><br/>Open 10:00 AM – 9:30 PM daily. Visit the Stores page for maps and directions.",
   },
   {
     question: "Do you have smart glasses?",
@@ -37,4 +42,5 @@ export const chatbotQA: ChatQA[] = [
 ];
 
 export const FALLBACK_MESSAGE =
-  'Happy to help! Please call us on <a href="tel:+919440525789" class="underline font-medium">+91 94405 25789</a> or drop by any of our three Hyderabad studios and our team will assist you.';
+  'Happy to help! Reach us directly on <a href="https://wa.me/919440525789" target="_blank" rel="noopener noreferrer" class="underline font-medium">WhatsApp</a> or call <a href="tel:+919440525789" class="underline font-medium">+91 94405 25789</a>, or drop by any of our three Hyderabad studios and our team will assist you.';
+
