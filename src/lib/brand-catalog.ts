@@ -824,6 +824,13 @@ export const HOUSES: House[] = [
   { name: "Modo", tag: "Urban design", note: "Ultra-light city frames", domain: "modo.com" },
   { slug: "maui-jim", name: "Maui Jim", tag: "Hawaii-born", note: "Alika & PolarizedPlus2®", logo: mauiJimLogo.url, domain: "mauijim.com" },
   { name: "Stepper", tag: "Skin-friendly", note: "SI-line comfort frames", domain: "steppereyewear.com" },
+  { name: "CooperVision", tag: "Contact lenses", note: "Daily & monthly soft lenses", domain: "coopervision.com" },
+  { name: "Johnson & Johnson", tag: "Contact lenses", note: "Acuvue daily & bi-weekly", domain: "jnj.com" },
+  { name: "Bausch & Lomb", tag: "Contact lenses", note: "Ultra & Biotrue lenses", domain: "bausch.com.au" },
+  { name: "Alcon", tag: "Contact lenses", note: "Dailies & Air Optix", domain: "alcon.com" },
+  { name: "ZEISS", tag: "Lens expert", note: "Precision prescription lenses", domain: "zeiss.com" },
+  { name: "Hoya", tag: "Lens expert", note: "High-index & progressive lenses", domain: "hoyavision.com" },
+  { name: "Essilor", tag: "Lens expert", note: "Varilux & Crizal coatings", domain: "essilor.com" },
 ];
 
 

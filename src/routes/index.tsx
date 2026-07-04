@@ -78,6 +78,13 @@ const BRANDS: MarqueeBrand[] = [
   { name: "Modo", domain: "modo.com" },
   { name: "Maui Jim", domain: "mauijim.com" },
   { name: "Stepper", domain: "steppereyewear.com" },
+  { name: "CooperVision", domain: "coopervision.com" },
+  { name: "Johnson & Johnson", domain: "jnj.com" },
+  { name: "Bausch & Lomb", domain: "bausch.com.au" },
+  { name: "Alcon", domain: "alcon.com" },
+  { name: "ZEISS", domain: "zeiss.com" },
+  { name: "Hoya", domain: "hoyavision.com" },
+  { name: "Essilor", domain: "essilor.com" },
 ];
 
 const logoUrl = (domain: string) =>
@@ -392,40 +399,41 @@ function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {HOUSES.slice(0, 5).map((h, i) => (
-              <Reveal key={h.slug} delay={(i % 3) * 0.05}>
-                <TiltCard max={5}>
-                  <Link
-                    to="/brands/$brand"
-                    params={{ brand: h.slug }}
-                    className="group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full"
-                  >
-                    <div className="flex items-start justify-between mb-12">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground group-hover:text-white/50">
-                        0{i + 1}
-                      </span>
-                      <ArrowUpRight className="size-5 opacity-40 group-hover:opacity-100 group-hover:text-electric transition-all" />
-                    </div>
-                    {h.logo ? (
-                      <img
-                        src={h.logo}
-                        alt={`${h.name} logo`}
-                        width={160}
-                        height={80}
-                        loading="lazy"
-                        className="h-9 w-auto object-contain object-left dark:invert group-hover:invert"
-                      />
-                    ) : (
-                      <h3 className="text-3xl font-bold tracking-tight">{h.name}</h3>
-                    )}
-                    <p className="text-xs uppercase tracking-[0.18em] text-electric mt-2 font-bold">{h.tag}</p>
-                    <p className="mt-4 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
-                      {h.note}
-                    </p>
-                  </Link>
-                </TiltCard>
-              </Reveal>
-            ))}
+            {["ray-ban", "oakley", "maui-jim", "prada", "burberry"]
+              .map((s) => HOUSES.find((h) => h.slug === s))
+              .filter((h): h is NonNullable<typeof h> => Boolean(h))
+              .map((h, i) => (
+                <Reveal key={h.slug} delay={(i % 3) * 0.05}>
+                  <TiltCard max={5}>
+                    <Link
+                      to="/brands/$brand"
+                      params={{ brand: h.slug! }}
+                      className="group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full"
+                    >
+                      <div className="flex items-start justify-between gap-4 mb-10">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground group-hover:text-white/50">
+                          0{i + 1}
+                        </span>
+                        <div className="shrink-0 rounded-2xl bg-white p-3.5 shadow-sm ring-1 ring-black/5 flex items-center justify-center h-20 w-32">
+                          <img
+                            src={h.logo ?? logoUrl(h.domain!)}
+                            alt={`${h.name} logo`}
+                            width={200}
+                            height={100}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                      <h3 className="text-2xl font-bold tracking-tight">{h.name}</h3>
+                      <p className="mt-3 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
+                        {h.note}
+                      </p>
+                    </Link>
+                  </TiltCard>
+                </Reveal>
+              ))}
+
 
             <Reveal delay={0.1}>
               <Link
