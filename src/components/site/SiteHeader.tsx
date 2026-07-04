@@ -157,15 +157,16 @@ export function SiteHeader() {
         {/* Secondary nav */}
         <nav className="hidden md:flex justify-center gap-8 lg:gap-10 pb-3 -mt-1 text-[12px] font-medium uppercase tracking-[0.18em]">
           {NAV.map((item) => {
-            const isActive =
-              location.pathname === "/" &&
-              (item.hash ? item.hash === activeSection : activeSection === undefined);
+            const isActive = item.route
+              ? location.pathname === item.to
+              : location.pathname === "/" &&
+                (item.hash ? item.hash === activeSection : activeSection === undefined);
             return (
               <Link
                 key={item.label}
                 to={item.to}
                 hash={item.hash}
-                onClick={handleHashClick(item.hash)}
+                onClick={handleNavClick(item)}
                 className={cn(
                   "transition-colors",
                   isActive
