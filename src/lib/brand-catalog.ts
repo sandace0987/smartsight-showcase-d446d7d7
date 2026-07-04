@@ -554,7 +554,7 @@ export const BRANDS: BrandData[] = [
     blurb: "Check, monogram and trench-coat tailoring translated into eyewear from London.",
     models: [
       {
-        model: "B2378",
+        model: "BE2378",
         shape: "rectangle",
         colour: "Crystal",
         priceFrom: 22290,
@@ -573,7 +573,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2409",
+        model: "BE2409",
         shape: "wayfarer",
         colour: "Black",
         priceFrom: 22290,
@@ -592,7 +592,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2255QF",
+        model: "BE2255QF",
         shape: "cateye",
         colour: "Black",
         priceFrom: 19590,
@@ -611,7 +611,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2379U",
+        model: "BE2379U",
         shape: "rectangle",
         colour: "Black",
         priceFrom: 17190,
@@ -630,7 +630,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2389",
+        model: "BE2389",
         shape: "cateye",
         colour: "Black",
         priceFrom: 16890,
@@ -649,7 +649,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2403",
+        model: "BE2403",
         shape: "rectangle",
         colour: "Black",
         priceFrom: 20490,
@@ -668,7 +668,7 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
-        model: "B2413D",
+        model: "BE2413D",
         shape: "round",
         colour: "Black / Gold",
         priceFrom: 28430,
