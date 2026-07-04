@@ -31,7 +31,10 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       {trigger ? <DialogTrigger asChild>{trigger}</DialogTrigger> : null}
-      <DialogContent className="max-w-3xl sm:rounded-2xl p-0 overflow-hidden">
+      <DialogContent
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-3xl sm:rounded-2xl p-0 overflow-hidden"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Gallery */}
           <div className="bg-white p-6 flex flex-col gap-4">
