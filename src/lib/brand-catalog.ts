@@ -380,6 +380,25 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "SPR A17",
+        shape: "rectangle",
+        colour: "Black",
+        priceFrom: 43190,
+        variants: [
+          {
+            id: "black",
+            name: "Black",
+            lens: "Green Polarized",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #3a3a3d 50%, #0d0d0e 100%)",
+            images: {
+              front: pradaSprA17Front.url,
+              quarter: pradaSprA17Quarter.url,
+              side: pradaSprA17Side.url,
+            },
+          },
+        ],
+      },
       { model: "Symbole Oval", shape: "oversized", colour: "Black / Smoke", priceFrom: 28990 },
       { model: "Linea Rossa Sport", shape: "shield", colour: "Rubber Black", priceFrom: 22990 },
       { model: "Cinéma Cat-Eye", shape: "cateye", colour: "Havana", priceFrom: 26490 },
