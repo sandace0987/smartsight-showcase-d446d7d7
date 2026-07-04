@@ -92,6 +92,9 @@ import burberryB2379uSide from "@/assets/products/burberry-b2379u/side.webp.asse
 import burberryB2389Front from "@/assets/products/burberry-b2389/front.webp.asset.json";
 import burberryB2389Quarter from "@/assets/products/burberry-b2389/quarter.webp.asset.json";
 import burberryB2389Side from "@/assets/products/burberry-b2389/side.webp.asset.json";
+import burberryB2403Front from "@/assets/products/burberry-b2403/front.avif.asset.json";
+import burberryB2403Quarter from "@/assets/products/burberry-b2403/quarter.avif.asset.json";
+import burberryB2403Side from "@/assets/products/burberry-b2403/side.avif.asset.json";
 
 export type ColorVariant = {
   id: string;
