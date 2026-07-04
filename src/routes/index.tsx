@@ -55,7 +55,33 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const BRANDS = ["RAY·BAN", "OAKLEY", "PRADA", "GUCCI", "BURBERRY", "PERSOL", "CARRERA", "TOM FORD", "VOGUE", "POLICE"];
+const LOGO_TOKEN = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY as string | undefined;
+
+type MarqueeBrand = { name: string; domain: string; ai?: boolean };
+
+const BRANDS: MarqueeBrand[] = [
+  { name: "Ray-Ban", domain: "ray-ban.com", ai: true },
+  { name: "Oakley", domain: "oakley.com", ai: true },
+  { name: "Prada Milano", domain: "prada.com" },
+  { name: "Montblanc", domain: "montblanc.com" },
+  { name: "Prada Linea Rossa", domain: "prada.com" },
+  { name: "Puma", domain: "puma.com" },
+  { name: "Silhouette", domain: "silhouette.com" },
+  { name: "Tom Ford", domain: "tomford.com" },
+  { name: "Burberry", domain: "burberry.com" },
+  { name: "Philipp Plein", domain: "plein.com" },
+  { name: "Versace", domain: "versace.com" },
+  { name: "Porsche Design", domain: "porsche-design.com" },
+  { name: "Guess", domain: "guess.com" },
+  { name: "Police", domain: "policelifestyle.com" },
+  { name: "Carrera", domain: "carreraworld.com" },
+  { name: "Modo", domain: "modo.com" },
+  { name: "Maui Jim", domain: "mauijim.com" },
+  { name: "Stepper", domain: "steppereyewear.com" },
+];
+
+const logoUrl = (domain: string) =>
+  `https://img.logo.dev/${domain}?token=${LOGO_TOKEN}&format=png&size=200&retina=true`;
 
 
 const COLLECTIONS = [
