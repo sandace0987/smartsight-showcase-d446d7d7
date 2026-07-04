@@ -137,7 +137,7 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
           trigger={
             <button
               type="button"
-              className="my-7 block rounded-2xl bg-white p-4 cursor-zoom-in"
+              className="my-7 block rounded-2xl bg-white p-4 cursor-pointer"
               aria-label={`View ${m.model} details`}
             >
               <div className="flex items-center justify-center h-28">
