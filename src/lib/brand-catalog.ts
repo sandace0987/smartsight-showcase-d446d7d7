@@ -44,6 +44,7 @@ import sugarKhakiFront from "@/assets/products/maui-jim-sugar-beach/HT421-15_fro
 import sugarKhakiQuarter from "@/assets/products/maui-jim-sugar-beach/HT421-15_quarter.webp";
 import sugarKhakiSide from "@/assets/products/maui-jim-sugar-beach/HT421-15_side.webp";
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp";
+import silhouetteLogo from "@/assets/brands/silhouette-logo.png";
 import pradaPs03qv2azFront from "@/assets/products/prada-ps03qv/2az-front.jpg";
 import pradaPs03qv2azQuarter from "@/assets/products/prada-ps03qv/2az-quarter.jpg";
 import pradaPs03qv2azSide from "@/assets/products/prada-ps03qv/2az-side.png";
