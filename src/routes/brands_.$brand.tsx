@@ -191,16 +191,17 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
       }
       aria-label={hasVariants ? `View ${m.model} details` : undefined}
     >
-      {m.is_hot && (
-        <span className="absolute top-4 right-4 z-10 inline-flex items-center gap-1 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-sm">
-          Selling fast
-        </span>
-      )}
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between gap-2">
         <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
           0{index + 1}
         </span>
-        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-electric">{m.shape}</span>
+        {m.is_hot ? (
+          <span className="inline-flex items-center gap-1 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-sm">
+            Selling fast
+          </span>
+        ) : (
+          <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-electric">{m.shape}</span>
+        )}
       </div>
 
       {hasVariants && variant ? (
