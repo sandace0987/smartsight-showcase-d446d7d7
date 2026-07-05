@@ -38,12 +38,6 @@ function BrandsPage() {
             From Italian ateliers to American icons — each brand we carry is hand-selected
             and stocked across our three Hyderabad studios.
           </p>
-          <img
-            src={pradaModelMale}
-            alt="Male model wearing Prada sunglasses"
-            loading="lazy"
-            className="hidden lg:block absolute -top-8 -right-4 w-[320px] h-auto object-contain pointer-events-none z-10"
-          />
         </div>
 
         {/* Section tabs */}
@@ -139,11 +133,19 @@ function BrandCard({ h, index }: { h: House; index: number }) {
       <p className="mt-3 text-sm text-muted-foreground group-hover:text-white/70 font-serif italic">
         {h.note}
       </p>
+      {h.slug === "prada" && (
+        <img
+          src={pradaModelMale}
+          alt="Male model wearing Prada sunglasses"
+          loading="lazy"
+          className="absolute bottom-0 right-0 w-[180px] h-auto object-contain pointer-events-none z-10"
+        />
+      )}
     </>
   );
 
   const className =
-    "group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full";
+    "relative group bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full overflow-hidden";
 
   if (h.slug) {
     return (
