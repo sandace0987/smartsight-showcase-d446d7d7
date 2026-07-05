@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+
+const SHOP_WHATSAPP = "919440525789";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
