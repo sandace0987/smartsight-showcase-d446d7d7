@@ -203,6 +203,21 @@ function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   const [heroSlide, setHeroSlide] = useState(0);
 
+  const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const msg = [
+      "Hi Clear Sight Opticians, I'd like to book a consultation.",
+      fd.get("name") && `Name: ${fd.get("name")}`,
+      fd.get("mobile") && `Mobile: ${fd.get("mobile")}`,
+      fd.get("store") && `Preferred store: ${fd.get("store")}`,
+      fd.get("notes") && `Details: ${fd.get("notes")}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(`https://wa.me/919440525789?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+  };
+
   useEffect(() => {
     const id = setInterval(() => {
       setHeroSlide((prev) => (prev + 1) % HERO_SLIDES.length);
