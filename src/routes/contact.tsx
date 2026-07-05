@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { FormEvent } from "react";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const SHOP_WHATSAPP = "919440525789";
@@ -16,7 +17,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const msg = [

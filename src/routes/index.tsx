@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 import {
   ArrowUpRight,
@@ -203,7 +203,7 @@ function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   const [heroSlide, setHeroSlide] = useState(0);
 
-  const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleBookingSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const msg = [
