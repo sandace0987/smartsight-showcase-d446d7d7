@@ -51,7 +51,7 @@ function ContactPage() {
                 Shop #4, Padmaja Complex, JNTU Road, 6th Phase, KPHB, Hyderabad - 500085
               </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Also at Nizampet &amp; Bowenpally · Open daily 10:00 AM – 9:30 PM
+                Also at Nizampet &amp; Bowenpally · Open daily 9:00 AM – 9:30 PM
               </p>
             </div>
           </aside>
