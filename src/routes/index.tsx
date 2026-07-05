@@ -16,6 +16,7 @@ import {
   Mail,
   Clock,
   Quote,
+  MessageCircle,
 } from "lucide-react";
 
 import { HOUSES } from "@/lib/brand-catalog";
