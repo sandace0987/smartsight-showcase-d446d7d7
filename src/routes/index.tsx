@@ -60,14 +60,14 @@ export const Route = createFileRoute("/")({
 
 const LOGO_TOKEN = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY as string | undefined;
 
-type MarqueeBrand = { name: string; domain: string; ai?: boolean };
+type MarqueeBrand = { name: string; domain: string; ai?: boolean; logo?: string };
 
 const BRANDS: MarqueeBrand[] = [
   { name: "Ray-Ban", domain: "ray-ban.com", ai: true },
   { name: "Oakley", domain: "oakley.com", ai: true },
-  { name: "Prada Milano", domain: "prada.com" },
+  { name: "Prada Milano", domain: "prada.com", logo: pradaMilanoLogo },
   { name: "Montblanc", domain: "montblanc.com" },
-  { name: "Prada Linea Rossa", domain: "prada.com" },
+  { name: "Prada Linea Rossa", domain: "prada.com", logo: pradaMilanoLogo },
   { name: "Puma", domain: "puma.com" },
   { name: "Silhouette", domain: "silhouette.com" },
   { name: "Tom Ford", domain: "tomford.com" },
