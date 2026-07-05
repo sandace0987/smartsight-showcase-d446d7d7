@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 import {
   ArrowUpRight,
@@ -16,6 +16,7 @@ import {
   Mail,
   Clock,
   Quote,
+  MessageCircle,
 } from "lucide-react";
 
 import { HOUSES } from "@/lib/brand-catalog";
@@ -144,21 +145,21 @@ const STORES = [
     tag: "Flagship",
     address: "Shop #4, Padmaja Complex, JNTU Road, 6th Phase, KPHB, Hyderabad - 500085",
     phone: "+91 94405 25789",
-    hours: "10:00 AM – 9:30 PM",
+    hours: "9:00 AM – 9:30 PM",
   },
   {
     name: "Nizampet",
     tag: "Studio",
     address: "Beside Vazra Nirman Pushpak, Nizampet Colony, Hyderabad, Telangana",
     phone: "+91 94405 25789",
-    hours: "10:00 AM – 9:30 PM",
+    hours: "9:00 AM – 9:30 PM",
   },
   {
     name: "Bowenpally",
     tag: "Studio",
     address: "Near Delhi Public School, Sikh Village Road, Bowenpally, Hyderabad, Telangana",
     phone: "+91 94405 25789",
-    hours: "10:00 AM – 9:00 PM",
+    hours: "9:00 AM – 9:30 PM",
   },
 ];
 
@@ -201,6 +202,21 @@ const HERO_SLIDES: { src: string; alt: string }[] = [
 function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   const [heroSlide, setHeroSlide] = useState(0);
+
+  const handleBookingSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const msg = [
+      "Hi Clear Sight Opticians, I'd like to book a consultation.",
+      fd.get("name") && `Name: ${fd.get("name")}`,
+      fd.get("mobile") && `Mobile: ${fd.get("mobile")}`,
+      fd.get("store") && `Preferred store: ${fd.get("store")}`,
+      fd.get("notes") && `Details: ${fd.get("notes")}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(`https://wa.me/919440525789?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+  };
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -794,18 +810,18 @@ function HomePage() {
               <p className="inline-flex items-start gap-3"><MapPin className="size-4 shrink-0 text-electric mt-0.5" /><span>Kukatpally (KPHB), Nizampet, Bowenpally</span></p>
             </div>
           </div>
-          <form className="lg:col-span-7 bg-card border border-border rounded-3xl p-8 lg:p-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form onSubmit={handleBookingSubmit} className="lg:col-span-7 bg-card border border-border rounded-3xl p-8 lg:p-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <label className="flex flex-col gap-2 sm:col-span-1">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Full name</span>
-              <input type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
+              <input name="name" type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
             </label>
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Mobile</span>
-              <input type="tel" placeholder="+91 …" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
+              <input name="mobile" type="tel" placeholder="+91 …" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors" />
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Preferred store</span>
-              <select className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
+              <select name="store" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
                 <option className="bg-card text-foreground">Kukatpally (KPHB)</option>
                 <option className="bg-card text-foreground">Nizampet</option>
                 <option className="bg-card text-foreground">Bowenpally</option>
@@ -813,13 +829,13 @@ function HomePage() {
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">What brings you in?</span>
-              <textarea rows={3} placeholder="Eye test, smart glasses demo, frame styling…" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors resize-none" />
+              <textarea name="notes" rows={3} placeholder="Eye test, smart glasses demo, frame styling…" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric placeholder:text-muted-foreground/60 transition-colors resize-none" />
             </label>
             <button
-              type="button"
-              className="sm:col-span-2 mt-2 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:opacity-90 transition-opacity"
+              type="submit"
+              className="sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:opacity-90 transition-opacity"
             >
-              Request appointment
+              <MessageCircle className="size-4" /> Send via WhatsApp
             </button>
           </form>
         </div>

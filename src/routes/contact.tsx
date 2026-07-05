@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import type { FormEvent } from "react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+
+const SHOP_WHATSAPP = "919440525789";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -14,6 +17,23 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const msg = [
+      "Hi Clear Sight Opticians, I'd like to book an appointment.",
+      fd.get("name") && `Name: ${fd.get("name")}`,
+      fd.get("mobile") && `Mobile: ${fd.get("mobile")}`,
+      fd.get("email") && `Email: ${fd.get("email")}`,
+      fd.get("store") && `Preferred store: ${fd.get("store")}`,
+      fd.get("reason") && `Reason: ${fd.get("reason")}`,
+      fd.get("notes") && `Notes: ${fd.get("notes")}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(`https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="px-6 lg:px-10 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -33,7 +53,7 @@ function ContactPage() {
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">WhatsApp</h3>
-              <a href="https://wa.me/919440525789" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
+              <a href={`https://wa.me/${SHOP_WHATSAPP}`} target="_blank" rel="noopener noreferrer" className="text-2xl font-bold tracking-tight inline-flex items-center gap-3">
                 <MessageCircle className="size-5 text-electric" /> Chat with us
               </a>
             </div>
@@ -45,33 +65,39 @@ function ContactPage() {
               </a>
             </div>
             <div>
+              <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">Opening Hours</h3>
+              <p className="text-lg font-bold tracking-tight inline-flex items-center gap-3">
+                <Clock className="size-5 text-electric" /> Mon–Sun: 9:00 AM – 9:30 PM
+              </p>
+            </div>
+            <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">Main Address</h3>
               <p className="text-sm text-muted-foreground leading-relaxed inline-flex items-start gap-3">
                 <MapPin className="size-5 text-electric mt-0.5" />
                 Shop #4, Padmaja Complex, JNTU Road, 6th Phase, KPHB, Hyderabad - 500085
               </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Also at Nizampet &amp; Bowenpally · Open daily 10:00 AM – 9:30 PM
+                Also at Nizampet &amp; Bowenpally · Open daily 9:00 AM – 9:30 PM
               </p>
             </div>
           </aside>
 
-          <form className="lg:col-span-8 bg-secondary/60 border border-border rounded-3xl p-8 lg:p-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="lg:col-span-8 bg-secondary/60 border border-border rounded-3xl p-8 lg:p-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Full name</span>
-              <input type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
+              <input name="name" type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
             </label>
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Mobile</span>
-              <input type="tel" placeholder="+91 …" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
+              <input name="mobile" type="tel" placeholder="+91 …" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Email</span>
-              <input type="email" placeholder="you@example.com" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
+              <input name="email" type="email" placeholder="you@example.com" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
             </label>
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Preferred store</span>
-              <select className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
+              <select name="store" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
                 <option>Kukatpally (KPHB)</option>
                 <option>Nizampet</option>
                 <option>Bowenpally</option>
@@ -79,7 +105,7 @@ function ContactPage() {
             </label>
             <label className="flex flex-col gap-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Reason</span>
-              <select className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
+              <select name="reason" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
                 <option>Eye test</option>
                 <option>Smart glasses demo</option>
                 <option>Frame styling</option>
@@ -89,13 +115,13 @@ function ContactPage() {
             </label>
             <label className="flex flex-col gap-2 sm:col-span-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Notes</span>
-              <textarea rows={4} placeholder="Tell us anything that would help us prepare." className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors resize-none" />
+              <textarea name="notes" rows={4} placeholder="Tell us anything that would help us prepare." className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors resize-none" />
             </label>
             <button
-              type="button"
-              className="sm:col-span-2 mt-4 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:bg-ink transition-colors"
+              type="submit"
+              className="sm:col-span-2 mt-4 inline-flex items-center justify-center gap-2 bg-electric text-white py-4 rounded-full font-bold tracking-[0.18em] uppercase text-xs hover:bg-ink transition-colors"
             >
-              Request appointment
+              <MessageCircle className="size-4" /> Send via WhatsApp
             </button>
           </form>
         </div>

@@ -20,21 +20,21 @@ const STORES = [
     tag: "Flagship",
     address: "Shop #4, Padmaja Complex, JNTU Road, 6th Phase, KPHB, Hyderabad - 500085",
     phone: "+91 94405 25789",
-    hours: "Mon–Sun · 10:00 AM – 9:30 PM",
+    hours: "Mon–Sun · 9:00 AM – 9:30 PM",
   },
   {
     name: "Nizampet",
     tag: "Studio",
     address: "Beside Vazra Nirman Pushpak, Nizampet Colony, Hyderabad, Telangana",
     phone: "+91 94405 25789",
-    hours: "Mon–Sun · 10:00 AM – 9:30 PM",
+    hours: "Mon–Sun · 9:00 AM – 9:30 PM",
   },
   {
     name: "Bowenpally",
     tag: "Studio",
     address: "Near Delhi Public School, Sikh Village Road, Bowenpally, Hyderabad, Telangana",
     phone: "+91 94405 25789",
-    hours: "Mon–Sun · 10:00 AM – 9:00 PM",
+    hours: "Mon–Sun · 9:00 AM – 9:30 PM",
   },
 ];
 
