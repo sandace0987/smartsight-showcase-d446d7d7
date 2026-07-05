@@ -27,7 +27,7 @@ export const chatbotQA: ChatQA[] = [
   {
     question: "Where are your stores located?",
     answer:
-      "We have three Hyderabad studios:<br/>• <strong>Kukatpally (KPHB)</strong><br/>• <strong>Nizampet</strong><br/>• <strong>Bowenpally</strong><br/>Open 10:00 AM – 9:30 PM daily. Visit the Stores page for maps and directions.",
+      "We have three Hyderabad studios:<br/>• <strong>Kukatpally (KPHB)</strong><br/>• <strong>Nizampet</strong><br/>• <strong>Bowenpally</strong><br/>Open Mon–Sun, 9:00 AM – 9:30 PM. Visit the Stores page for maps and directions.",
   },
   {
     question: "Do you have smart glasses?",
