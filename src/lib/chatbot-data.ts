@@ -22,7 +22,7 @@ export const chatbotQA: ChatQA[] = [
   {
     question: "What are your shop timings?",
     answer:
-      "All three studios are open every day from <strong>10:00 AM to 9:30 PM</strong>. Walk-ins are welcome, and we recommend booking an eye test in advance during weekends.",
+      "We're open <strong>Monday to Sunday, 9:00 AM to 9:30 PM</strong> across all three studios. Walk-ins are welcome, and we recommend booking an eye test in advance during weekends.",
   },
   {
     question: "Where are your stores located?",
