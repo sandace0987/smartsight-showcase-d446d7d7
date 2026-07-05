@@ -102,7 +102,7 @@ export function ChatBot() {
             aria-label="Open chat"
           >
             <MessageCircle className="h-6 w-6 -scale-x-100" />
-            <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-electric border-2 border-background" />
+            <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-red-500 border-2 border-background" />
           </motion.button>
         )}
       </AnimatePresence>
