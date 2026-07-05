@@ -508,14 +508,14 @@ function HomePage() {
                     <Link
                       to="/brands/$brand"
                       params={{ brand: h.slug! }}
-                      className={`group relative bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full ${h.slug === "prada" ? "" : "overflow-hidden"}`}
+                      className="group relative bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full overflow-hidden"
                     >
                       {h.slug === "prada" && (
                         <img
                           src={pradaModelFemale}
                           alt="Female model wearing Prada eyewear"
                           loading="lazy"
-                          className="pointer-events-none absolute -bottom-4 -right-4 w-[200px] h-auto object-contain z-10"
+                          className="pointer-events-none absolute bottom-0 right-0 w-[180px] h-auto object-contain z-10"
                         />
                       )}
                       <div className="relative flex items-start justify-between gap-4 mb-10">
