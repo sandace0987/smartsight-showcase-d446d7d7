@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Play, X } from "lucide-react";
-import eyeTest from "@/assets/eye-test.jpg";
+import eyeTest from "@/assets/eye-test.webp";
 import {
   Dialog,
   DialogContent,

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Clock, MapPin, Phone } from "lucide-react";
-import storeInterior from "@/assets/store-interior.jpg";
+import storeInterior from "@/assets/store-interior.webp";
 
 export const Route = createFileRoute("/stores")({
   head: () => ({

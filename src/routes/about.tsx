@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Eye, Glasses, ShieldCheck, Users } from "lucide-react";
-import storeInterior from "@/assets/store-interior.jpg";
-import madhuPhoto from "@/assets/madhu-founder.png";
+import storeInterior from "@/assets/store-interior.webp";
+import madhuPhoto from "@/assets/madhu-founder.webp";
 import { Reveal } from "@/components/motion/Reveal";
 
 export const Route = createFileRoute("/about")({

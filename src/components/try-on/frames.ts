@@ -1,9 +1,9 @@
-import prada from "@/assets/try-on/prada-cateye.png";
-import pradaRect from "@/assets/try-on/prada-rectangle.png";
-import burberry from "@/assets/try-on/burberry-square.png";
-import burberryWay from "@/assets/try-on/burberry-wayfarer.png";
-import mauiAviator from "@/assets/try-on/mauijim-aviator.png";
-import mauiSport from "@/assets/try-on/mauijim-sport.png";
+import prada from "@/assets/try-on/prada-cateye.webp";
+import pradaRect from "@/assets/try-on/prada-rectangle.webp";
+import burberry from "@/assets/try-on/burberry-square.webp";
+import burberryWay from "@/assets/try-on/burberry-wayfarer.webp";
+import mauiAviator from "@/assets/try-on/mauijim-aviator.webp";
+import mauiSport from "@/assets/try-on/mauijim-sport.webp";
 
 export type Frame = {
   id: string;

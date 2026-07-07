@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Camera, Cpu, Headphones, Sparkles, BatteryCharging, Mic } from "lucide-react";
-import raybanMeta from "@/assets/rayban-meta.jpg";
-import oakleyMeta from "@/assets/oakley-meta.jpg";
+import raybanMeta from "@/assets/rayban-meta.webp";
+import oakleyMeta from "@/assets/oakley-meta.webp";
 
 export const Route = createFileRoute("/smart-glasses")({
   head: () => ({

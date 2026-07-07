@@ -20,13 +20,13 @@ import {
 } from "lucide-react";
 
 import { HOUSES } from "@/lib/brand-catalog";
-import heroPortrait from "@/assets/hero-portrait.jpg";
-import pradaModelFemale from "@/assets/brands/prada-model-female.png";
-import pradaMilanoLogo from "@/assets/brands/prada-milano-logo.png";
+import heroPortrait from "@/assets/hero-portrait.webp";
+import pradaModelFemale from "@/assets/brands/prada-model-female.webp";
+import pradaMilanoLogo from "@/assets/brands/prada-milano-logo.webp";
 
-import raybanMetaHero from "@/assets/rayban-meta-hero.jpg";
-import oakleyMeta from "@/assets/oakley-meta.jpg";
-import storeInterior from "@/assets/store-interior.jpg";
+import raybanMetaHero from "@/assets/rayban-meta-hero.webp";
+import oakleyMeta from "@/assets/oakley-meta.webp";
+import storeInterior from "@/assets/store-interior.webp";
 import { TryOnSection } from "@/components/try-on/TryOnSection";
 import { KineticHeading } from "@/components/motion/KineticHeading";
 import { Reveal } from "@/components/motion/Reveal";
