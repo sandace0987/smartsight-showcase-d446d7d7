@@ -119,6 +119,9 @@ import rb4252MatteSide from "@/assets/products/ray-ban-rb4252/matte-side.webp";
 import rx3681v2509Front from "@/assets/products/ray-ban-rx3681v/2509-front.avif";
 import rx3681v2509Quarter from "@/assets/products/ray-ban-rx3681v/2509-quarter.avif";
 import rx3681v2509Side from "@/assets/products/ray-ban-rx3681v/2509-side.avif";
+import rx7027GreenFront from "@/assets/products/ray-ban-rx7027/green-front.webp";
+import rx7027GreenQuarter from "@/assets/products/ray-ban-rx7027/green-quarter.webp";
+import rx7027GreenSide from "@/assets/products/ray-ban-rx7027/green-side.webp";
 import burberryBe2387Quarter from "@/assets/products/burberry-be2387/quarter.webp";
 import burberryBe2387Side from "@/assets/products/burberry-be2387/side.webp";
 
@@ -375,6 +378,21 @@ export const BRANDS: BrandData[] = [
             lens: "Clear Demo",
             swatch: "linear-gradient(135deg, #101012 0%, #2a2a2c 50%, #454547 100%)",
             images: { front: rx3681v2509Front, quarter: rx3681v2509Quarter, side: rx3681v2509Side },
+          },
+        ],
+      },
+      {
+        model: "RX7027I",
+        shape: "rectangle",
+        colour: "Green",
+        priceFrom: 6290,
+        variants: [
+          {
+            id: "green",
+            name: "Green (6751)",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #3a4a2e 0%, #566b3f 50%, #7a8f5a 100%)",
+            images: { front: rx7027GreenFront, quarter: rx7027GreenQuarter, side: rx7027GreenSide },
           },
         ],
       },
