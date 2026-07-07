@@ -360,12 +360,6 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
-      { model: "Wayfarer Classic", shape: "wayfarer", colour: "Black", priceFrom: 8490 },
-      { model: "Aviator Gold", shape: "aviator", colour: "Gold / Green G-15", priceFrom: 9990 },
-      { model: "Round Metal", shape: "round", colour: "Gunmetal", priceFrom: 8990 },
-      { model: "Clubmaster", shape: "browline", colour: "Tortoise / Gold", priceFrom: 9490 },
-      { model: "Hexagonal Flat", shape: "geometric", colour: "Copper", priceFrom: 9290 },
-      { model: "Justin Sport", shape: "rectangle", colour: "Matte Black", priceFrom: 7490 },
     ],
   },
   {
