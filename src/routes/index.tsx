@@ -69,9 +69,9 @@ type MarqueeBrand = { name: string; domain: string; ai?: boolean; logo?: string 
 const BRANDS: MarqueeBrand[] = [
   { name: "Ray-Ban", domain: "ray-ban.com", ai: true, logo: rayBanLogo },
   { name: "Oakley", domain: "oakley.com", ai: true },
-  { name: "Prada Milano", domain: "prada.com" },
+  { name: "Prada Milano", domain: "prada.com", logo: pradaMilanoLogo },
   { name: "Montblanc", domain: "montblanc.com" },
-  { name: "Prada Linea Rossa", domain: "prada.com", logo: pradaMilanoLogo },
+  { name: "Prada Linea Rossa", domain: "prada.com" },
   { name: "Puma", domain: "puma.com" },
   { name: "Silhouette", domain: "silhouette.com", logo: silhouetteLogo },
   { name: "Tom Ford", domain: "tomford.com" },
