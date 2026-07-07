@@ -46,6 +46,8 @@ import sugarKhakiSide from "@/assets/products/maui-jim-sugar-beach/HT421-15_side
 import mauiJimLogo from "@/assets/brands/maui-jim-logo.webp";
 import silhouetteLogo from "@/assets/brands/silhouette-logo.webp";
 import pradaMilanoLogo from "@/assets/brands/prada-milano-logo.webp";
+import rayBanLogo from "@/assets/brands/ray-ban-logo.svg";
+import guessLogo from "@/assets/brands/guess-logo.webp";
 import pradaPs03qv2azFront from "@/assets/products/prada-ps03qv/2az-front.webp";
 import pradaPs03qv2azQuarter from "@/assets/products/prada-ps03qv/2az-quarter.webp";
 import pradaPs03qv2azSide from "@/assets/products/prada-ps03qv/2az-side.webp";
@@ -1014,7 +1016,7 @@ export type House = {
 
 export const HOUSES: House[] = [
   // ---- Glasses ----
-  { slug: "ray-ban", name: "Ray-Ban", tag: "American icon", note: "Wayfarer, Aviator & Meta editions", domain: "ray-ban.com", category: "glasses" },
+  { slug: "ray-ban", name: "Ray-Ban", tag: "American icon", note: "Wayfarer, Aviator & Meta editions", logo: rayBanLogo, domain: "ray-ban.com", category: "glasses" },
   { slug: "oakley", name: "Oakley", tag: "Performance", note: "Sport, lifestyle & Meta HSTN", domain: "oakley.com", category: "glasses" },
   { slug: "prada", name: "Prada", tag: "Italian luxury", note: "Linea Rossa & Symbole", logo: pradaMilanoLogo, domain: "prada.com", category: "glasses" },
   { name: "Montblanc", tag: "German maison", note: "Refined optical & sun", domain: "montblanc.com", category: "glasses" },
@@ -1025,7 +1027,7 @@ export const HOUSES: House[] = [
   { name: "Philipp Plein", tag: "Statement", note: "Bold, embellished frames", domain: "plein.com", category: "glasses" },
   { name: "Versace", tag: "Italian luxury", note: "Baroque icon eyewear", domain: "versace.com", category: "glasses" },
   { name: "Porsche Design", tag: "Engineered", note: "Precision minimalism", domain: "porsche-design.com", category: "glasses" },
-  { name: "Guess", tag: "Fashion", note: "Fashion-forward everyday", domain: "guess.com", category: "glasses" },
+  { name: "Guess", tag: "Fashion", note: "Fashion-forward everyday", logo: guessLogo, domain: "guess.com", category: "glasses" },
   { slug: "police", name: "Police", tag: "Italian cool", note: "Sport & lifestyle", domain: "policelifestyle.com", category: "glasses" },
   { slug: "carrera", name: "Carrera", tag: "Motorsport DNA", note: "Aviator & retro sport", domain: "carreraworld.com", category: "glasses" },
   { name: "Modo", tag: "Urban design", note: "Ultra-light city frames", domain: "modo.com", category: "glasses" },
