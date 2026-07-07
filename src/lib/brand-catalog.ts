@@ -381,6 +381,21 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "RX7027I",
+        shape: "rectangle",
+        colour: "Green",
+        priceFrom: 6290,
+        variants: [
+          {
+            id: "green",
+            name: "Green (6751)",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #3a4a2e 0%, #566b3f 50%, #7a8f5a 100%)",
+            images: { front: rx7027GreenFront, quarter: rx7027GreenQuarter, side: rx7027GreenSide },
+          },
+        ],
+      },
     ],
   },
   {
