@@ -232,22 +232,15 @@ function HomePage() {
       {/* ============== HERO ============== */}
       <section className="px-4 sm:px-6 lg:px-10 pt-6 pb-16 lg:pb-24">
         <div className="relative w-full h-[560px] sm:h-[640px] lg:h-[780px] overflow-hidden rounded-[28px] lg:rounded-[40px] bg-secondary">
-          <AnimatePresence initial={false}>
-            <motion.img
-              key={heroSlide}
-              src={HERO_SLIDES[heroSlide].src}
-              alt={HERO_SLIDES[heroSlide].alt}
-              width={1920}
-              height={1080}
-              fetchPriority="high"
-              decoding="async"
-              initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 1, scale: 1.05 }}
-              exit={{ opacity: 0 }}
-              transition={{ opacity: { duration: 1 }, scale: { duration: 5, ease: "linear" } }}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </AnimatePresence>
+          <img
+            src={heroPortrait}
+            alt="Person wearing clear-frame luxury eyewear in cinematic blue light"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
           {/* gradients */}
           <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-transparent" />
@@ -385,20 +378,6 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Carousel dots */}
-          <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-10 flex items-center gap-2">
-            {HERO_SLIDES.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setHeroSlide(i)}
-                aria-label={`Show slide ${i + 1}`}
-                className={`h-2 rounded-full transition-all ${
-                  i === heroSlide ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </section>
 
