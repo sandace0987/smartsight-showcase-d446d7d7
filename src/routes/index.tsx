@@ -201,6 +201,7 @@ const OFFERS = [
 
 function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
+  const [playing, setPlaying] = useState(false);
 
   const handleBookingSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
