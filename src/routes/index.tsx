@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 import {
   ArrowUpRight,
@@ -17,6 +17,8 @@ import {
   Clock,
   Quote,
   MessageCircle,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 
 import { HOUSES } from "@/lib/brand-catalog";
@@ -29,8 +31,6 @@ import rayBanLogo from "@/assets/brands/ray-ban-logo.svg";
 import guessLogo from "@/assets/brands/guess-logo.webp";
 import silhouetteLogo from "@/assets/brands/silhouette-logo.webp";
 
-import raybanMetaHero from "@/assets/rayban-meta-hero.webp";
-import oakleyMeta from "@/assets/oakley-meta.webp";
 import storeInterior from "@/assets/store-interior.webp";
 import { TryOnSection } from "@/components/try-on/TryOnSection";
 import { KineticHeading } from "@/components/motion/KineticHeading";
@@ -204,6 +204,21 @@ const OFFERS = [
 function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   const [playing, setPlaying] = useState(false);
+  const rbVideoRef = useRef<HTMLVideoElement>(null);
+  const oakVideoRef = useRef<HTMLVideoElement>(null);
+  const [rbMuted, setRbMuted] = useState(true);
+  const [oakMuted, setOakMuted] = useState(true);
+
+  const toggleRbMute = () => {
+    if (!rbVideoRef.current) return;
+    rbVideoRef.current.muted = !rbMuted;
+    setRbMuted((v) => !v);
+  };
+  const toggleOakMute = () => {
+    if (!oakVideoRef.current) return;
+    oakVideoRef.current.muted = !oakMuted;
+    setOakMuted((v) => !v);
+  };
 
   const handleBookingSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -450,41 +465,167 @@ function HomePage() {
 
 
 
-      {/* ============== SMART GLASSES — HERO SHOWCASE ============== */}
-      <section id="smart-glasses" className="relative scroll-mt-24 px-6 lg:px-10 py-20 lg:py-32 bg-ink overflow-hidden">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5 text-white">
-            <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-electric/90">
-              <span className="size-1.5 rounded-full bg-electric" />
-              Ray-Ban Meta
+      {/* ============== SMART GLASSES — VIDEO HERO ============== */}
+      <section id="smart-glasses" className="relative scroll-mt-24 px-4 sm:px-6 lg:px-10 py-16 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          {/* Section label */}
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Smart Glasses</span>
+              <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+                Iconic style meets{" "}
+                <span className="font-serif italic font-medium text-electric">Meta AI.</span>
+              </h2>
             </div>
-            <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tighter">
-              Iconic frames.
-              <br />
-              <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
-            </h2>
-            <p className="mt-6 text-white/70 text-base sm:text-lg max-w-md leading-relaxed">
-              Capture, call, and ask Meta AI — without ever reaching for your phone. The Wayfarer you know, reimagined.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/smart-glasses" className="bg-electric text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-ink transition-colors">
-                Explore Smart Glasses
-              </Link>
-              <Link to="/contact" className="border border-white/25 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
-                Try in store
-              </Link>
-            </div>
+            <Link
+              to="/smart-glasses"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-bold border-b-2 border-electric pb-1 tracking-[0.2em] uppercase"
+            >
+              Shop All
+            </Link>
           </div>
-          <div className="lg:col-span-7 relative">
-            <div className="absolute -inset-10 bg-electric/20 blur-3xl rounded-full pointer-events-none" />
-            <img
-              src={raybanMetaHero}
-              alt="Ray-Ban Meta smart glasses on an obsidian pedestal with electric-blue rim lighting"
-              width={1600}
-              height={1024}
-              loading="lazy"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
+
+          {/* Main Ray-Ban Meta video card */}
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden bg-ink group">
+            <video
+              ref={rbVideoRef}
+              src="/videos/rayban-meta.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
             />
+            {/* overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/15" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
+            {/* brand badges */}
+            <div className="absolute top-5 left-5 sm:top-8 sm:left-8 flex items-center gap-2">
+              <span className="text-white/90 text-[10px] sm:text-xs font-bold tracking-[0.22em] uppercase bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1">
+                Ray-Ban
+              </span>
+              <span className="text-white/40 text-xs">×</span>
+              <span className="text-white/90 text-[10px] sm:text-xs font-bold tracking-[0.22em] uppercase bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1">
+                Meta
+              </span>
+            </div>
+
+            {/* discount badge */}
+            <div className="absolute top-5 right-14 sm:top-8 sm:right-16">
+              <span className="bg-electric text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                15% Off
+              </span>
+            </div>
+
+            {/* headline */}
+            <div className="absolute bottom-6 left-5 sm:bottom-10 sm:left-8 right-16">
+              <p className="text-white/60 text-[10px] font-bold uppercase tracking-[0.25em] mb-2">Ray-Ban Meta Wayfarer (Gen 2)</p>
+              <h3 className="text-white text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight max-w-xl">
+                Iconic frames.
+                <br />
+                <span className="font-serif italic font-medium text-white/80">Now intelligent.</span>
+              </h3>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link
+                  to="/smart-glasses"
+                  className="bg-electric text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-ink transition-colors"
+                >
+                  Explore Now
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border border-white/30 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition-colors"
+                >
+                  Book Demo
+                </Link>
+              </div>
+            </div>
+
+            {/* mute toggle */}
+            <button
+              type="button"
+              onClick={toggleRbMute}
+              className="absolute bottom-5 right-5 sm:bottom-8 sm:right-7 size-9 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              aria-label={rbMuted ? "Unmute video" : "Mute video"}
+            >
+              {rbMuted ? <VolumeX className="size-4" /> : <Volume2 className="size-4" />}
+            </button>
+          </div>
+
+          {/* Oakley + Offer row below */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Oakley video card */}
+            <div className="md:col-span-2 relative rounded-3xl overflow-hidden bg-ink aspect-[16/7] md:aspect-auto min-h-[220px] group">
+              <video
+                ref={oakVideoRef}
+                src="/videos/oakley-meta.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+              <div className="relative h-full p-6 sm:p-8 flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-white/90 text-[10px] font-bold tracking-[0.22em] uppercase bg-white/10 backdrop-blur border border-white/20 rounded-full px-2.5 py-1">
+                      Oakley
+                    </span>
+                    <span className="text-white/40 text-[10px]">×</span>
+                    <span className="text-white/90 text-[10px] font-bold tracking-[0.22em] uppercase bg-white/10 backdrop-blur border border-white/20 rounded-full px-2.5 py-1">
+                      Meta
+                    </span>
+                  </div>
+                  <span className="bg-electric text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
+                    20% Off
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-white text-2xl sm:text-3xl font-bold tracking-tight">
+                    Built for the way you move.
+                  </h3>
+                  <p className="text-white/65 text-sm mt-2 max-w-sm">
+                    HSTN with Meta AI, Prizm™ lenses and open-ear audio.
+                  </p>
+                  <Link
+                    to="/smart-glasses"
+                    className="mt-4 inline-flex items-center gap-2 text-electric text-sm font-semibold"
+                  >
+                    Shop Oakley Meta <ArrowUpRight className="size-4" />
+                  </Link>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={toggleOakMute}
+                className="absolute bottom-4 right-5 size-8 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                aria-label={oakMuted ? "Unmute" : "Mute"}
+              >
+                {oakMuted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
+              </button>
+            </div>
+
+            {/* Offer card */}
+            <div className="rounded-3xl bg-electric text-white p-8 flex flex-col justify-between min-h-[220px]">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">This Season</span>
+                <p className="mt-3 text-3xl font-bold leading-tight">Up to 20% off Meta smart eyewear</p>
+              </div>
+              <div>
+                <p className="text-white/85 text-sm mt-6">In-store demo, expert fitting, launch pricing — at all three Hyderabad studios.</p>
+                <Link
+                  to="/smart-glasses"
+                  className="mt-5 inline-flex items-center gap-2 bg-white text-electric px-5 py-3 rounded-full text-sm font-semibold"
+                >
+                  See all models <ArrowUpRight className="size-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -584,43 +725,7 @@ function HomePage() {
 
 
 
-      {/* ============== OAKLEY COMPANION + OFFER ============== */}
-      <section className="px-6 lg:px-10 py-16 lg:py-24 bg-secondary/60">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 relative rounded-3xl overflow-hidden bg-ink text-white p-8 sm:p-10 flex flex-col justify-between min-h-[260px]">
-            <img src={oakleyMeta} alt="Oakley Meta performance glasses" width={1024} height={1024} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
-            <div className="relative">
-              <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur text-[10px] font-bold uppercase tracking-widest border border-white/15">
-                Performance
-              </span>
-              <h3 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight max-w-md">
-                Oakley Meta — for the way you move.
-              </h3>
-            </div>
-            <div className="relative flex flex-wrap items-center justify-between gap-4">
-              <p className="text-white/70 text-sm max-w-sm">
-                HSTN &amp; Sphaera silhouettes with advanced audio, capture and Meta AI.
-              </p>
-              <Link to="/smart-glasses" className="inline-flex items-center gap-2 text-sm font-semibold text-electric">
-                Shop Oakley Meta <ArrowUpRight className="size-4" />
-              </Link>
-            </div>
-          </div>
-          <div className="rounded-3xl bg-electric text-white p-8 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">Limited</span>
-              <p className="mt-3 text-3xl font-bold leading-tight">Up to 30% off smart eyewear</p>
-            </div>
-            <p className="text-white/85 text-sm mt-6">
-              Visit any branch for an in-person demo. Stock moves quickly.
-            </p>
-            <Link to="/stores" className="mt-6 inline-flex items-center gap-2 bg-white text-electric px-5 py-3 rounded-full text-sm font-semibold w-fit">
-              Find a store <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       {/* ============== VIRTUAL TRY-ON ============== */}
       <TryOnSection id="try-on" />
