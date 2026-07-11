@@ -10,7 +10,7 @@ type NavItem = { to: string; hash?: string; label: string; route?: boolean };
 
 const NAV: NavItem[] = [
   { to: "/", hash: undefined, label: "Home" },
-  { to: "/smart-glasses", label: "Smart Glasses", route: true },
+  { to: "/", hash: "smart-glasses", label: "Smart Glasses" },
   { to: "/", hash: "brands", label: "Brands" },
   { to: "/", hash: "try-on", label: "Try On" },
   { to: "/", hash: "offers", label: "Offers" },
