@@ -778,6 +778,26 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      },
+      {
+        model: "SPP086N Stud Crystals",
+        shape: "rectangle",
+        colour: "Black / Grey Gradient",
+        priceFrom: 37800,
+        variants: [
+          {
+            id: "black-grey-gradient",
+            name: "Black / Grey Gradient",
+            lens: "Grey Gradient",
+            swatch: "linear-gradient(135deg, #1c1c1e 0%, #3a3a3d 55%, #6b6b6f 100%)",
+            images: {
+              front: pleinSpp086nFront,
+              quarter: pleinSpp086nQuarter,
+              side: pleinSpp086nSide,
+            },
+          },
+        ],
+      },
     ],
   },
   {
