@@ -866,6 +866,25 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "VPP223 0700 57 Optical",
+        shape: "rectangle",
+        colour: "Black / Gold",
+        priceFrom: 34900,
+        variants: [
+          {
+            id: "black-gold",
+            name: "Black / Gold",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #1c1c1e 0%, #171718 45%, #d4af37 100%)",
+            images: {
+              front: pleinPp223Front,
+              quarter: pleinPp223Quarter,
+              side: pleinPp223Side,
+            },
+          },
+        ],
+      },
     ],
   },
   {
