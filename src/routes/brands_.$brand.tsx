@@ -239,7 +239,9 @@ function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brand
         {collection ? ` · ${collection}` : ""}
       </p>
 
-      <p className="text-sm font-semibold mt-3">From ₹{m.priceFrom.toLocaleString("en-IN")}</p>
+      {m.priceFrom != null && (
+        <p className="text-sm font-semibold mt-3">From ₹{m.priceFrom.toLocaleString("en-IN")}</p>
+      )}
 
       {hasVariants && (
         <div className="mt-3 flex items-center gap-2">
