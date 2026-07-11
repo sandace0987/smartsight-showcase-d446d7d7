@@ -174,6 +174,9 @@ import pleinSpp194Side from "@/assets/products/philipp-plein-spp194/side.webp";
 import pleinPp116Front from "@/assets/products/philipp-plein-pp116/front.webp";
 import pleinPp116Quarter from "@/assets/products/philipp-plein-pp116/quarter.webp";
 import pleinPp116Side from "@/assets/products/philipp-plein-pp116/side.webp";
+import pleinPp195Front from "@/assets/products/philipp-plein-pp195/front.webp";
+import pleinPp195Quarter from "@/assets/products/philipp-plein-pp195/quarter.webp";
+import pleinPp195Side from "@/assets/products/philipp-plein-pp195/side.webp";
 import oakleyRafterBlackFront from "@/assets/products/oakley-rafter/black-front.webp";
 import oakleyRafterBlackQuarter from "@/assets/products/oakley-rafter/black-quarter.webp";
 import oakleyRafterGreyFront from "@/assets/products/oakley-rafter/grey-front.webp";
@@ -837,6 +840,25 @@ export const BRANDS: BrandData[] = [
               front: pleinPp116Front,
               quarter: pleinPp116Quarter,
               side: pleinPp116Side,
+            },
+          },
+        ],
+      },
+      {
+        model: "VPP195 700 Optical",
+        shape: "aviator",
+        colour: "Black / Gold",
+        priceFrom: 36900,
+        variants: [
+          {
+            id: "black-gold",
+            name: "Black / Gold",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #1c1c1e 0%, #171718 45%, #d4af37 100%)",
+            images: {
+              front: pleinPp195Front,
+              quarter: pleinPp195Quarter,
+              side: pleinPp195Side,
             },
           },
         ],
