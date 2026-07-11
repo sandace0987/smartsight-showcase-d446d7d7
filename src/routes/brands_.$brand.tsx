@@ -117,15 +117,49 @@ function BrandPage() {
           </div>
         )}
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {brand.models.map((m, i) => (
-            <Reveal key={m.model} delay={(i % 3) * 0.05}>
-              <TiltCard max={5} className="h-full">
-                <ModelCard m={m} index={i} brandName={brand.name} />
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
+        {(() => {
+          const hasLines = brand.models.some((m) => m.line);
+          if (!hasLines) {
+            return (
+              <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {brand.models.map((m, i) => (
+                  <Reveal key={m.model} delay={(i % 3) * 0.05}>
+                    <TiltCard max={5} className="h-full">
+                      <ModelCard m={m} index={i} brandName={brand.name} />
+                    </TiltCard>
+                  </Reveal>
+                ))}
+              </div>
+            );
+          }
+          const lines: string[] = [];
+          for (const m of brand.models) {
+            const l = m.line ?? "Other";
+            if (!lines.includes(l)) lines.push(l);
+          }
+          return lines.map((line) => {
+            const models = brand.models.filter((m) => (m.line ?? "Other") === line);
+            return (
+              <section key={line} className="mt-16">
+                <div className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
+                  <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{line}</h2>
+                  <span className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
+                    {models.length} {models.length === 1 ? "model" : "models"}
+                  </span>
+                </div>
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {models.map((m, i) => (
+                    <Reveal key={m.model} delay={(i % 3) * 0.05}>
+                      <TiltCard max={5} className="h-full">
+                        <ModelCard m={m} index={i} brandName={brand.name} />
+                      </TiltCard>
+                    </Reveal>
+                  ))}
+                </div>
+              </section>
+            );
+          });
+        })()}
 
         <div className="mt-20">
           <h2 className="text-2xl font-bold tracking-tight mb-6">Other houses</h2>
