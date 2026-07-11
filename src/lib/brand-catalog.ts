@@ -1184,7 +1184,7 @@ export const HOUSES: House[] = [
   { name: "Silhouette", tag: "Austrian craft", note: "Rimless lightweight titanium", logo: silhouetteLogo, domain: "silhouette.com", category: "glasses" },
   { slug: "tom-ford", name: "Tom Ford", tag: "Modern luxury", note: "Optical & oversize sun", domain: "tomford.com", category: "glasses" },
   { slug: "burberry", name: "Burberry", tag: "British heritage", note: "Check & monogram series", domain: "burberry.com", category: "glasses" },
-  { name: "Philipp Plein", tag: "Statement", note: "Bold, embellished frames", domain: "plein.com", category: "glasses" },
+  { slug: "philipp-plein", name: "Philipp Plein", tag: "Statement", note: "Bold, embellished frames", domain: "plein.com", category: "glasses" },
   { name: "Versace", tag: "Italian luxury", note: "Baroque icon eyewear", domain: "versace.com", category: "glasses" },
   { name: "Porsche Design", tag: "Engineered", note: "Precision minimalism", domain: "porsche-design.com", category: "glasses" },
   { name: "Guess", tag: "Fashion", note: "Fashion-forward everyday", logo: guessLogo, domain: "guess.com", category: "glasses" },
