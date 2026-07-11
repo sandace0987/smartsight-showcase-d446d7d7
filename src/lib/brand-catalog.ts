@@ -165,6 +165,11 @@ import oakleyValdostaSide from "@/assets/products/oakley-valdosta/side.webp";
 import pleinSpp086Front from "@/assets/products/philipp-plein-spp086/front.webp";
 import pleinSpp086Quarter from "@/assets/products/philipp-plein-spp086/quarter.webp";
 import pleinSpp086Side from "@/assets/products/philipp-plein-spp086/side.webp";
+import oakleyRafterBlackFront from "@/assets/products/oakley-rafter/black-front.webp";
+import oakleyRafterBlackQuarter from "@/assets/products/oakley-rafter/black-quarter.webp";
+import oakleyRafterGreyFront from "@/assets/products/oakley-rafter/grey-front.webp";
+import oakleyRafterGreyQuarter from "@/assets/products/oakley-rafter/grey-quarter.webp";
+import oakleyRafterGreySide from "@/assets/products/oakley-rafter/grey-side.webp";
 
 export type ColorVariant = {
   id: string;
@@ -623,6 +628,36 @@ export const BRANDS: BrandData[] = [
               front: oakleyValdostaFront,
               quarter: oakleyValdostaQuarter,
               side: oakleyValdostaSide,
+            },
+          },
+        ],
+      },
+      {
+        model: "OX8178 Rafter",
+        shape: "rectangle",
+        colour: "Satin Black / Satin Grey Smoke",
+        priceFrom: 7790,
+        variants: [
+          {
+            id: "satin-black",
+            name: "Satin Black",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #2b2b2d 0%, #171718 55%, #45454a 100%)",
+            images: {
+              front: oakleyRafterBlackFront,
+              quarter: oakleyRafterBlackQuarter,
+              side: oakleyRafterBlackQuarter,
+            },
+          },
+          {
+            id: "satin-grey-smoke",
+            name: "Satin Grey Smoke",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #8f9095 0%, #6a6b70 55%, #a9aab0 100%)",
+            images: {
+              front: oakleyRafterGreyFront,
+              quarter: oakleyRafterGreyQuarter,
+              side: oakleyRafterGreySide,
             },
           },
         ],
