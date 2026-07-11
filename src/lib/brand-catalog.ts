@@ -227,6 +227,8 @@ export type GlassItem = {
   variants?: ColorVariant[];
   /** flags a model as trending — shows a "Selling fast" pill on the card */
   is_hot?: boolean;
+  /** optional product line / collection used to group models into subsections on the brand page */
+  line?: string;
 };
 
 export type Category = "glasses" | "lenses" | "kids";
