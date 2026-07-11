@@ -660,17 +660,9 @@ function HomePage() {
                       params={{ brand: h.slug! }}
                       className="group relative bg-secondary/60 border border-border rounded-3xl p-8 hover:bg-ink hover:text-white transition-colors block h-full overflow-hidden"
                     >
-                      {h.slug === "prada" && (
+                      {(h.slug === "prada" || h.slug === "ray-ban" || h.slug === "oakley") && (
                         <img
-                          src={pradaModelFemale}
-                          alt="Female model wearing Prada eyewear"
-                          loading="lazy"
-                          className="pointer-events-none absolute bottom-0 right-0 w-[180px] h-auto object-contain z-10"
-                        />
-                      )}
-                      {(h.slug === "ray-ban" || h.slug === "oakley") && (
-                        <img
-                          src={h.slug === "ray-ban" ? raybanModel : oakleyModel}
+                          src={h.slug === "prada" ? pradaModelMale : h.slug === "ray-ban" ? raybanModel : oakleyModel}
                           alt={`${h.name} campaign`}
                           loading="lazy"
                           className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-30 transition-opacity z-0"
