@@ -203,7 +203,7 @@ function BrandPage() {
           return lines.map((line) => {
             const models = brand.models.filter((m) => (m.line ?? "Other") === line);
             return (
-              <section key={line} className="mt-16">
+              <section key={line} id={slugify(line)} className="scroll-mt-40 mt-16">>
                 <div className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
                   <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{line}</h2>
                   <span className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
