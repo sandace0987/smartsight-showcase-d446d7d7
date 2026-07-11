@@ -5,6 +5,20 @@ import { TiltCard } from "@/components/motion/TiltCard";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { housesByCategory, type House } from "@/lib/brand-catalog";
 import pradaModelMale from "@/assets/brands/prada-model-male.webp";
+import pleinModel from "@/assets/brands/plein-model.webp";
+import vogueModel from "@/assets/brands/vogue-model.webp";
+import policeModel from "@/assets/brands/police-model.webp";
+import oakleyModel from "@/assets/brands/oakley-model.webp";
+import raybanModel from "@/assets/brands/rayban-model.webp";
+
+const BRAND_MODELS: Record<string, { src: string; alt: string }> = {
+  prada: { src: pradaModelMale, alt: "Male model wearing Prada sunglasses" },
+  "philipp-plein": { src: pleinModel, alt: "Model wearing Philipp Plein eyewear" },
+  vogue: { src: vogueModel, alt: "Model wearing Vogue Eyewear" },
+  police: { src: policeModel, alt: "Model wearing Police sunglasses" },
+  oakley: { src: oakleyModel, alt: "Athlete wearing Oakley sunglasses" },
+  "ray-ban": { src: raybanModel, alt: "Models wearing Ray-Ban Scuderia Ferrari" },
+};
 
 const SECTIONS = [
   { id: "glasses", label: "Glasses", heading: "Eyeglasses & Sunglasses" },
