@@ -630,6 +630,33 @@ export const BRANDS: BrandData[] = [
     ],
   },
   {
+    slug: "philipp-plein",
+    name: "Philipp Plein",
+    tag: "Statement",
+    blurb: "Bold, embellished eyewear with gold hardware and the signature hexagon plaque — luxury with an edge.",
+    models: [
+      {
+        model: "SPP 086M 400 49",
+        shape: "rectangle",
+        colour: "Gold / Blue Gradient",
+        priceFrom: 49900,
+        variants: [
+          {
+            id: "gold-blue-gradient",
+            name: "Gold / Blue Gradient",
+            lens: "Blue Gradient",
+            swatch: "linear-gradient(135deg, #d4af37 0%, #b8892b 45%, #6f92c9 100%)",
+            images: {
+              front: pleinSpp086Front,
+              quarter: pleinSpp086Quarter,
+              side: pleinSpp086Side,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "prada",
     name: "Prada",
     tag: "Italian luxury",
