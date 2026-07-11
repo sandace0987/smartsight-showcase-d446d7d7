@@ -707,6 +707,47 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "Wingfold OX5118",
+        shape: "rimless",
+        colour: "Satin Black / Polished Cement / Satin Midnight Blue",
+        priceFrom: 14390,
+        variants: [
+          {
+            id: "satin-black",
+            name: "Satin Black",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #2b2b2d 0%, #171718 55%, #45454a 100%)",
+            images: {
+              front: oakleyWingfoldBlackFront,
+              quarter: oakleyWingfoldBlackQuarter,
+              side: oakleyWingfoldBlackSide,
+            },
+          },
+          {
+            id: "polished-cement",
+            name: "Polished Cement",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #c7c8ca 0%, #9a9b9e 55%, #dedfe1 100%)",
+            images: {
+              front: oakleyWingfoldCementFront,
+              quarter: oakleyWingfoldCementQuarter,
+              side: oakleyWingfoldCementSide,
+            },
+          },
+          {
+            id: "satin-midnight-blue",
+            name: "Satin Midnight Blue",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #2b3a63 0%, #172445 55%, #3d5187 100%)",
+            images: {
+              front: oakleyWingfoldBlueFront,
+              quarter: oakleyWingfoldBlueQuarter,
+              side: oakleyWingfoldBlueSide,
+            },
+          },
+        ],
+      },
     ],
   },
   {
