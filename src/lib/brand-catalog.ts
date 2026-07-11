@@ -549,6 +549,37 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
+        model: "RB3025 Aviator",
+        shape: "aviator",
+        colour: "Black / Silver / Gold",
+        priceFrom: 8990,
+        line: "Sunglasses",
+        is_hot: true,
+        variants: [
+          {
+            id: "black-green",
+            name: "Black / Green G-15 (002)",
+            lens: "Green Classic G-15",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #171718 45%, #3d5a3a 100%)",
+            images: { front: rb3025BlackFront, quarter: rb3025BlackQuarter, side: rb3025BlackSide },
+          },
+          {
+            id: "silver-blue",
+            name: "Silver / Blue Gradient (003/3F)",
+            lens: "Blue Gradient",
+            swatch: "linear-gradient(135deg, #c7ccd1 0%, #9aa0a6 45%, #7fb0d8 100%)",
+            images: { front: rb3025SilverFront, quarter: rb3025SilverQuarter, side: rb3025SilverSide },
+          },
+          {
+            id: "gold-green",
+            name: "Gold / Green G-15 (001)",
+            lens: "Green Classic G-15",
+            swatch: "linear-gradient(135deg, #e6c766 0%, #c79a3a 45%, #3d5a3a 100%)",
+            images: { front: rb3025GoldFront, quarter: rb3025GoldQuarter, side: rb3025GoldSide },
+          },
+        ],
+      },
+      {
         model: "RB4252",
         shape: "round",
         colour: "Transparent / Black",
