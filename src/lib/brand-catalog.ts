@@ -154,7 +154,8 @@ export type GlassItem = {
   model: string;
   shape: string;
   colour: string;
-  priceFrom: number;
+  /** omit to leave price blank (hidden on card & dialog) */
+  priceFrom?: number;
   variants?: ColorVariant[];
   /** flags a model as trending — shows a "Selling fast" pill on the card */
   is_hot?: boolean;
