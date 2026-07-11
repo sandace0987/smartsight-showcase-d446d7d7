@@ -150,6 +150,9 @@ import oakleyHolbrookSGreySide from "@/assets/products/oakley-holbrook-s/prizm-g
 import oakleyHolbrookSRedFront from "@/assets/products/oakley-holbrook-s/red-iridium-front.webp";
 import oakleyHolbrookSRedQuarter from "@/assets/products/oakley-holbrook-s/red-iridium-quarter.webp";
 import oakleyHolbrookSRedSide from "@/assets/products/oakley-holbrook-s/red-iridium-side.webp";
+import oakleyCrosslinkZeroFront from "@/assets/products/oakley-crosslink-zero/front.webp";
+import oakleyCrosslinkZeroQuarter from "@/assets/products/oakley-crosslink-zero/quarter.webp";
+import oakleyCrosslinkZeroSide from "@/assets/products/oakley-crosslink-zero/side.webp";
 
 export type ColorVariant = {
   id: string;
