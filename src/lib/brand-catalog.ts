@@ -576,6 +576,54 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "Hex Jector",
+        shape: "rectangle",
+        colour: "Satin Black / Satin Smoke Grey",
+        variants: [
+          {
+            id: "satin-black",
+            name: "Satin Black",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #2b2b2d 0%, #171718 55%, #45454a 100%)",
+            images: {
+              front: oakleyHexJectorBlackFront,
+              quarter: oakleyHexJectorBlackQuarter,
+              side: oakleyHexJectorBlackSide,
+            },
+          },
+          {
+            id: "satin-smoke-grey",
+            name: "Satin Smoke Grey",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #8f9095 0%, #6a6b70 55%, #a9aab0 100%)",
+            images: {
+              front: oakleyHexJectorGreyFront,
+              quarter: oakleyHexJectorGreyQuarter,
+              side: oakleyHexJectorGreySide,
+            },
+          },
+        ],
+      },
+      {
+        model: "Valdosta",
+        shape: "rectangle",
+        colour: "Polished Black",
+        priceFrom: 22780,
+        variants: [
+          {
+            id: "polished-black",
+            name: "Polished Black",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #35353a 0%, #0e0e10 55%, #4d4d52 100%)",
+            images: {
+              front: oakleyValdostaFront,
+              quarter: oakleyValdostaQuarter,
+              side: oakleyValdostaSide,
+            },
+          },
+        ],
+      },
     ],
   },
   {
