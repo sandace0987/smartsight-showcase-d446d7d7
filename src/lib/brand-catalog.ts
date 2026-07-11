@@ -448,6 +448,22 @@ export const BRANDS: BrandData[] = [
         ],
       },
       {
+        model: "RB2217M Scuderia Ferrari",
+        shape: "rectangle",
+        colour: "Black / Green",
+        priceFrom: 19290,
+        line: "Ray-Ban | Ferrari",
+        variants: [
+          {
+            id: "black-green",
+            name: "Black / Green (F601-71)",
+            lens: "Green UV Protection",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #171718 45%, #3d5a3a 100%)",
+            images: { front: rb2217mBlackFront, quarter: rb2217mBlackQuarter, side: rb2217mBlackSide },
+          },
+        ],
+      },
+      {
         model: "RB4252",
         shape: "round",
         colour: "Transparent / Black",
