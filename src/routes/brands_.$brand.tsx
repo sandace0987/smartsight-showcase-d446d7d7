@@ -55,11 +55,37 @@ const houseLogo = (name: string) => {
   return null;
 };
 
+const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+/** Placeholder Meta smart-glasses line-up per brand. Real product data TBD. */
+const META_MODELS: Record<string, { model: string; note: string; shape: string }[]> = {
+  "ray-ban": [
+    { model: "Ray-Ban Meta Wayfarer", note: "Camera + open-ear audio · coming soon", shape: "wayfarer" },
+    { model: "Ray-Ban Meta Skyler", note: "Lightweight cat-eye · coming soon", shape: "cateye" },
+    { model: "Ray-Ban Meta Headliner", note: "Rounded classic · coming soon", shape: "round" },
+  ],
+  oakley: [
+    { model: "Oakley Meta HSTN", note: "Sport-lifestyle AI eyewear · coming soon", shape: "sport" },
+    { model: "Oakley Meta Vanguard", note: "Wraparound performance · coming soon", shape: "shield" },
+  ],
+};
+
 function BrandPage() {
   const { brand } = Route.useLoaderData() as { brand: BrandData };
   const otherBrands = BRANDS.filter((b) => b.slug !== brand.slug)
     .sort((a, b) => priorityIndex(a.name) - priorityIndex(b.name))
     .slice(0, 6);
+
+  const metaModels = META_MODELS[brand.slug];
+  const lineList: string[] = [];
+  for (const m of brand.models) {
+    const l = m.line ?? "Other";
+    if (m.line && !lineList.includes(l)) lineList.push(l);
+  }
+  const navSections: { id: string; label: string }[] = [
+    ...(metaModels ? [{ id: "meta-glasses", label: "Meta Glasses" }] : []),
+    ...lineList.map((l) => ({ id: slugify(l), label: l })),
+  ];
 
   return (
     <div className="px-6 lg:px-10 py-16 lg:py-24">
