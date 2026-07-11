@@ -122,10 +122,10 @@ function BrandCard({ h, index }: { h: House; index: number }) {
 
   const inner = (
     <>
-      {h.slug === "prada" && (
+      {h.slug && BRAND_MODELS[h.slug] && (
         <img
-          src={pradaModelMale}
-          alt="Male model wearing Prada sunglasses"
+          src={BRAND_MODELS[h.slug].src}
+          alt={BRAND_MODELS[h.slug].alt}
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-30 transition-opacity pointer-events-none z-0"
         />
