@@ -1666,6 +1666,29 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "VOGUE FRAME VO5676",
+        shape: "cat-eye",
+        colour: "Black / Grey",
+        priceFrom: 4990,
+        line: "RX / Optical",
+        variants: [
+          {
+            id: "black",
+            name: "Black",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #101012 0%, #2a2a2c 50%, #454547 100%)",
+            images: { front: vo5676BlackFront, quarter: vo5676BlackQuarter, side: vo5676BlackSide },
+          },
+          {
+            id: "grey",
+            name: "Transparent Grey",
+            lens: "Clear Demo",
+            swatch: "linear-gradient(135deg, #8a8681 0%, #a8a39c 50%, #cfc8bf 100%)",
+            images: { front: vo5676GreyFront, quarter: vo5676GreyQuarter, side: vo5676GreySide },
+          },
+        ],
+      },
     ],
   },
 ];
