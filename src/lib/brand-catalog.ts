@@ -492,7 +492,25 @@ export const BRANDS: BrandData[] = [
     tag: "Performance",
     blurb: "Sport-built optics with Prizm lens tech — for the road, the trail and the everyday.",
     models: [
-      // Oakley models added from user-provided screenshots
+      {
+        model: "BiSphaera™",
+        shape: "sport",
+        colour: "Steel / Prizm Black",
+        priceFrom: 12590,
+        variants: [
+          {
+            id: "steel-prizm-black",
+            name: "Steel / Prizm Black",
+            lens: "Prizm Black",
+            swatch: "linear-gradient(135deg, #4a4d52 0%, #2b2d30 55%, #6b6f75 100%)",
+            images: {
+              front: oakleyBisphaeraFront,
+              quarter: oakleyBisphaeraQuarter,
+              side: oakleyBisphaeraSide,
+            },
+          },
+        ],
+      },
     ],
   },
   {
