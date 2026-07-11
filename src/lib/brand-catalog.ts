@@ -157,6 +157,15 @@ import rb8416mBlackSide from "@/assets/products/ray-ban-rb8416m/side.webp";
 import rb7144mBlackFront from "@/assets/products/ray-ban-rb7144m/front.webp";
 import rb7144mBlackQuarter from "@/assets/products/ray-ban-rb7144m/quarter.webp";
 import rb7144mBlackSide from "@/assets/products/ray-ban-rb7144m/side.webp";
+import rb3025BlackFront from "@/assets/products/ray-ban-rb3025/black-front.webp";
+import rb3025BlackQuarter from "@/assets/products/ray-ban-rb3025/black-quarter.webp";
+import rb3025BlackSide from "@/assets/products/ray-ban-rb3025/black-side.webp";
+import rb3025SilverFront from "@/assets/products/ray-ban-rb3025/silver-front.webp";
+import rb3025SilverQuarter from "@/assets/products/ray-ban-rb3025/silver-quarter.webp";
+import rb3025SilverSide from "@/assets/products/ray-ban-rb3025/silver-side.webp";
+import rb3025GoldFront from "@/assets/products/ray-ban-rb3025/gold-front.webp";
+import rb3025GoldQuarter from "@/assets/products/ray-ban-rb3025/gold-quarter.webp";
+import rb3025GoldSide from "@/assets/products/ray-ban-rb3025/gold-side.webp";
 import burberryBe2387Quarter from "@/assets/products/burberry-be2387/quarter.webp";
 import burberryBe2387Side from "@/assets/products/burberry-be2387/side.webp";
 import oakleyBisphaeraFront from "@/assets/products/oakley-bisphaera/front.webp";
@@ -536,6 +545,37 @@ export const BRANDS: BrandData[] = [
             lens: "Clear Demo",
             swatch: "linear-gradient(135deg, #1a1a1c 0%, #171718 45%, #c2352f 100%)",
             images: { front: rb7144mBlackFront, quarter: rb7144mBlackQuarter, side: rb7144mBlackSide },
+          },
+        ],
+      },
+      {
+        model: "RB3025 Aviator",
+        shape: "aviator",
+        colour: "Black / Silver / Gold",
+        priceFrom: 8990,
+        line: "Sunglasses",
+        is_hot: true,
+        variants: [
+          {
+            id: "black-green",
+            name: "Black / Green G-15 (002)",
+            lens: "Green Classic G-15",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #171718 45%, #3d5a3a 100%)",
+            images: { front: rb3025BlackFront, quarter: rb3025BlackQuarter, side: rb3025BlackSide },
+          },
+          {
+            id: "silver-blue",
+            name: "Silver / Blue Gradient (003/3F)",
+            lens: "Blue Gradient",
+            swatch: "linear-gradient(135deg, #c7ccd1 0%, #9aa0a6 45%, #7fb0d8 100%)",
+            images: { front: rb3025SilverFront, quarter: rb3025SilverQuarter, side: rb3025SilverSide },
+          },
+          {
+            id: "gold-green",
+            name: "Gold / Green G-15 (001)",
+            lens: "Green Classic G-15",
+            swatch: "linear-gradient(135deg, #e6c766 0%, #c79a3a 45%, #3d5a3a 100%)",
+            images: { front: rb3025GoldFront, quarter: rb3025GoldQuarter, side: rb3025GoldSide },
           },
         ],
       },
