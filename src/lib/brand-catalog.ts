@@ -1349,6 +1349,21 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "SPLQ88 Supernova 2 0703",
+        shape: "rectangle",
+        colour: "Black / G-15 Green",
+        priceFrom: 13900,
+        variants: [
+          {
+            id: "black-green",
+            name: "Black / G-15 Green",
+            lens: "G-15 Green",
+            swatch: "linear-gradient(135deg, #1c1c1e 0%, #171718 45%, #3d5a3a 100%)",
+            images: { front: policeSplq88Front, quarter: policeSplq88Quarter, side: policeSplq88Side },
+          },
+        ],
+      },
       { model: "Origins Aviator", shape: "aviator", colour: "Gunmetal", priceFrom: 7990 },
       { model: "Lewis Rectangle", shape: "rectangle", colour: "Matte Black", priceFrom: 6990 },
       { model: "Tailwind Shield", shape: "shield", colour: "Black", priceFrom: 8490 },
