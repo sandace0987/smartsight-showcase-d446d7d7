@@ -166,6 +166,9 @@ import rb3025SilverSide from "@/assets/products/ray-ban-rb3025/silver-side.webp"
 import rb3025GoldFront from "@/assets/products/ray-ban-rb3025/gold-front.webp";
 import rb3025GoldQuarter from "@/assets/products/ray-ban-rb3025/gold-quarter.webp";
 import rb3025GoldSide from "@/assets/products/ray-ban-rb3025/gold-side.webp";
+import rb2140Front from "@/assets/products/ray-ban-rb2140/front.webp";
+import rb2140Quarter from "@/assets/products/ray-ban-rb2140/quarter.webp";
+import rb2140Side from "@/assets/products/ray-ban-rb2140/side.webp";
 import burberryBe2387Quarter from "@/assets/products/burberry-be2387/quarter.webp";
 import burberryBe2387Side from "@/assets/products/burberry-be2387/side.webp";
 import oakleyBisphaeraFront from "@/assets/products/oakley-bisphaera/front.webp";
@@ -576,6 +579,23 @@ export const BRANDS: BrandData[] = [
             lens: "Green Classic G-15",
             swatch: "linear-gradient(135deg, #e6c766 0%, #c79a3a 45%, #3d5a3a 100%)",
             images: { front: rb3025GoldFront, quarter: rb3025GoldQuarter, side: rb3025GoldSide },
+          },
+        ],
+      },
+      {
+        model: "RB2140 Original Wayfarer",
+        shape: "rectangle",
+        colour: "Black",
+        priceFrom: 14990,
+        line: "Sunglasses",
+        is_hot: true,
+        variants: [
+          {
+            id: "black-901",
+            name: "Black (901/58)",
+            lens: "Polarized Green Classic G-15",
+            swatch: "linear-gradient(135deg, #1a1a1c 0%, #171718 45%, #3d5a3a 100%)",
+            images: { front: rb2140Front, quarter: rb2140Quarter, side: rb2140Side },
           },
         ],
       },
