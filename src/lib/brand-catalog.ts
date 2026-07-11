@@ -800,6 +800,25 @@ export const BRANDS: BrandData[] = [
           },
         ],
       },
+      {
+        model: "SPP 194M 700 53",
+        shape: "rectangle",
+        colour: "Black / Grey Gradient",
+        priceFrom: 40900,
+        variants: [
+          {
+            id: "black-grey-gradient",
+            name: "Black / Grey Gradient",
+            lens: "Grey Gradient",
+            swatch: "linear-gradient(135deg, #1c1c1e 0%, #3a3a3d 55%, #6b6b6f 100%)",
+            images: {
+              front: pleinSpp194Front,
+              quarter: pleinSpp194Quarter,
+              side: pleinSpp194Side,
+            },
+          },
+        ],
+      },
     ],
   },
   {
