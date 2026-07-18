@@ -68,7 +68,7 @@ function StoresPage() {
                 <StoreImageCarousel
                   images={s.images}
                   alt={s.name}
-                  className={i === 1 ? "scale-110" : i === 2 ? "-scale-x-100" : ""}
+                  className={i === 1 ? "scale-110" : ""}
                 />
               </div>
               <div className="lg:col-span-7 p-8 lg:p-12 flex flex-col gap-5">

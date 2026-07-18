@@ -683,7 +683,7 @@ function HomePage() {
                   <StoreImageCarousel
                     images={s.images}
                     alt={s.name}
-                    className={i === 1 ? "scale-110" : i === 2 ? "-scale-x-100" : ""}
+                    className={i === 1 ? "scale-110" : ""}
                   />
                 </div>
                 <div className="p-7 flex flex-col gap-4 flex-1">
