@@ -5,6 +5,7 @@ import { GlassSilhouette } from "@/components/site/GlassSilhouette";
 import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ProductDialog } from "@/components/site/ProductDialog";
 import { useImageDominantColor } from "@/hooks/useImageDominantColor";
+import { GLOBAL_PROMO } from "@/lib/promo-config";
 
 export function ModelCard({ m, index, brandName }: { m: GlassItem; index: number; brandName: string }) {
   const hasVariants = !!m.variants && m.variants.length > 0;
@@ -16,6 +17,8 @@ export function ModelCard({ m, index, brandName }: { m: GlassItem; index: number
 
   const imageSrc = m.image || variant?.images.front;
   const { color } = useImageDominantColor(imageSrc);
+
+  const isZeiss = brandName.toLowerCase() === "zeiss";
 
   return (
     <article
@@ -38,9 +41,16 @@ export function ModelCard({ m, index, brandName }: { m: GlassItem; index: number
       aria-label={hasVariants ? `View ${m.model} details` : undefined}
     >
       <div className="flex items-start justify-between gap-2">
-        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
-          0{index + 1}
-        </span>
+        <div className="flex flex-col gap-1.5 items-start">
+          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+            0{index + 1}
+          </span>
+          {isZeiss && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-electric/10 border border-electric/30 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-electric">
+              {GLOBAL_PROMO.badgeText}
+            </span>
+          )}
+        </div>
         {m.is_hot ? (
           <span className="inline-flex items-center gap-1 rounded-full bg-red-700/90 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-white/95">
             Selling fast

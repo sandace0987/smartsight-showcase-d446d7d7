@@ -6,6 +6,7 @@ import { EnquireDialog } from "@/components/site/EnquireDialog";
 import { ArrowUpRight } from "lucide-react";
 import type { ColorVariant } from "@/lib/brand-catalog";
 import { useImageDominantColor } from "@/hooks/useImageDominantColor";
+import { GLOBAL_PROMO } from "@/lib/promo-config";
 
 type Props = {
   brand: string;
@@ -133,6 +134,20 @@ export function ProductDialog({ brand, model, priceFrom, variants, trigger, open
                 <dd className="font-medium">{variant.lens}</dd>
               </div>
             </dl>
+
+            {brand.toLowerCase() === "zeiss" && (
+              <div className="mt-6 p-4 rounded-2xl bg-electric/5 border border-electric/25">
+                <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-electric block mb-1">
+                  Ongoing Promotion
+                </span>
+                <p className="text-xs font-semibold text-foreground/90 leading-snug">
+                  {GLOBAL_PROMO.text}
+                </p>
+                <p className="text-[10px] text-muted-foreground mt-1 leading-normal">
+                  {GLOBAL_PROMO.description}
+                </p>
+              </div>
+            )}
 
             <div className="mt-auto pt-8">
               <EnquireDialog

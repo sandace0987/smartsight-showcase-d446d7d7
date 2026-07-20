@@ -6,6 +6,7 @@ import { AnimatedWordmark } from "./AnimatedWordmark";
 import { ThemeSwatches } from "./ThemeSwatches";
 import logoUrl from "@/assets/miscellaneous/clear-sight-logo.avif";
 import { CONTACT_PHONE_RAW } from "@/lib/contact-config";
+import { GLOBAL_PROMO } from "@/lib/promo-config";
 
 type NavItem = { to: string; hash?: string; label: string; route?: boolean };
 
@@ -259,6 +260,30 @@ export function SiteHeader() {
           </Link>
         </nav>
       </div>
+
+      {location.pathname === "/" && (
+        <div className="w-full bg-electric text-white py-2 overflow-hidden whitespace-nowrap select-none border-t border-border/20 text-[10px] font-bold uppercase tracking-[0.25em]">
+          <div className="animate-[marquee_60s_linear_infinite] inline-flex gap-8 whitespace-nowrap">
+            <span>{GLOBAL_PROMO.text}</span>
+            <span>✦</span>
+            <span>Free ZEISS Certified Eye Test</span>
+            <span>✦</span>
+            <span>{GLOBAL_PROMO.text}</span>
+            <span>✦</span>
+            <span>Free ZEISS Certified Eye Test</span>
+            <span>✦</span>
+            {/* Duplicate for seamless looping marquee */}
+            <span>{GLOBAL_PROMO.text}</span>
+            <span>✦</span>
+            <span>Free ZEISS Certified Eye Test</span>
+            <span>✦</span>
+            <span>{GLOBAL_PROMO.text}</span>
+            <span>✦</span>
+            <span>Free ZEISS Certified Eye Test</span>
+            <span>✦</span>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

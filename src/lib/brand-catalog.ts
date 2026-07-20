@@ -877,7 +877,7 @@ export const BRANDS: BrandData[] = [
         model: "Ray-Ban Meta Wayfarer (Gen 2)",
         shape: "wayfarer",
         colour: "6 colourways",
-        priceFrom: 33915,
+        priceFrom: 39800,
         line: "Meta Glasses",
         variants: [
           {
@@ -936,7 +936,7 @@ export const BRANDS: BrandData[] = [
         model: "Meta HSTN",
         shape: "round",
         colour: "8 colourways",
-        priceFrom: 33915,
+        priceFrom: 41800,
         line: "Meta Glasses",
         is_hot: true,
         variants: [

@@ -10,6 +10,7 @@ import { TiltCard } from "@/components/motion/TiltCard";
 import { ModelCard } from "@/components/site/ModelCard";
 import { breadcrumbSchema, createSeoHead } from "@/lib/seo";
 import { CONTACT_PHONE_RAW } from "@/lib/contact-config";
+import { GLOBAL_PROMO } from "@/lib/promo-config";
 import pradaModelMale from "@/assets/brands/prada-model-male.webp";
 import pleinModel from "@/assets/brands/plein-model.webp";
 import vogueModel from "@/assets/brands/vogue-model.webp";
@@ -255,6 +256,30 @@ function BrandPage() {
             </div>
           </div>
         </div>
+
+        {brand.slug === "zeiss" && (
+          <div className="mt-8 p-6 lg:p-8 rounded-3xl bg-electric/10 border border-electric/30 relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="relative z-10 max-w-2xl">
+              <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase block mb-2">
+                Exclusive In-Store Offer
+              </span>
+              <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
+                {GLOBAL_PROMO.text}
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {GLOBAL_PROMO.description} This exclusive promotion is available across our Hyderabad locations (KPHB, Nizampet, and Bowenpally). Consult our styling experts in-store to redeem.
+              </p>
+            </div>
+            <a
+              href={`https://wa.me/${CONTACT_PHONE_RAW}?text=Hi%20Clear%20Sight%20Opticians,%20I'd%20like%20to%20enquire%20about%20the%20ZEISS%20lenses%20promotion.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 bg-electric text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:opacity-90 transition shrink-0 h-fit w-fit"
+            >
+              Enquire on WhatsApp
+            </a>
+          </div>
+        )}
 
         {/* Featured Video for Ray-Ban and Oakley */}
         {(brand.slug === "ray-ban" || brand.slug === "oakley") && (
