@@ -132,6 +132,11 @@ function RootShell({ children }: { children: React.ReactNode }) {
             __html: `(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(err){console.error('Service Worker registration failed:',err);});});}`,
+          }}
+        />
       </head>
       <body>
         {children}
