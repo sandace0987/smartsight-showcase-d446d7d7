@@ -151,8 +151,20 @@ export default {
       }
 
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      let response = await handler.fetch(request, env, ctx);
+      response = await normalizeCatastrophicSsrResponse(response);
+
+      const contentType = response.headers.get("content-type") ?? "";
+      if (contentType.includes("text/html")) {
+        const newHeaders = new Headers(response.headers);
+        newHeaders.set("Cache-Control", "public, max-age=0, must-revalidate");
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers: newHeaders,
+        });
+      }
+      return response;
     } catch (error) {
       console.error(error);
       return brandedErrorResponse();
