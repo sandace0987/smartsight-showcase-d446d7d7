@@ -9,23 +9,23 @@ interface FAQItem {
 const FAQS: FAQItem[] = [
   {
     question: "Where can I get a professional ZEISS eye test in Hyderabad?",
-    answer: "Clear Sight Opticians is a proud ZEISS Certified Vision Expert — the first partner in Telangana. You can get advanced, precise vision profiling and professional eye tests using state-of-the-art ZEISS diagnostic equipment at all three of our Hyderabad studios: Kukatpally (KPHB), Nizampet, and Bowenpally. Eye tests are complimentary with any eyewear purchase.",
+    answer: "Clear Sight Opticians is a proud ZEISS Certified Vision Expert — the first partner in Telangana. You can get advanced, precise vision profiling and professional eye tests using state-of-the-art ZEISS diagnostic equipment at all three premium stores: Kukatpally (KPHB), Nizampet, and Bowenpally. Eye tests are complimentary with any eyewear purchase.",
   },
   {
-    question: "Can I get custom prescription lenses for Ray-Ban Meta smart glasses?",
-    answer: "Yes, absolutely. We specialize in fitting custom, high-index prescription lenses into Ray-Ban Meta and Oakley Meta smart glasses. Whether you need single vision, progressive, blue-light filtering, or transition lenses, our in-house optical lab fits them precisely without affecting the open-ear audio or camera systems.",
+    question: "Can I get custom prescription lenses for Ray-Ban Meta AI glasses?",
+    answer: "Yes, absolutely. We specialize in fitting custom, high-index prescription lenses into Ray-Ban Meta and Oakley Meta AI glasses. Whether you need single vision, progressive, blue-light filtering, or transition lenses, our in-house optical lab fits them precisely without affecting the open-ear audio or camera systems.",
   },
   {
     question: "What luxury designer eyewear brands do you stock?",
-    answer: "We carry a curated edit of the world's finest eyewear brands, including Prada, Gucci, Oakley, Ray-Ban, Maui Jim, Silhouette, Montblanc, and Tom Ford. Every frame we sell is 100% authentic and comes with its original case, certificate, and manufacturer warranty.",
+    answer: "We carry a curated edit of the world's finest eyewear brands, including Prada, Oakley, Ray-Ban, Maui Jim, Silhouette, Montblanc, ZEISS, and Essilor. Every frame we sell is 100% authentic and comes with its original case, certificate, and manufacturer warranty.",
   },
   {
     question: "Do you offer walk-in appointments for vision check-ups?",
-    answer: "Yes, walk-ins are always welcome at all three of our Hyderabad locations. However, to minimize wait times during weekends or peak hours, we recommend booking a slot in advance by calling us or scheduling via WhatsApp through our Contact page.",
+    answer: "Yes, walk-ins are always welcome at all three of our locations. However, to minimize wait times during weekends or peak hours, we recommend booking a slot in advance by calling us or scheduling via WhatsApp through our Contact page.",
   },
   {
     question: "Do you offer lifetime support for frames purchased from your store?",
-    answer: "Yes! Every frame purchased from Clear Sight Opticians qualifies for our complimentary lifetime fitting service. You can walk into any of our KPHB, Nizampet, or Bowenpally studios anytime for free frame adjustments, nose pad replacements, screw tightening, and ultrasonic deep cleaning.",
+    answer: "Yes! Every frame purchased from Clear Sight Opticians qualifies for our complimentary lifetime fitting service. You can walk into any of our KPHB, Nizampet, or Bowenpally stores anytime for free frame adjustments, nose pad replacements, screw tightening, and ultrasonic deep cleaning.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function FAQSection() {
             Frequently Asked <span className="font-serif italic font-medium text-electric">Questions.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Everything you need to know about our clinical eye tests, premium eyewear, and smart glasses fittings in Hyderabad.
+            Everything you need to know about our clinical eye tests, premium eyewear, and AI glasses fittings.
           </p>
         </div>
 

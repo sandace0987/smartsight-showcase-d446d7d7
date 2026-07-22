@@ -38,7 +38,7 @@ const FRAME_TYPES = [
 ];
 
 const SMART_GLASSES_PREF = [
-  { id: "yes", label: "Yes, I want Smart Glasses", desc: "Features camera, audio, and Meta AI" },
+  { id: "yes", label: "Yes, I want AI Glasses", desc: "Features camera, audio, and Meta AI" },
   { id: "no", label: "No, Standard Eyewear", desc: "Traditional luxury & prescription frames" },
   { id: "any", label: "Show me both options", desc: "Open to both tech and traditional eyewear" },
 ];
@@ -438,7 +438,7 @@ export function FrameFinderAssistant({ open, onOpenChange }: FrameFinderAssistan
             {/* Step 4: Smart Glasses */}
             {step === "smart" && (
               <div>
-                <h3 className="text-xl font-bold tracking-tight mb-2">Interest in Smart Glasses features?</h3>
+                <h3 className="text-xl font-bold tracking-tight mb-2">Interest in AI Glasses features?</h3>
                 <p className="text-xs text-muted-foreground mb-6">Select yes if you're looking for built-in camera, music audio, and Meta AI.</p>
                 <div className="space-y-2">
                   {SMART_GLASSES_PREF.map((opt) => {

@@ -53,7 +53,7 @@ function AboutPage() {
           <p className="mt-8 text-muted-foreground max-w-2xl text-lg leading-relaxed">
             Clear Sight Opticians began in Kukatpally in 2009 with a simple idea — that
             buying glasses in Hyderabad should feel as considered as the frames themselves.
-            Today we run three studios, fit the world's finest eyewear houses, and are proud
+            Today we run three premium stores, fit the world's finest eyewear houses, and are proud
             <span className="text-foreground font-medium"> ZEISS Certified Vision Experts</span> — the first eye-care
             professionals in Telangana to partner with ZEISS.
           </p>
@@ -128,7 +128,7 @@ function AboutPage() {
       <section className="px-6 lg:px-10 pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl bg-secondary border border-border rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           <h2 className="text-3xl lg:text-5xl font-bold tracking-tighter max-w-2xl">
-            Come say hello — at any of our three Hyderabad studios.
+            Come say hello — at any of our three premium stores.
           </h2>
           <Link to="/stores" className="bg-electric text-white px-8 py-4 rounded-full text-sm font-semibold inline-flex items-center gap-2">
             Find a store <ArrowUpRight className="size-4" />

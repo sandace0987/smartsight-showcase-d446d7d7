@@ -8,11 +8,11 @@ import {
   useCallback,
   useEffect,
   type FC,
-  type ReactNode,
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { CanvasRenderer } from "./CanvasRenderer";
+import { BookingModal } from "@/components/site/BookingModal";
 import type { ProductRevealProps, TextCue } from "./types";
 
 /* ─────────────── helpers ────────────────── */
@@ -41,9 +41,10 @@ interface TextOverlayProps {
   cue: TextCue;
   opacity: number;
   translateY: number;
+  onBookDemo: () => void;
 }
 
-const TextOverlay: FC<TextOverlayProps> = ({ cue, opacity, translateY }) => {
+const TextOverlay: FC<TextOverlayProps> = ({ cue, opacity, translateY, onBookDemo }) => {
   // Split headline on \n for multi-line rendering
   const lines = cue.headline.split("\n");
 
@@ -90,17 +91,18 @@ const TextOverlay: FC<TextOverlayProps> = ({ cue, opacity, translateY }) => {
       {cue.showCTA && (
         <div className="flex flex-wrap gap-4 justify-center mt-8">
           <Link
-            to="/smart-glasses"
+            to="/ai-glasses"
             className="bg-white text-black px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-electric hover:text-white transition-colors shadow-lg"
           >
             Shop Collection
           </Link>
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={onBookDemo}
             className="border border-white/20 text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition-colors"
           >
             Book Free Demo
-          </Link>
+          </button>
         </div>
       )}
     </div>
@@ -109,14 +111,14 @@ const TextOverlay: FC<TextOverlayProps> = ({ cue, opacity, translateY }) => {
 
 /* ─────────────── reduced-motion fallback ── */
 
-const ReducedMotionFallback: FC<{ id?: string }> = ({ id }) => (
+const ReducedMotionFallback: FC<{ id?: string; onBookDemo: () => void }> = ({ id, onBookDemo }) => (
   <section
     id={id}
     className="relative h-screen bg-black flex items-center justify-center overflow-hidden"
   >
     <div className="text-center text-white px-6 max-w-2xl">
       <span className="text-electric text-xs font-bold tracking-[0.3em] uppercase mb-4 block">
-        Meta Glasses
+        Meta AI Glasses
       </span>
       <h2 className="text-5xl font-bold tracking-tighter leading-tight">
         Looks like eyewear.
@@ -127,11 +129,18 @@ const ReducedMotionFallback: FC<{ id?: string }> = ({ id }) => (
       </h2>
       <div className="flex gap-4 justify-center mt-8">
         <Link
-          to="/smart-glasses"
+          to="/ai-glasses"
           className="bg-white text-black px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest"
         >
           Shop Collection
         </Link>
+        <button
+          type="button"
+          onClick={onBookDemo}
+          className="border border-white/20 text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest"
+        >
+          Book Free Demo
+        </button>
       </div>
     </div>
   </section>
@@ -143,12 +152,13 @@ export const ProductReveal: FC<ProductRevealProps> = ({
   sequence,
   textTimeline,
   scrollHeight = 3000,
-  id = "smart-glasses",
+  id = "ai-glasses",
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
 
   // Progress is stored in a ref — no re-renders for the canvas path
   const progressRef = useRef(0);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   // Text overlay state — only re-renders when the active cue changes
   const [textState, setTextState] = useState<{
@@ -202,8 +212,21 @@ export const ProductReveal: FC<ProductRevealProps> = ({
     [textTimeline]
   );
 
+  const handleOpenDemo = () => {
+    setBookingOpen(true);
+  };
+
   if (prefersReducedMotion) {
-    return <ReducedMotionFallback id={id} />;
+    return (
+      <>
+        <ReducedMotionFallback id={id} onBookDemo={handleOpenDemo} />
+        <BookingModal
+          isOpen={bookingOpen}
+          onClose={() => setBookingOpen(false)}
+          defaultReason="AI glasses demo"
+        />
+      </>
+    );
   }
 
   return (
@@ -226,10 +249,10 @@ export const ProductReveal: FC<ProductRevealProps> = ({
         {/* ── Section label bar ── */}
         <div className="absolute top-8 left-6 sm:left-10 right-6 sm:right-10 flex items-center justify-between z-20">
           <span className="text-white text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase bg-white/5 border border-white/10 backdrop-blur rounded-full px-3 py-1">
-            Smart Glasses
+            AI Glasses
           </span>
           <Link
-            to="/smart-glasses"
+            to="/ai-glasses"
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white border-b-2 border-white pb-1 tracking-[0.2em] uppercase hover:text-electric hover:border-electric transition-colors"
           >
             Shop All
@@ -244,10 +267,18 @@ export const ProductReveal: FC<ProductRevealProps> = ({
               cue={textState.cue}
               opacity={textState.opacity}
               translateY={textState.translateY}
+              onBookDemo={handleOpenDemo}
             />
           )}
         </AnimatePresence>
       </div>
+
+      <BookingModal
+        isOpen={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+        defaultReason="AI glasses demo"
+      />
     </section>
   );
 };
+

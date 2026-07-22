@@ -9,7 +9,7 @@ export const chatbotQA: ChatQA[] = [
   {
     question: "📍 Where are your stores located?",
     answer:
-      "We have three state-of-the-art Hyderabad studios open daily from <strong>9:00 AM to 9:30 PM</strong>:<br/><br/>• <strong>KPHB Colony</strong> (Near JNTU Metro)<br/>• <strong>Nizampet</strong> (Main Road)<br/>• <strong>Bowenpally</strong> (Near Diamond Point)<br/><br/>You can get directions and phone numbers on our <a href=\"/stores\" class=\"text-electric underline font-semibold\">Stores Page</a>.",
+      "We have three state-of-the-art premium stores open daily from <strong>9:00 AM to 9:30 PM</strong>:<br/><br/>• <strong>KPHB Colony</strong> (Near JNTU Metro)<br/>• <strong>Nizampet</strong> (Main Road)<br/>• <strong>Bowenpally</strong> (Near Diamond Point)<br/><br/>You can get directions and phone numbers on our <a href=\"/stores\" class=\"text-electric underline font-semibold\">Stores Page</a>.",
   },
   {
     question: "👓 Which designer brands do you carry?",
@@ -22,9 +22,9 @@ export const chatbotQA: ChatQA[] = [
       `Eye testing at Clear Sight is <strong>computerized, precision-calibrated, and free of charge</strong> with any frame or lens purchase! Bookings take under a minute:<br/><br/>• Tap <a href="/" class="text-electric underline font-semibold">Book Eye Test</a> in the menu<br/>• Call us directly at <a href="tel:+${CONTACT_PHONE_RAW}" class="text-electric underline font-semibold">${CONTACT_PHONE}</a><br/>• Walk-ins are always welcome!`,
   },
   {
-    question: "⚡ Do you have Ray-Ban Meta smart glasses?",
+    question: "⚡ Do you have Ray-Ban Meta AI glasses?",
     answer:
-      "Yes! We have in-store display models and active stock for both <strong>Ray-Ban Meta Wayfarer</strong> and <strong>Oakley Meta HSTN</strong> smart glasses. Drop by any branch for a live hands-free demo of photo/video capture, calling, and Meta AI features.",
+      "Yes! We have in-store display models and active stock for both <strong>Ray-Ban Meta Wayfarer</strong> and <strong>Oakley Meta HSTN</strong> AI glasses. Drop by any branch for a live hands-free demo of photo/video capture, calling, and Meta AI features.",
   },
   {
     question: "🔬 What prescription lenses do you recommend?",

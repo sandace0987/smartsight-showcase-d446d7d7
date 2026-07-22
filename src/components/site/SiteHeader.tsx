@@ -1,23 +1,24 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouter, useRouterState } from "@tanstack/react-router";
 import { Menu, X, Phone, CalendarCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedWordmark } from "./AnimatedWordmark";
 import { ThemeSwatches } from "./ThemeSwatches";
+import { BookingModal } from "./BookingModal";
 import logoUrl from "@/assets/miscellaneous/clear-sight-logo.avif";
 import { CONTACT_PHONE_RAW } from "@/lib/contact-config";
 import { GLOBAL_PROMO } from "@/lib/promo-config";
 
-type NavItem = { to: string; hash?: string; label: string; route?: boolean };
+type NavItem = { to: string; hash?: string; label: string; subroute?: string };
 
 const NAV: NavItem[] = [
-  { to: "/", hash: undefined, label: "Home" },
-  { to: "/", hash: "smart-glasses", label: "Smart Glasses" },
-  { to: "/", hash: "brands", label: "Brands" },
+  { to: "/", hash: undefined, label: "Home", subroute: "/" },
+  { to: "/", hash: "ai-glasses", label: "AI Glasses", subroute: "/ai-glasses" },
+  { to: "/", hash: "brands", label: "Brands", subroute: "/brands" },
   { to: "/", hash: "try-on", label: "Try On" },
-  { to: "/", hash: "stores", label: "Stores" },
-  { to: "/", hash: "about", label: "About" },
-  { to: "/", hash: "contact", label: "Contact" },
+  { to: "/", hash: "stores", label: "Stores", subroute: "/stores" },
+  { to: "/", hash: "about", label: "About", subroute: "/about" },
+  { to: "/", hash: "contact", label: "Contact Us" },
 ];
 
 const SECTION_IDS = NAV.filter((n) => n.hash).map((n) => n.hash as string);
@@ -25,7 +26,10 @@ const SECTION_IDS = NAV.filter((n) => n.hash).map((n) => n.hash as string);
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | undefined>(undefined);
+  const [bookingOpen, setBookingOpen] = useState(false);
+  const [bookingReason, setBookingReason] = useState("Eye test");
   const { location } = useRouterState();
+  const router = useRouter();
   const [showPromo, setShowPromo] = useState(true);
 
   // Dismiss the scrolling promotion ribbon for the current page view (not persisted across reloads)
@@ -90,7 +94,17 @@ export function SiteHeader() {
 
   const handleNavClick = (item: NavItem) => (e: React.MouseEvent) => {
     if (location.pathname !== "/") {
-      if (item.hash) {
+      if (item.label.includes("Contact") || item.hash === "contact") {
+        e.preventDefault();
+        setBookingReason("Eye test");
+        setBookingOpen(true);
+        setOpen(false);
+        return;
+      }
+      if (item.subroute) {
+        e.preventDefault();
+        router.navigate({ to: item.subroute });
+      } else if (item.hash) {
         sessionStorage.setItem("scrollTargetSection", item.hash);
       }
       setOpen(false);
@@ -108,12 +122,9 @@ export function SiteHeader() {
   };
 
   const handleBookTestClick = (e: React.MouseEvent) => {
-    if (location.pathname === "/") {
-      e.preventDefault();
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      sessionStorage.setItem("scrollTargetSection", "contact");
-    }
+    e.preventDefault();
+    setBookingReason("Eye test");
+    setBookingOpen(true);
     setOpen(false);
   };
 
@@ -133,7 +144,7 @@ export function SiteHeader() {
             to="/"
             onClick={handleLogoClick}
             aria-label="Clear Sight Opticians"
-            className="relative inline-flex items-center justify-start shrink-0 h-14 lg:h-16 w-36 lg:w-44 overflow-hidden"
+            className="relative inline-flex items-center justify-start shrink-0 h-[70px] lg:h-[80px] w-[180px] lg:w-[220px] overflow-hidden"
           >
             {/* Base Logo: Normal in light mode, dimmed in dark mode */}
             <img
@@ -168,26 +179,26 @@ export function SiteHeader() {
             >
               <Phone className="size-4" /> Call
             </a>
-            <Link
-              to="/"
+            <button
+              type="button"
               onClick={handleBookTestClick}
               className="bg-electric text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-ink transition-colors"
             >
               Book Eye Test
-            </Link>
+            </button>
             <ThemeSwatches />
           </div>
 
           {/* Mobile right cluster */}
           <div className="md:hidden flex items-center gap-1.5 shrink-0">
-            <Link
-              to="/"
+            <button
+              type="button"
               onClick={handleBookTestClick}
               aria-label="Book Eye Test"
               className="inline-flex size-9 items-center justify-center rounded-full bg-electric text-white hover:bg-ink transition-colors"
             >
               <CalendarCheck className="size-4" />
-            </Link>
+            </button>
             <ThemeSwatches />
             <button
               type="button"
@@ -216,10 +227,10 @@ export function SiteHeader() {
         {/* Secondary nav */}
         <nav className="hidden md:flex justify-center gap-8 lg:gap-10 pb-3 -mt-1 text-[12px] font-medium uppercase tracking-[0.18em]">
           {NAV.map((item) => {
-            const isActive = item.route
-              ? location.pathname === item.to
-              : location.pathname === "/" &&
-                (item.hash ? item.hash === activeSection : activeSection === undefined);
+            const isActive =
+              location.pathname === "/"
+                ? item.hash ? item.hash === activeSection : activeSection === undefined
+                : item.subroute ? location.pathname === item.subroute : false;
             return (
               <Link
                 key={item.label}
@@ -248,10 +259,10 @@ export function SiteHeader() {
       >
         <nav className="px-6 py-5 flex flex-col gap-2">
           {NAV.map((item) => {
-            const isActive = item.route
-              ? location.pathname === item.to
-              : location.pathname === "/" &&
-                (item.hash ? item.hash === activeSection : activeSection === undefined);
+            const isActive =
+              location.pathname === "/"
+                ? item.hash ? item.hash === activeSection : activeSection === undefined
+                : item.subroute ? location.pathname === item.subroute : false;
             return (
               <Link
                 key={item.label}
@@ -266,13 +277,13 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link
-            to="/"
+          <button
+            type="button"
             onClick={handleBookTestClick}
             className="mt-2 text-center bg-electric text-white px-5 py-3 rounded-full text-sm font-semibold"
           >
             Book Eye Test
-          </Link>
+          </button>
         </nav>
       </div>
 
@@ -282,20 +293,20 @@ export function SiteHeader() {
             <div className="animate-[marquee_60s_linear_infinite] inline-flex gap-8 whitespace-nowrap">
               <span>{GLOBAL_PROMO.text}</span>
               <span>✦</span>
-              <span>Free ZEISS Certified Eye Test</span>
+              <span>Free ZEISS Global Certified Eye Test</span>
               <span>✦</span>
               <span>{GLOBAL_PROMO.text}</span>
               <span>✦</span>
-              <span>Free ZEISS Certified Eye Test</span>
+              <span>Free ZEISS Global Certified Eye Test</span>
               <span>✦</span>
               {/* Duplicate for seamless looping marquee */}
               <span>{GLOBAL_PROMO.text}</span>
               <span>✦</span>
-              <span>Free ZEISS Certified Eye Test</span>
+              <span>Free ZEISS Global Certified Eye Test</span>
               <span>✦</span>
               <span>{GLOBAL_PROMO.text}</span>
               <span>✦</span>
-              <span>Free ZEISS Certified Eye Test</span>
+              <span>Free ZEISS Global Certified Eye Test</span>
               <span>✦</span>
             </div>
           </div>
@@ -309,6 +320,13 @@ export function SiteHeader() {
           </button>
         </div>
       )}
+
+      <BookingModal
+        isOpen={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+        defaultReason={bookingReason}
+      />
     </header>
   );
 }
+

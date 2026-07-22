@@ -26,6 +26,8 @@ import carreraModel from "@/assets/brands/carrera-model.webp";
 import guessModel from "@/assets/brands/guess-model.webp";
 import modoModel from "@/assets/brands/modo-model.webp";
 import stepperModel from "@/assets/brands/stepper-model.webp";
+import zeissModel from "@/assets/brands/zeiss-model.webp";
+import essilorModel from "@/assets/brands/essilor-model.webp";
 import { breadcrumbSchema, createSeoHead, itemListSchema } from "@/lib/seo";
 
 const BRAND_MODELS: Record<string, { src: string; alt: string }> = {
@@ -47,6 +49,8 @@ const BRAND_MODELS: Record<string, { src: string; alt: string }> = {
   guess: { src: guessModel, alt: "Model wearing Guess eyewear" },
   modo: { src: modoModel, alt: "Model wearing Modo eyewear" },
   stepper: { src: stepperModel, alt: "Model wearing Stepper skin-friendly frames" },
+  zeiss: { src: zeissModel, alt: "ZEISS Certified Vision Expert diagnostic equipment and precision lenses" },
+  essilor: { src: essilorModel, alt: "Essilor Varilux and Crizal precision lenses" },
 };
 
 const SECTIONS = [
@@ -108,7 +112,7 @@ function BrandsPage() {
           </h1>
           <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
             From Italian ateliers to American icons — each brand we carry is hand-selected
-            and stocked across our three Hyderabad studios.
+            and stocked across our three premium stores.
           </p>
         </div>
 

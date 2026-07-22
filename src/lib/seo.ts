@@ -119,7 +119,7 @@ export const STORE_LOCATIONS: StoreLocation[] = [
     services: [
       "ZEISS eye testing",
       "designer eyewear styling",
-      "Ray-Ban Meta demos",
+      "Ray-Ban Meta AI glasses demos",
       "progressive and computer lenses",
       "frame adjustments",
     ],

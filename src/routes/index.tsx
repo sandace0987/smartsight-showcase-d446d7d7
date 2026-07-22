@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { CONTACT_PHONE, CONTACT_PHONE_RAW, CONTACT_EMAIL } from "@/lib/contact-config";
 import { HOUSES } from "@/lib/brand-catalog";
+import { BookingModal } from "@/components/site/BookingModal";
 import heroPortraitLight from "@/assets/homepage/hero-portrait-light.webp";
 import heroPortraitDark from "@/assets/homepage/hero-portrait-dark.webp";
 import pradaModelMale from "@/assets/brands/prada-model-male.webp";
@@ -53,6 +54,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SMART_GLASSES_SEQUENCE } from "@/components/ProductReveal/sequence";
 import { SMART_GLASSES_TEXT_TIMELINE } from "@/components/ProductReveal/textTimeline";
 
+import zeissModel from "@/assets/brands/zeiss-model.webp";
+import essilorModel from "@/assets/brands/essilor-model.webp";
+
 const BRAND_CAMPAIGN_IMAGES: Record<string, string> = {
   prada: pradaModelMale,
   "ray-ban": raybanModel,
@@ -63,6 +67,8 @@ const BRAND_CAMPAIGN_IMAGES: Record<string, string> = {
   montblanc: montblancModel,
   burberry: burberryModel,
   "maui-jim": mauiJimModel,
+  zeiss: zeissModel,
+  essilor: essilorModel,
 };
 import { Gamepad2 } from "lucide-react";
 import { FAQSection } from "@/components/site/FAQSection";
@@ -89,8 +95,8 @@ const HOMEPAGE_FAQS = [
     answer: "Clear Sight Opticians is a proud ZEISS Certified Vision Expert — the first partner in Telangana. You can get advanced, precise vision profiling and professional eye tests using state-of-the-art ZEISS diagnostic equipment at all three of our Hyderabad studios: Kukatpally (KPHB), Nizampet, and Bowenpally. Eye tests are complimentary with any eyewear purchase.",
   },
   {
-    question: "Can I get custom prescription lenses for Ray-Ban Meta smart glasses?",
-    answer: "Yes, absolutely. We specialize in fitting custom, high-index prescription lenses into Ray-Ban Meta and Oakley Meta smart glasses. Whether you need single vision, progressive, blue-light filtering, or transition lenses, our in-house optical lab fits them precisely without affecting the open-ear audio or camera systems.",
+    question: "Can I get custom prescription lenses for Ray-Ban Meta AI glasses?",
+    answer: "Yes, absolutely. We specialize in fitting custom, high-index prescription lenses into Ray-Ban Meta and Oakley Meta AI glasses. Whether you need single vision, progressive, blue-light filtering, or transition lenses, our in-house optical lab fits them precisely without affecting the open-ear audio or camera systems.",
   },
   {
     question: "What luxury designer eyewear brands do you stock?",
@@ -209,10 +215,10 @@ function MarqueeItem({ b }: { b: MarqueeBrand }) {
 const WHY = [
   { icon: Eye, title: "Expert optical guidance", desc: "Certified optometrists with 15+ years on the floor." },
   { icon: Gem, title: "Luxury & designer brands", desc: "From Prada to Persol — the world's finest, in one place." },
-  { icon: Cpu, title: "Smart eyewear, fitted", desc: "Ray-Ban Meta & Oakley Meta with on-site demos." },
-  { icon: Store, title: "Multi-store convenience", desc: "Three Hyderabad locations, same expert care." },
+  { icon: Cpu, title: "AI eyewear, fitted", desc: "Ray-Ban Meta & Oakley Meta with on-site demos." },
+  { icon: Sparkles, title: "Contact Lenses & Fitting", desc: "Daily, monthly & toric lenses from Acuvue, CooperVision & Alcon." },
+  { icon: Store, title: "Multi-store convenience", desc: "Three premium stores, same expert care." },
   { icon: ShieldCheck, title: "Lifetime fitting service", desc: "Free adjustments and tune-ups, forever." },
-  { icon: Sparkles, title: "Personalised styling", desc: "Frame consultations matched to your face shape." },
 ];
 
 const ANSWER_BLOCKS = [
@@ -222,6 +228,11 @@ const ANSWER_BLOCKS = [
       "Clear Sight Opticians offers professional ZEISS eye testing at KPHB, Nizampet, and Bowenpally. Each visit includes careful refraction, frame guidance, and lens recommendations for your daily routine.",
   },
   {
+    question: "Do you offer contact lenses and trial fittings?",
+    answer:
+      "Yes! We stock leading contact lens brands including Johnson & Johnson Acuvue, CooperVision, Bausch & Lomb, and Alcon. We offer professional contact lens trial fittings, prescription checks, toric/astigmatism solutions, and daily or monthly disposables at all three stores.",
+  },
+  {
     question: "Can Ray-Ban Meta and Oakley Meta take prescription lenses?",
     answer:
       "Yes. Our team helps fit compatible prescription, progressive, transition, and blue-light lens options for Ray-Ban Meta and Oakley Meta frames without blocking the camera, speakers, or controls.",
@@ -229,7 +240,7 @@ const ANSWER_BLOCKS = [
   {
     question: "Which designer eyewear brands are available?",
     answer:
-      "We stock authentic designer eyewear including Ray-Ban, Oakley, Prada, Maui Jim, Silhouette, Montblanc, Burberry, Vogue Eyewear, Police, Philipp Plein, Puma, Carrera, Tom Ford, and ZEISS lenses.",
+      "We stock authentic designer eyewear including Ray-Ban, Oakley, Prada, Maui Jim, Silhouette, Montblanc, ZEISS, Essilor, and premium contact lenses.",
   },
   {
     question: "Which Clear Sight store is nearest to me?",
@@ -300,6 +311,8 @@ function HomePage() {
   const hash = useRouterState({ select: (s) => s.location.hash });
   const [playing, setPlaying] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
+  const [bookingReason, setBookingReason] = useState("Contact lens fitting");
 
   useEffect(() => {
     setIsDark(document.documentElement.classList.contains("dark"));
@@ -502,8 +515,7 @@ function HomePage() {
                 className="mt-8 sm:mt-10"
               >
                 <p className="text-white/85 text-base sm:text-lg max-w-md leading-relaxed">
-                  Premium eyewear curated for the visionary. Discover Ray-Ban Meta,
-                  Oakley Meta and the world's finest luxury frames — fitted by experts.
+                  Discover Meta AI glasses, prescription contact lenses, and the world's finest luxury frames — fitted by experts.
                 </p>
               </motion.div>
             </div>
@@ -601,7 +613,7 @@ function HomePage() {
                 The brands we carry.
               </h2>
               <p className="text-muted-foreground mt-3 max-w-lg">
-                A curated edit from the world's finest eyewear houses, stocked across our three Hyderabad studios.
+                A curated edit from the world's finest eyewear houses, stocked across our three premium stores.
               </p>
             </div>
             <Link to="/brands" className="text-sm font-bold border-b-2 border-electric pb-1 tracking-[0.2em] uppercase w-fit">
@@ -610,7 +622,7 @@ function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {["ray-ban", "oakley", "maui-jim", "prada", "montblanc", "silhouette", "vogue", "burberry"]
+            {["ray-ban", "oakley", "maui-jim", "prada", "montblanc", "silhouette", "zeiss", "essilor"]
               .map((s) => HOUSES.find((h) => h.slug === s))
               .filter((h): h is NonNullable<typeof h> => Boolean(h))
               .map((h, i) => (
@@ -694,8 +706,8 @@ function HomePage() {
             <div>
               <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Visit a store</span>
               <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tighter">
-                Three Hyderabad{" "}
-                <span className="font-serif italic font-medium text-electric">studios.</span>
+                Three{" "}
+                <span className="font-serif italic font-medium text-electric">premium stores.</span>
               </h2>
             </div>
             <Link to="/stores" className="text-sm font-bold border-b-2 border-electric pb-1 tracking-[0.2em] uppercase w-fit">
@@ -773,6 +785,30 @@ function HomePage() {
             ))}
           </div>
 
+          {/* ============== CONTACT LENSES HIGHLIGHT BANNER ============== */}
+          <div className="mt-12 bg-gradient-to-r from-electric/15 via-electric/5 to-transparent border border-electric/25 rounded-3xl p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="size-2 rounded-full bg-electric animate-pulse" />
+                <span className="text-electric text-xs font-bold uppercase tracking-[0.22em]">Vision Care Highlight</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Prescription Contact Lenses &amp; Trial Fittings</h3>
+              <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
+                Daily disposables, monthly wear, toric (astigmatism), and multifocal lenses from world-class brands including CooperVision, Johnson &amp; Johnson Acuvue, Bausch &amp; Lomb, and Alcon. Complimentary trial fittings at all three stores.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setBookingReason("Contact lens fitting");
+                setBookingOpen(true);
+              }}
+              className="bg-electric text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-ink transition-colors shrink-0 shadow-sm"
+            >
+              Book Lens Trial
+            </button>
+          </div>
+
           <div className="mt-12 flex justify-center">
             <Link
               to="/about"
@@ -798,7 +834,7 @@ function HomePage() {
                   <Star key={i} className="size-4 fill-electric text-electric" />
                 ))}
               </div>
-              4.9 · 1,200+ reviews
+              5.0 · 97 Google reviews
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -852,7 +888,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Get In Touch</span>
           <h2 className="mt-3 text-4xl lg:text-6xl font-bold tracking-tighter max-w-3xl leading-[1.02]">
-            Book your eye test or smart glasses{" "}
+            Book your eye test or AI glasses{" "}
             <span className="font-serif italic font-medium text-electric">demo.</span>
           </h2>
 
@@ -898,7 +934,7 @@ function HomePage() {
             <form onSubmit={handleBookingSubmit} className="lg:col-span-8 bg-secondary/60 border border-border rounded-3xl p-8 lg:p-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <label className="flex flex-col gap-2">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Full name</span>
-                <input name="name" type="text" placeholder="Aarav Reddy" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
+                <input name="name" type="text" placeholder="Name..." className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors" />
               </label>
               <label className="flex flex-col gap-2">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Mobile</span>
@@ -920,7 +956,9 @@ function HomePage() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Reason</span>
                 <select name="reason" className="bg-transparent border-b border-border py-3 focus:outline-none focus:border-electric transition-colors">
                   <option className="bg-card text-foreground">Eye test</option>
-                  <option className="bg-card text-foreground">Smart glasses demo</option>
+                  <option className="bg-card text-foreground">AI glasses demo</option>
+                  <option className="bg-card text-foreground">Glasses Service &amp; Repairs</option>
+                  <option className="bg-card text-foreground">Kids Eyewear &amp; Myopia Care</option>
                   <option className="bg-card text-foreground">Frame styling</option>
                   <option className="bg-card text-foreground">Contact lens fitting</option>
                   <option className="bg-card text-foreground">Something else</option>
@@ -941,6 +979,11 @@ function HomePage() {
         </div>
       </section>
 
+      <BookingModal
+        isOpen={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+        defaultReason={bookingReason}
+      />
     </div>
   );
 }

@@ -71,7 +71,7 @@ function generateSitemap(): string {
   
   const corePages = [
     { url: "/", changefreq: "weekly", priority: 1.0 },
-    { url: "/smart-glasses", changefreq: "weekly", priority: 0.9 },
+    { url: "/ai-glasses", changefreq: "weekly", priority: 0.9 },
     { url: "/brands", changefreq: "weekly", priority: 0.9 },
     { url: "/stores", changefreq: "monthly", priority: 0.9 },
     { url: "/about", changefreq: "monthly", priority: 0.7 },

@@ -14,7 +14,7 @@ export function SiteFooter() {
             className="h-16 w-auto mb-6 brightness-0 invert opacity-90"
           />
           <p className="text-white/60 max-w-sm leading-relaxed">
-            The premier optical destination in Hyderabad — luxury frames, smart eyewear
+            The premier optical destination in Hyderabad — luxury frames, AI eyewear
             and clinical-grade eye care, fitted by experts.
           </p>
           <div className="mt-6 flex gap-4">
@@ -43,7 +43,7 @@ export function SiteFooter() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-5">Explore</p>
           <ul className="space-y-3 text-sm">
             <li><Link to="/brands" className="hover:text-electric">Brands</Link></li>
-            <li><Link to="/smart-glasses" className="hover:text-electric">Smart Glasses</Link></li>
+            <li><Link to="/ai-glasses" className="hover:text-electric">AI Glasses</Link></li>
             <li><Link to="/stores" className="hover:text-electric">Store Locator</Link></li>
             <li><Link to="/about" className="hover:text-electric">About</Link></li>
           </ul>

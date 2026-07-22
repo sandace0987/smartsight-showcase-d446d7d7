@@ -48,6 +48,8 @@ import silhouetteLogo from "@/assets/brands/silhouette-logo.webp";
 import pradaMilanoLogo from "@/assets/brands/prada-milano-logo.webp";
 import rayBanLogo from "@/assets/brands/ray-ban-logo.svg";
 import guessLogo from "@/assets/brands/guess-logo.webp";
+import zeissModel from "@/assets/brands/zeiss-model.webp";
+import essilorModel from "@/assets/brands/essilor-model.webp";
 
 // Montblanc Products
 import mb0256oFront from "@/assets/products/montblanc/mb-0256o-front.webp";
@@ -376,7 +378,7 @@ import silIllusion1617Side from "@/assets/products/silhouette/illusion-1617-side
 import silTimeless5603Front from "@/assets/products/silhouette/timeless-visionary-5603-front.webp";
 import silTimeless5603Quarter from "@/assets/products/silhouette/timeless-visionary-5603-quarter.webp";
 import silTimeless5603Side from "@/assets/products/silhouette/timeless-visionary-5603-side.webp";
-import zeissLens from "@/assets/products/zeiss-lens.webp";
+import zeissLens from "@/assets/products/zeiss/zeiss-lens.webp";
 
 export type ColorVariant = {
   id: string;

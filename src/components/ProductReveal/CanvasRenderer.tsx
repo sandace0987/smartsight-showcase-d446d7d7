@@ -25,31 +25,32 @@ export const CanvasRenderer: FC<CanvasRendererProps> = ({
   const { canvasRef, drawFrame, resetLastImg } = useCanvasRenderer();
   const { getFrame, startPreload } = useImageSequence(config);
 
-  const targetFrameRef = useRef<number>(1);
-  const currentFrameRef = useRef<number>(1);
+  const initialFrame = textTimeline[0]?.keyframe ?? 125;
+  const targetFrameRef = useRef<number>(initialFrame);
+  const currentFrameRef = useRef<number>(initialFrame);
   const isLoopRunningRef = useRef<boolean>(false);
   const rafIdRef = useRef<number | null>(null);
   const mountedRef = useRef(false);
 
   // On mount: reset all frame state, clear any stale cache from previous mount,
-  // then eagerly preload the initial frames and draw frame 1 immediately.
+  // then eagerly preload the initial frames and draw initial frame (125) immediately.
   useEffect(() => {
     // Reset all positional refs so we start fresh on every mount
-    targetFrameRef.current = 1;
-    currentFrameRef.current = 1;
+    targetFrameRef.current = initialFrame;
+    currentFrameRef.current = initialFrame;
     isLoopRunningRef.current = false;
     mountedRef.current = true;
 
-    // Clear stale module-level cache (holds dead HTMLImageElement bitmaps from
-    // previous mount that the browser silently emptied when we navigated away)
+    // Clear stale module-level cache
     clearCache();
     // Reset the canvas last-drawn ref so the first frame is always painted
     resetLastImg();
 
-    // Preload initial frames and draw frame 1 as soon as it is ready
+    // Preload initial frames and draw frame 125 as soon as it is ready
     startPreload().then(() => {
       if (!mountedRef.current) return;
-      const img = getFrame(0, (loadedImg) => {
+      const initialProgress = (initialFrame - 1) / (config.totalFrames - 1);
+      const img = getFrame(initialProgress, (loadedImg) => {
         if (mountedRef.current) drawFrame(loadedImg);
       });
       if (img) drawFrame(img);
@@ -105,25 +106,22 @@ export const CanvasRenderer: FC<CanvasRendererProps> = ({
   useScrollProgress(sectionRef, (progress) => {
     onProgress(progress);
 
-    let targetFrame = 1;
+    let targetFrame = initialFrame;
 
-    // If progress is >= 0.02, find active text cue and its corresponding keyframe
-    if (progress >= 0.02) {
-      let activeCue = textTimeline[0];
-      for (const cue of textTimeline) {
-        if (progress >= cue.inStart) {
-          activeCue = cue;
-        }
+    // Find active text cue and its corresponding keyframe
+    let activeCue = textTimeline[0];
+    for (const cue of textTimeline) {
+      if (progress >= cue.inStart) {
+        activeCue = cue;
       }
-      targetFrame = activeCue.keyframe;
     }
+    targetFrame = activeCue.keyframe;
 
     // Set target index to the determined keyframe
     targetFrameRef.current = targetFrame;
     triggerLoop();
 
     // If the loop isn't running (paused on a keyframe), ensure the frame is still valid.
-    // This recovers cases where the browser evicted the bitmap (naturalWidth → 0).
     if (!isLoopRunningRef.current) {
       const frameProgress = (currentFrameRef.current - 1) / (config.totalFrames - 1);
       const img = getFrame(frameProgress, (loadedImg) => {

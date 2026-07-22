@@ -15,6 +15,7 @@ import { Route as SmartGlassesRouteImport } from './routes/smart-glasses'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BrandsRouteImport } from './routes/brands'
+import { Route as AiGlassesRouteImport } from './routes/ai-glasses'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
@@ -50,6 +51,11 @@ const BrandsRoute = BrandsRouteImport.update({
   path: '/brands',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiGlassesRoute = AiGlassesRouteImport.update({
+  id: '/ai-glasses',
+  path: '/ai-glasses',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/ai-glasses': typeof AiGlassesRoute
   '/brands': typeof BrandsRoute
   '/contact': typeof ContactRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/ai-glasses': typeof AiGlassesRoute
   '/brands': typeof BrandsRoute
   '/contact': typeof ContactRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/ai-glasses': typeof AiGlassesRoute
   '/brands': typeof BrandsRoute
   '/contact': typeof ContactRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/ai-glasses'
     | '/brands'
     | '/contact'
     | '/privacy-policy'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/ai-glasses'
     | '/brands'
     | '/contact'
     | '/privacy-policy'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/ai-glasses'
     | '/brands'
     | '/contact'
     | '/privacy-policy'
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
+  AiGlassesRoute: typeof AiGlassesRoute
   BrandsRoute: typeof BrandsRoute
   ContactRoute: typeof ContactRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-glasses': {
+      id: '/ai-glasses'
+      path: '/ai-glasses'
+      fullPath: '/ai-glasses'
+      preLoaderRoute: typeof AiGlassesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -239,6 +259,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
+  AiGlassesRoute: AiGlassesRoute,
   BrandsRoute: BrandsRoute,
   ContactRoute: ContactRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,

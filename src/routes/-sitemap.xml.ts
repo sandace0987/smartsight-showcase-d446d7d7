@@ -11,7 +11,7 @@ const pages = [
     changefreq: 'weekly',
   },
   {
-    path: '/smart-glasses',
+    path: '/ai-glasses',
     priority: '0.9',
     changefreq: 'weekly',
   },

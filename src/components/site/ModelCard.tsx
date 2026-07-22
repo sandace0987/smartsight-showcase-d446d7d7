@@ -22,20 +22,19 @@ export function ModelCard({ m, index, brandName }: { m: GlassItem; index: number
 
   return (
     <article
-      className={`group relative bg-secondary/60 border border-border rounded-3xl p-7 flex flex-col h-full ${
-        hasVariants ? "cursor-pointer" : ""
-      }`}
+      className={`group relative bg-secondary/60 border border-border rounded-3xl p-7 flex flex-col h-full ${hasVariants ? "cursor-pointer" : ""
+        }`}
       onClick={hasVariants ? () => setOpen(true) : undefined}
       role={hasVariants ? "button" : undefined}
       tabIndex={hasVariants ? 0 : undefined}
       onKeyDown={
         hasVariants
           ? (e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setOpen(true);
-              }
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setOpen(true);
             }
+          }
           : undefined
       }
       aria-label={hasVariants ? `View ${m.model} details` : undefined}

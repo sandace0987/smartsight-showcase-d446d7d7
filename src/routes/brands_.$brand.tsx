@@ -14,6 +14,7 @@ import { useFeatureToggles } from "@/hooks/useFeatureToggles";
 import { breadcrumbSchema, createSeoHead } from "@/lib/seo";
 import { CONTACT_PHONE_RAW } from "@/lib/contact-config";
 import { GLOBAL_PROMO } from "@/lib/promo-config";
+import { BookingModal } from "@/components/site/BookingModal";
 import pradaModelMale from "@/assets/brands/prada-model-male.webp";
 import pleinModel from "@/assets/brands/plein-model.webp";
 import vogueModel from "@/assets/brands/vogue-model.webp";
@@ -32,6 +33,8 @@ import carreraModel from "@/assets/brands/carrera-model.webp";
 import guessModel from "@/assets/brands/guess-model.webp";
 import modoModel from "@/assets/brands/modo-model.webp";
 import stepperModel from "@/assets/brands/stepper-model.webp";
+import zeissModel from "@/assets/brands/zeiss-model.webp";
+import essilorModel from "@/assets/brands/essilor-model.webp";
 
 const CAMPAIGN_IMAGES: Record<string, string> = {
   prada: pradaModelMale,
@@ -52,18 +55,37 @@ const CAMPAIGN_IMAGES: Record<string, string> = {
   guess: guessModel,
   modo: modoModel,
   stepper: stepperModel,
+  zeiss: zeissModel,
+  essilor: essilorModel,
 };
 
+const getHouseOrBrand = (slug: string): BrandData | null => {
+  const brand = BRANDS.find((b) => b.slug === slug);
+  if (brand) return brand;
 
+  const house = HOUSES.find((h) => h.slug === slug);
+  if (house) {
+    return {
+      slug: house.slug ?? slug,
+      name: house.name,
+      tag: house.tag,
+      blurb: house.note ? `${house.name} — ${house.note}.` : `Authentic ${house.name} designer frames and prescription eyewear.`,
+      logo: house.logo,
+      models: [],
+    };
+  }
+
+  return null;
+};
 
 export const Route = createFileRoute("/brands_/$brand")({
   head: ({ params }) => {
-    const b = getBrand(params.brand);
+    const b = getHouseOrBrand(params.brand);
     const title = b
       ? `${b.name} Eyewear in Hyderabad | Clear Sight Opticians`
       : "Designer Eyewear Brands | Clear Sight Opticians";
     const desc = b
-      ? `Shop authentic ${b.name} prescription glasses and sunglasses at Clear Sight Opticians in Hyderabad. ${b.models?.length ? `${b.models.length} models in stock.` : ""} Available at KPHB, Nizampet, and Bowenpally.`
+      ? `Shop authentic ${b.name} prescription glasses and sunglasses at Clear Sight Opticians in Hyderabad.`
       : "Curated designer frames and prescription eyewear at Clear Sight Opticians Hyderabad.";
     return createSeoHead({
       title,
@@ -79,17 +101,21 @@ export const Route = createFileRoute("/brands_/$brand")({
     });
   },
   loader: ({ params }) => {
-    const brand = getBrand(params.brand);
+    const brand = getHouseOrBrand(params.brand);
     if (!brand) throw notFound();
     return { brand };
   },
   notFoundComponent: () => (
     <div className="px-6 lg:px-10 py-24 mx-auto max-w-3xl text-center">
-      <h1 className="text-4xl font-bold tracking-tight">Brand not found</h1>
-      <p className="mt-4 text-muted-foreground">We couldn't find that brand.</p>
-      <Link to="/brands" className="mt-6 inline-flex items-center gap-2 text-electric font-semibold">
-        <ArrowLeft className="size-4" /> Back to all brands
-      </Link>
+      <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Brand not found</h1>
+      <p className="mt-4 text-muted-foreground text-lg">
+        We couldn't find that brand in our catalog.
+      </p>
+      <div className="mt-8 flex justify-center">
+        <Link to="/brands" className="inline-flex items-center gap-2 bg-electric text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-ink transition-colors">
+          <ArrowLeft className="size-4" /> Back to all brands
+        </Link>
+      </div>
     </div>
   ),
   errorComponent: ({ error }) => (
@@ -117,6 +143,68 @@ function BrandPage() {
   const [videoMuted, setVideoMuted] = React.useState(true);
   const [videoPlaying, setVideoPlaying] = React.useState(false);
   const videoRef = React.useRef<HTMLVideoElement>(null);
+  const [bookingOpen, setBookingOpen] = React.useState(false);
+  const [bookingReason, setBookingReason] = React.useState(`${brand.name} Inquiry`);
+
+  if (!brand.models || brand.models.length === 0) {
+    const logoUrl = houseLogo(brand.name);
+    return (
+      <div className="px-6 lg:px-10 py-20 lg:py-28 mx-auto max-w-4xl text-center">
+        <div className="bg-secondary/60 border border-border rounded-3xl p-8 sm:p-14 shadow-sm flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="size-2 rounded-full bg-amber-500 animate-pulse" />
+            Inventory Updating
+          </div>
+
+          {logoUrl ? (
+            <div className="mx-auto mb-6 h-16 w-36 bg-white rounded-2xl p-3 shadow-sm border border-border flex items-center justify-center">
+              <img
+                src={logoUrl}
+                alt={`${brand.name} logo`}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+          ) : (
+            <h2 className="text-2xl font-bold tracking-tight mb-4 text-electric">{brand.name}</h2>
+          )}
+
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tighter text-foreground leading-tight max-w-2xl">
+            Uh-oh! We are currently adding online inventory for{" "}
+            <span className="font-serif italic font-medium text-electric">{brand.name}.</span>
+          </h1>
+
+          <p className="mt-5 text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            While our digital showcase is being populated with the latest models, authentic {brand.name} frames and full collections are available right now across all three of our Hyderabad stores.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => {
+                setBookingReason(`${brand.name} Inquiry`);
+                setBookingOpen(true);
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-electric text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-ink transition-colors shadow-md"
+            >
+              Inquire / Book Visit <ArrowUpRight className="size-4" />
+            </button>
+            <Link
+              to="/brands"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-border bg-background text-foreground px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:border-electric hover:text-electric transition-colors"
+            >
+              <ArrowLeft className="size-4" /> Explore Available Brands
+            </Link>
+          </div>
+        </div>
+
+        <BookingModal
+          isOpen={bookingOpen}
+          onClose={() => setBookingOpen(false)}
+          defaultReason={bookingReason}
+        />
+      </div>
+    );
+  }
 
   const otherBrands = BRANDS.filter((b) => b.slug !== brand.slug)
     .sort((a, b) => priorityIndex(a.name) - priorityIndex(b.name))
@@ -368,9 +456,6 @@ function BrandPage() {
               )}
               <p className="mt-5 text-muted-foreground max-w-2xl text-lg">{brand.blurb}</p>
             </div>
-            <div className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
-              {brand.models.length} {brand.category === "lenses" ? "lens ranges" : "models in stock"}
-            </div>
           </div>
         </div>
 
@@ -546,9 +631,6 @@ function BrandPage() {
               <section key={line} id={slugify(line)} className="scroll-mt-40 mt-16">
                 <div className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
                   <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{line}</h2>
-                  <span className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
-                    {models.length} {models.length === 1 ? "model" : "models"}
-                  </span>
                 </div>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                   {models.map((m, i) => (

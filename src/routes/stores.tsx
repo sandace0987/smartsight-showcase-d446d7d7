@@ -19,7 +19,7 @@ export const Route = createFileRoute("/stores")({
     createSeoHead({
       title: "Optical Stores in Hyderabad | KPHB, Nizampet & Bowenpally | Clear Sight",
       description:
-        "Visit Clear Sight Opticians in KPHB, Nizampet, or Bowenpally for ZEISS eye tests, designer eyewear, prescription lenses, computer glasses, and smart glasses demos.",
+        "Visit Clear Sight Opticians in KPHB, Nizampet, or Bowenpally for ZEISS eye tests, designer eyewear, prescription lenses, computer glasses, and AI glasses demos.",
       path: "/stores",
       schema: [
         breadcrumbSchema([
@@ -55,7 +55,7 @@ function StoresPage() {
       <div className="mx-auto max-w-7xl">
         <span className="text-electric text-xs font-bold tracking-[0.22em] uppercase">Visit</span>
         <h1 className="mt-3 text-5xl lg:text-7xl font-bold tracking-tighter max-w-3xl">
-          Three Hyderabad <span className="font-serif italic font-medium text-electric">studios.</span>
+          Three <span className="font-serif italic font-medium text-electric">premium stores.</span>
         </h1>
         <p className="mt-6 text-muted-foreground max-w-2xl text-lg">
           Walk-ins welcome. Bring your prescription — or get one done with us, on the house.
