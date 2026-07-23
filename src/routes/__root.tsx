@@ -17,6 +17,7 @@ import { PageTransition } from "@/components/motion/PageTransition";
 import { Glasses } from "lucide-react";
 import { useFeatureToggles } from "@/hooks/useFeatureToggles";
 import { ORGANIZATION_SCHEMA, createSeoHead } from "@/lib/seo";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import appCss from "../styles.css?url";
 
 const FloatingVideoCard = lazy(() =>
@@ -210,6 +211,7 @@ function RootComponent() {
             </span>
           </button>
         )}
+        <SpeedInsights />
       </div>
     </QueryClientProvider>
   );

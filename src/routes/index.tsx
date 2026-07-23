@@ -592,12 +592,10 @@ function HomePage() {
 
 
 
-      {/* ============== SMART GLASSES — SCROLL IMAGE SEQUENCE (Apple-style) ============== */}
-      <Suspense fallback={<section id="smart-glasses" className="min-h-[70vh] bg-ink" />}>
+      {/* ============== SMART GLASSES — LOOPING VIDEO REVEAL ============== */}
+      <Suspense fallback={<section id="smart-glasses" className="min-h-[50vh] bg-ink" />}>
         <ProductReveal
-          sequence={SMART_GLASSES_SEQUENCE}
           textTimeline={SMART_GLASSES_TEXT_TIMELINE}
-          scrollHeight={3000}
           id="smart-glasses"
         />
       </Suspense>

@@ -34,7 +34,7 @@ export interface TextCue {
 
 export interface ProductRevealProps {
   /** Frame sequence configuration */
-  sequence: FrameSequenceConfig;
+  sequence?: FrameSequenceConfig;
   /** Text cues keyed to scroll progress */
   textTimeline: TextCue[];
   /** Approximate scroll distance in px mapped to full animation — default 3000 */
